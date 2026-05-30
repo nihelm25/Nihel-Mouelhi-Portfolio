@@ -1,0 +1,27 @@
+"use client";
+
+export default function Logo({
+  className = "",
+  fill = "#555555",
+}: {
+  className?: string;
+  fill?: string;
+}) {
+  return (
+    <svg
+      viewBox="0 0 150 150"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+    >
+      <path
+        d="M37.5 118.75C37.5 100 43.75 87.5 56.25 75C68.75 62.5 75 56.25 75 43.75C75 35 68.75 25 56.25 25C43.75 25 37.5 35 37.5 43.75V118.75Z"
+        fill={fill}
+      />
+      <path
+        d="M112.5 31.25C112.5 50 106.25 62.5 93.75 75C81.25 87.5 75 93.75 75 106.25C75 115 81.25 125 93.75 125C106.25 125 112.5 115 112.5 106.25V31.25Z"
+        fill={fill}
+      />
+    </svg>
+  );
+}

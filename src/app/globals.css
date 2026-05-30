@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-cream: #faf6ee;
+  --color-text-primary: #555555;
+  --color-text-secondary: #888888;
+  --color-accent: #bda678;
+  --color-divider: #d9d9d9;
+  --font-sans: var(--font-geist);
+  --font-serif: var(--font-fraunces);
+}
+
+body {
+  background: var(--color-cream);
+  color: var(--color-text-primary);
+}
+
+::selection {
+  background: var(--color-accent);
+  color: white;
+}

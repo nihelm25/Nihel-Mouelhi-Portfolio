@@ -749,7 +749,7 @@ const projects: Omit<CaseCardProps, "index">[] = [
     tags: ["B2C", "B2E", "BANKING"],
     metrics: [
       { value: "+€1M", label: "Funding requests, first month" },
-      { value: "−42%", label: "Inbound support calls" },
+      { value: "200K", label: "Migrated on the platform" },
     ],
     visualBg: "#5a2a82",
     visualContent: <DeepPurpleVisual />,

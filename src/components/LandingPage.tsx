@@ -15,7 +15,7 @@ export default function LandingPage() {
       <Header />
 
       {/* Header spacer — clears the vertical nav */}
-      <div className="shrink-0 h-[17vw]" />
+      <div className="shrink-0 h-[11vw]" />
 
       {/* Main content */}
       <div className="flex-1 flex items-start px-[3.33vw]">

@@ -18,8 +18,8 @@ export default function LandingPage() {
       <div className="shrink-0 h-[14vw]" />
 
       {/* Main content */}
-      <div className="flex-1 flex items-start px-[3.33vw]">
-        <div className="flex items-start justify-between w-full gap-[2vw]">
+      <div className="flex-1 flex items-center px-[3.33vw]">
+        <div className="flex items-center justify-between w-full gap-[2vw]">
           {/* Left column */}
           <div className="flex flex-col gap-[2.5vh] flex-1 min-w-0">
             <motion.div

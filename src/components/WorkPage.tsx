@@ -81,7 +81,7 @@ function SAFEVisual() {
 function ESGVisual() {
   return (
     <img
-      src="/images/esg-heroshot.png"
+      src="/images/esg-browser.png"
       alt="ESG Workspace"
       className="absolute inset-0 w-full h-full object-cover pointer-events-none"
     />
@@ -134,6 +134,7 @@ const projects: Omit<CaseCardProps, "index">[] = [
     ],
     visualBg: "#1a4a73",
     visualContent: <ESGVisual />,
+    href: "/work/specificationworkbench",
   },
   {
     heading: "One unified product surface for BPCE credit products",
@@ -144,6 +145,7 @@ const projects: Omit<CaseCardProps, "index">[] = [
     ],
     visualBg: "#5a2a82",
     visualContent: <DeepPurpleVisual />,
+    href: "/work/deep-purple",
   },
 ];
 

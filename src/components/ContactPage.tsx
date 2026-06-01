@@ -12,7 +12,7 @@ const contactSections = [
   {
     label: "CONNECT",
     value: "Linkedin",
-    href: "https://www.linkedin.com/in/nihelmouelhi",
+    href: "https://www.linkedin.com/in/nihel-mouelhi-047552a8/",
   },
   {
     label: "LOCATION",

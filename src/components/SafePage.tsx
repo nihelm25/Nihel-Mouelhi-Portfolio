@@ -47,7 +47,7 @@ export default function SafePage() {
           transition={{ delay: 0.2, duration: 0.7 }}
         >
           <img
-            src="/images/safe-heroshot.png"
+            src="/images/safe-hero-desktop-mobile.png"
             alt="SAFE Surveillance Platform — Desktop and Mobile"
             className="w-full object-cover object-top pointer-events-none"
           />
@@ -702,13 +702,13 @@ export default function SafePage() {
       <div className="px-[3.33vw] mt-[4.44vw]">
         <div className="flex items-center justify-between">
           <a
-            href="/work/workplace-solutions"
+            href="/work"
             className="font-sans text-[1.39vw] font-normal text-[#555] hover:underline underline-offset-4"
           >
             &larr; Back to work
           </a>
           <a
-            href="/work/specification-workbench"
+            href="/work/specificationworkbench"
             className="font-sans text-[1.39vw] font-normal text-[#555] hover:underline underline-offset-4"
           >
             Next case study &rarr;

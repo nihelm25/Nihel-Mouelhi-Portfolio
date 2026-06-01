@@ -580,7 +580,7 @@ export default function WorkplaceSolutionsPage() {
             &larr; Back to work
           </a>
           <a
-            href="/work"
+            href="/work/safe"
             className="font-sans text-[1.39vw] font-normal text-[#555] hover:underline underline-offset-4"
           >
             Next case study &rarr;

@@ -104,20 +104,11 @@ export default function LandingPage() {
           >
             {/* Dashboard hero card */}
             <div className="w-full aspect-[528/340] rounded-[3px] overflow-hidden relative bg-[#faf6ee]">
-              <div className="absolute top-0 left-0 w-full h-[133.76%] bg-white rounded-[4.8px] overflow-hidden flex flex-col shadow-[0px_2px_8px_0px_rgba(0,0,0,0.04)]">
-                <div className="flex gap-[4.8px] items-center px-[2.27%] h-[4.5%] bg-[#f0eade] shrink-0">
-                  <div className="w-[1.36%] aspect-square rounded-full bg-[#c8c4bc]" />
-                  <div className="w-[1.36%] aspect-square rounded-full bg-[#c8c4bc]" />
-                  <div className="w-[1.36%] aspect-square rounded-full bg-[#c8c4bc]" />
-                </div>
-                <div className="relative w-full flex-1 overflow-hidden">
-                  <img
-                    src="/images/dashboard-screenshot.png"
-                    alt="JP Morgan Dashboard"
-                    className="absolute top-0 left-0 w-full h-[165.28%] object-cover pointer-events-none"
-                  />
-                </div>
-              </div>
+              <img
+                src="/images/ws-hero-card.png"
+                alt="JP Morgan Dashboard"
+                className="absolute inset-0 w-full h-full object-cover object-top pointer-events-none"
+              />
               {/* Gradient overlay on visible card area */}
               <div
                 className="absolute left-0 bottom-0 w-full h-[40%] z-10 pointer-events-none"

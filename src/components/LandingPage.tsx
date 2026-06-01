@@ -14,11 +14,8 @@ export default function LandingPage() {
     <section className="relative w-full h-full bg-cream overflow-hidden flex flex-col">
       <Header />
 
-      {/* Header spacer */}
-      <div className="shrink-0 h-[14vh]" />
-
-      {/* Main content */}
-      <div className="flex-1 flex items-center px-[3.33vw]">
+      {/* Nav clearance + centering zone */}
+      <div className="flex-1 flex items-center px-[3.33vw] pt-[28vh]">
         <div className="flex items-center justify-between w-full gap-[2vw]">
           {/* Left column */}
           <div className="flex flex-col gap-[2.5vh] flex-1 min-w-0">

@@ -15,7 +15,7 @@ export default function LandingPage() {
       <Header />
 
       {/* Header spacer — clears the vertical nav */}
-      <div className="shrink-0 h-[11vw]" />
+      <div className="shrink-0 h-[14vw]" />
 
       {/* Main content */}
       <div className="flex-1 flex items-start px-[3.33vw]">
@@ -98,7 +98,7 @@ export default function LandingPage() {
 
           {/* Right column */}
           <motion.div
-            className="flex flex-col gap-[1.5vh] items-start w-[36.67vw] shrink-0"
+            className="flex flex-col gap-[1.5vh] items-start w-[31.17vw] shrink-0"
             initial={{ opacity: 0, x: 40 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.5, duration: 0.8 }}

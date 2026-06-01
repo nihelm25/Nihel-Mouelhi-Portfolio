@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import ShimmerImage from "./ShimmerImage";
 import Header from "./Header";
 
 const companies = [
@@ -133,14 +134,17 @@ export default function AboutPage() {
       <div className="flex gap-[6.94vw] items-center px-[3.33vw]">
         {/* Portrait */}
         <motion.div
-          className="w-[38vw] h-[45.28vw] rounded-[1.39vw] overflow-hidden shrink-0"
+          className="relative w-[38vw] h-[45.28vw] rounded-[1.39vw] overflow-hidden shrink-0"
           {...fadeUp}
           transition={{ delay: 0.2, duration: 0.7 }}
         >
-          <img
+          <ShimmerImage
             src="/images/about-portrait.jpg"
             alt="Nihel Mouelhi"
-            className="w-full h-full object-cover"
+            fill
+            className="object-cover"
+            sizes="38vw"
+            priority
           />
         </motion.div>
 
@@ -229,11 +233,13 @@ export default function AboutPage() {
               {...fadeUp}
               transition={{ delay: 0.1 + i * 0.12, duration: 0.6 }}
             >
-              <div className="w-full h-[20.83vw] rounded-[1.39vw] overflow-hidden border border-[#6b6b6b]">
-                <img
+              <div className="relative w-full h-[20.83vw] rounded-[1.39vw] overflow-hidden border border-[#6b6b6b]">
+                <ShimmerImage
                   src={note.image}
                   alt={note.title}
-                  className="w-full h-full object-cover"
+                  fill
+                  className="object-cover"
+                  sizes="30vw"
                 />
               </div>
               <div className="flex flex-col gap-[1.11vw]">

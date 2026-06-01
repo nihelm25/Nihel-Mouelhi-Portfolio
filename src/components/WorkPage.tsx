@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import ShimmerImage from "./ShimmerImage";
 import Header from "./Header";
 
 type CaseCardProps = {
@@ -58,10 +59,12 @@ function BrowserChrome({
 /* ── Card 1 Visual: JP Morgan Dashboard ── */
 function JPMorganVisual() {
   return (
-    <img
+    <ShimmerImage
       src="/images/jpmorgan-heroshot.png"
       alt="JP Morgan Workplace Solutions Dashboard"
-      className="absolute inset-0 w-full h-full object-cover pointer-events-none"
+      fill
+      className="object-cover pointer-events-none"
+      sizes="64vw"
     />
   );
 }
@@ -69,10 +72,12 @@ function JPMorganVisual() {
 /* ── Card 2 Visual: SAFE Surveillance Platform ── */
 function SAFEVisual() {
   return (
-    <img
+    <ShimmerImage
       src="/images/safe-heroshot.png"
       alt="SAFE Surveillance Platform"
-      className="absolute inset-0 w-full h-full object-cover pointer-events-none"
+      fill
+      className="object-cover pointer-events-none"
+      sizes="64vw"
     />
   );
 }
@@ -80,10 +85,12 @@ function SAFEVisual() {
 /* ── Card 3 Visual: ESG Workspace ── */
 function ESGVisual() {
   return (
-    <img
+    <ShimmerImage
       src="/images/esg-browser.png"
       alt="ESG Workspace"
-      className="absolute inset-0 w-full h-full object-cover pointer-events-none"
+      fill
+      className="object-cover pointer-events-none"
+      sizes="64vw"
     />
   );
 }
@@ -91,10 +98,12 @@ function ESGVisual() {
 /* ── Card 4 Visual: Deep Purple BPCE Banking ── */
 function DeepPurpleVisual() {
   return (
-    <img
+    <ShimmerImage
       src="/images/deep-purple-heroshot.png"
       alt="Deep Purple BPCE Banking"
-      className="absolute inset-0 w-full h-full object-cover pointer-events-none"
+      fill
+      className="object-cover pointer-events-none"
+      sizes="64vw"
     />
   );
 }
@@ -160,11 +169,12 @@ function CaseCard({
 }: CaseCardProps) {
   const card = (
     <motion.div
-      className={`bg-[#faf6ee] rounded-[1.39vw] overflow-hidden flex w-full border border-[#d9d9d9]${href ? " cursor-pointer" : ""}`}
+      className={`bg-[#faf6ee] rounded-[1.39vw] overflow-hidden flex w-full border border-[#d9d9d9] transition-all duration-300 ease-out${href ? " cursor-pointer hover:shadow-[0px_8px_24px_0px_rgba(100,100,100,0.25)] hover:border-[#bbb]" : ""}`}
       style={{ boxShadow: "0px 4px 4px 0px rgba(127,127,127,0.25)" }}
       initial={{ opacity: 0, y: 40 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.3 + index * 0.15, duration: 0.6 }}
+      whileHover={href ? { y: -4 } : undefined}
     >
       {/* Left -- text content */}
       <div className="w-[36.11%] shrink-0 p-[3.33vw] flex flex-col justify-between">
@@ -203,7 +213,7 @@ function CaseCard({
 
       {/* Right -- visual */}
       <div
-        className="flex-1 relative overflow-hidden min-h-[36.11vw] border-l border-[rgba(255,255,255,0.06)]"
+        className="flex-1 relative overflow-hidden min-h-[36.11vw] border-l border-[rgba(255,255,255,0.06)] group-hover/card:scale-[1.02] transition-transform duration-500 ease-out"
         style={{ backgroundColor: visualBg }}
       >
         {visualContent}
@@ -213,7 +223,7 @@ function CaseCard({
 
   if (href) {
     return (
-      <a href={href} className="block no-underline text-inherit">
+      <a href={href} className="block no-underline text-inherit group/card">
         {card}
       </a>
     );

@@ -15,9 +15,23 @@ const fraunces = Fraunces({
 });
 
 export const metadata: Metadata = {
-  title: "Nihel Mouelhi — Product Designer",
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL || "https://nihelmouelhi.com"
+  ),
+  title: {
+    default: "Nihel Mouelhi — Product Designer",
+    template: "%s — Nihel Mouelhi",
+  },
   description:
-    "Senior product designer transforming ambitious ideas into elegant, high-impact experiences.",
+    "Lead product designer with 8+ years of experience transforming ambitious ideas into elegant, high-impact experiences.",
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    siteName: "Nihel Mouelhi — Portfolio",
+  },
+  twitter: {
+    card: "summary_large_image",
+  },
 };
 
 export default function RootLayout({

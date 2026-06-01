@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import ShimmerImage from "./ShimmerImage";
 import Header from "./Header";
 
 /* ── Animation preset ── */
@@ -73,10 +74,14 @@ export default function WorkplaceSolutionsPage() {
           transition={{ delay: 0.2, duration: 0.7 }}
         >
           <div className="relative max-h-[49.17vw] overflow-hidden rounded-[0.56vw]" style={{ boxShadow: "0px 2px 8px 0px rgba(0,0,0,0.08)" }}>
-            <img
+            <ShimmerImage
               src="/images/dashboard-screenshot.png"
               alt="Workplace Solutions Dashboard"
-              className="w-full object-cover object-top pointer-events-none"
+              width={5376}
+              height={3032}
+              className="shimmer w-full h-auto object-cover object-top pointer-events-none"
+              sizes="93vw"
+              priority
             />
             {/* Bottom fade */}
             <div className="absolute bottom-0 left-0 right-0 h-[8.33vw] bg-gradient-to-t from-white to-transparent" />
@@ -389,10 +394,13 @@ export default function WorkplaceSolutionsPage() {
         <div className="flex justify-center mt-[2.22vw]">
           <div className="w-[70vw]">
             <div className="relative rounded-[0.56vw] overflow-hidden" style={{ boxShadow: "0px 2px 8px 0px rgba(0,0,0,0.08)" }}>
-              <img
+              <ShimmerImage
                 src="/images/espp-screenshot.png"
                 alt="ESPP summary view"
-                className="w-full object-cover object-top pointer-events-none"
+                width={4032}
+                height={3032}
+                className="shimmer w-full h-auto object-cover object-top pointer-events-none"
+                sizes="70vw"
               />
               {/* Bottom fade */}
               <div className="absolute bottom-0 left-0 right-0 h-[6.94vw] bg-gradient-to-t from-white to-transparent" />
@@ -417,20 +425,26 @@ export default function WorkplaceSolutionsPage() {
         <div className="flex gap-[1.67vw] mt-[2.22vw]">
           <div className="flex-1">
             <div className="relative rounded-[0.56vw] overflow-hidden" style={{ boxShadow: "0px 2px 8px 0px rgba(0,0,0,0.08)" }}>
-              <img
+              <ShimmerImage
                 src="/images/sell-shares-screenshot.png"
                 alt="Sell shares flow"
-                className="w-full object-cover object-top pointer-events-none"
+                width={2736}
+                height={1908}
+                className="shimmer w-full h-auto object-cover object-top pointer-events-none"
+                sizes="45vw"
               />
               <div className="absolute bottom-0 left-0 right-0 h-[6.94vw] bg-gradient-to-t from-white to-transparent" />
             </div>
           </div>
           <div className="flex-1">
             <div className="relative rounded-[0.56vw] overflow-hidden" style={{ boxShadow: "0px 2px 8px 0px rgba(0,0,0,0.08)" }}>
-              <img
+              <ShimmerImage
                 src="/images/preclearance-screenshot.png"
                 alt="Preclearance request"
-                className="w-full object-cover object-top pointer-events-none"
+                width={2736}
+                height={1908}
+                className="shimmer w-full h-auto object-cover object-top pointer-events-none"
+                sizes="45vw"
               />
               <div className="absolute bottom-0 left-0 right-0 h-[6.94vw] bg-gradient-to-t from-white to-transparent" />
             </div>

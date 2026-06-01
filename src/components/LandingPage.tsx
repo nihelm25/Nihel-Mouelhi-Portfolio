@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import ShimmerImage from "./ShimmerImage";
 import Header from "./Header";
 
 const fadeUp = {
@@ -104,11 +105,7 @@ export default function LandingPage() {
           >
             {/* Dashboard hero card */}
             <div className="w-full aspect-[528/340] rounded-[3px] overflow-hidden relative bg-[#faf6ee]">
-              <img
-                src="/images/ws-hero-card.png"
-                alt="JP Morgan Dashboard"
-                className="absolute inset-0 w-full h-full object-cover object-top pointer-events-none"
-              />
+              <ShimmerImage src="/images/ws-hero-card.png" alt="JP Morgan Dashboard" fill className="object-cover object-top pointer-events-none" sizes="37vw" priority />
               {/* Gradient overlay on visible card area */}
               <div
                 className="absolute left-0 bottom-0 w-full h-[40%] z-10 pointer-events-none"
@@ -123,11 +120,7 @@ export default function LandingPage() {
             <div className="flex gap-[1.5vh] w-full">
               {/* Safe — surveillance */}
               <div className="flex-1 aspect-[8/9] rounded-[3px] overflow-hidden relative drop-shadow-[0px_2px_4px_rgba(0,0,0,0.04)]">
-                <img
-                  src="/images/surveillance-feed.png"
-                  alt="Safe — AI surveillance"
-                  className="absolute inset-0 w-full h-full object-cover pointer-events-none"
-                />
+                <ShimmerImage src="/images/surveillance-feed.png" alt="Safe — AI surveillance" fill className="object-cover pointer-events-none" sizes="12vw" />
                 <div className="absolute left-[51.88%] top-[42.22%] w-[20%] h-[27.78%] border border-[#00d4ab] rounded-[1px]" />
                 <div className="absolute left-[50%] top-[40.56%] w-[3.75%] h-[0.83%] bg-[rgba(38,217,115,0.9)]" />
                 <div className="absolute left-[50%] top-[40.56%] w-[0.94%] h-[3.33%] bg-[rgba(38,217,115,0.9)]" />
@@ -151,11 +144,7 @@ export default function LandingPage() {
               {/* Safe — train station */}
               <div className="flex-1 aspect-[8/9] rounded-[3px] overflow-hidden relative">
                 <div className="absolute inset-0 bg-[#09090f]" />
-                <img
-                  src="/images/train-station.png"
-                  alt="Train station scene"
-                  className="absolute inset-0 w-full h-full object-cover pointer-events-none rounded-[3px]"
-                />
+                <ShimmerImage src="/images/train-station.png" alt="Train station scene" fill className="object-cover pointer-events-none rounded-[3px]" sizes="12vw" />
               </div>
 
               {/* Deep Purple — mobile mockups */}
@@ -166,18 +155,10 @@ export default function LandingPage() {
                 }}
               >
                 <div className="absolute left-[7.2%] top-[11.5%] w-[42.5%] aspect-[68/146] rotate-[5deg] rounded-[6px] border border-[#e0ded9] shadow-[0px_3px_10px_0px_rgba(0,0,0,0.1)] overflow-hidden opacity-45">
-                  <img
-                    src="/images/deep-purple-back.png"
-                    alt=""
-                    className="absolute inset-0 w-full h-full object-cover rounded-[6px]"
-                  />
+                  <ShimmerImage src="/images/deep-purple-back.png" alt="" fill className="object-cover rounded-[6px]" sizes="5vw" />
                 </div>
                 <div className="absolute left-[37.5%] top-[5.5%] w-[46.25%] aspect-[74/158] -rotate-[3deg] rounded-[6px] border border-[#e0ded9] shadow-[0px_3px_10px_0px_rgba(0,0,0,0.1)] overflow-hidden">
-                  <img
-                    src="/images/deep-purple-front.png"
-                    alt=""
-                    className="absolute inset-0 w-full h-full object-cover rounded-[6px]"
-                  />
+                  <ShimmerImage src="/images/deep-purple-front.png" alt="" fill className="object-cover rounded-[6px]" sizes="6vw" />
                 </div>
               </div>
             </div>

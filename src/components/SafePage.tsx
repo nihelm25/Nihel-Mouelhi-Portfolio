@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import ShimmerImage from "./ShimmerImage";
 import Header from "./Header";
 
 /* ── Animation preset ── */
@@ -46,10 +47,14 @@ export default function SafePage() {
           {...fadeUp}
           transition={{ delay: 0.2, duration: 0.7 }}
         >
-          <img
+          <ShimmerImage
             src="/images/safe-hero-desktop-mobile.png"
             alt="SAFE Surveillance Platform — Desktop and Mobile"
-            className="w-full object-cover object-top pointer-events-none"
+            width={5376}
+            height={2519}
+            className="shimmer w-full h-auto object-cover object-top pointer-events-none"
+            sizes="93vw"
+            priority
           />
         </motion.div>
 
@@ -519,10 +524,13 @@ export default function SafePage() {
             className="relative overflow-hidden rounded-[0.56vw]"
             style={{ boxShadow: "0px 2px 8px 0px rgba(0,0,0,0.08)" }}
           >
-            <img
+            <ShimmerImage
               src="/images/safe-browser.png"
               alt="SAFE analyst working surface — control room desktop view"
-              className="w-full object-cover object-top pointer-events-none"
+              width={5376}
+              height={3280}
+              className="shimmer w-full h-auto object-cover object-top pointer-events-none"
+              sizes="93vw"
             />
           </div>
         </div>
@@ -558,17 +566,23 @@ export default function SafePage() {
         {/* Mobile phone mockups */}
         <div className="flex justify-center gap-[2.22vw] mt-[2.22vw]">
           <div className="w-[22%]">
-            <img
+            <ShimmerImage
               src="/images/safe-phone-intel.png"
               alt="SAFE field agent mobile — Intel view with suspect identification"
-              className="w-full object-contain pointer-events-none"
+              width={1440}
+              height={3344}
+              className="shimmer w-full h-auto object-contain pointer-events-none"
+              sizes="20vw"
             />
           </div>
           <div className="w-[22%]">
-            <img
+            <ShimmerImage
               src="/images/safe-phone-conversation.png"
               alt="SAFE field agent mobile — Conversation view with chat messages"
-              className="w-full object-contain pointer-events-none"
+              width={1440}
+              height={3344}
+              className="shimmer w-full h-auto object-contain pointer-events-none"
+              sizes="20vw"
             />
           </div>
         </div>

@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import ShimmerImage from "./ShimmerImage";
 import Header from "./Header";
 
 /* ── Animation preset ── */
@@ -57,10 +58,14 @@ export default function ESGPage() {
           {...fadeUp}
           transition={{ delay: 0.2, duration: 0.7 }}
         >
-          <img
+          <ShimmerImage
             src="/images/esg-heroshot.png"
             alt="Specification Workbench — Methodology Builder"
-            className="w-full object-contain pointer-events-none"
+            width={5376}
+            height={3648}
+            className="shimmer w-full h-auto object-contain pointer-events-none"
+            sizes="93vw"
+            priority
           />
         </motion.div>
 
@@ -144,10 +149,13 @@ export default function ESGPage() {
         {/* Opaque tools diagram */}
         <div className="mt-[2.22vw]">
           <div className="bg-[#f5f0e8] rounded-[0.83vw] overflow-hidden">
-            <img
+            <ShimmerImage
               src="/images/esg-opaque-tools-diagram.png"
               alt="Two opaque tools diagram — inputs, sealed methodology hub, and downstream outputs"
-              className="w-full object-contain pointer-events-none"
+              width={5376}
+              height={2112}
+              className="shimmer w-full h-auto object-contain pointer-events-none"
+              sizes="93vw"
             />
           </div>
           <p className="font-sans text-[0.76vw] font-normal text-[#878787] leading-[1.6] tracking-[0.104vw] mt-[1.11vw]">
@@ -291,10 +299,13 @@ export default function ESGPage() {
           {/* Computational graph */}
           <div className="shrink-0 w-[29.17vw]">
             <div className="rounded-[0.56vw] overflow-hidden">
-              <img
+              <ShimmerImage
                 src="/images/esg-computational-graph.png"
                 alt="Computational graph — how raw market data flows through three stages to become derived attributes and methodologies"
-                className="w-full object-contain pointer-events-none"
+                width={1680}
+                height={1052}
+                className="shimmer w-full h-auto object-contain pointer-events-none"
+                sizes="29vw"
               />
             </div>
             <p className="font-sans text-[0.76vw] font-normal text-[#878787] leading-[1.6] tracking-[0.104vw] mt-[1.11vw]">
@@ -383,10 +394,13 @@ export default function ESGPage() {
         {/* Journey map */}
         <div className="mt-[2.22vw]">
           <div className="rounded-[0.83vw] overflow-hidden">
-            <img
-              src="/images/esg-journey-map.png"
+            <ShimmerImage
+              src="/images/esg-journey-map.jpg"
               alt="User journey map — user steps, actions, goals, feelings, pain points, and opportunities across five lifecycle stages"
-              className="w-full object-contain pointer-events-none"
+              width={5376}
+              height={2927}
+              className="w-full h-auto object-contain pointer-events-none"
+              sizes="93vw"
             />
           </div>
           <p className="font-sans text-[0.76vw] font-normal text-[#878787] leading-[1.6] tracking-[0.104vw] mt-[1.11vw]">
@@ -565,10 +579,13 @@ export default function ESGPage() {
             </p>
           </div>
           <div className="shrink-0 w-[21.94vw]">
-            <img
+            <ShimmerImage
               src="/images/esg-analyze-panel.png"
               alt="Analyze panel — portfolio comparison, chart overlays, and security-level breakdowns"
-              className="w-full object-contain pointer-events-none"
+              width={1302}
+              height={2388}
+              className="shimmer w-full h-auto object-contain pointer-events-none"
+              sizes="22vw"
             />
           </div>
         </div>
@@ -602,10 +619,13 @@ export default function ESGPage() {
 
         {/* Builder canvas screenshot */}
         <div className="mt-[2.22vw] rounded-[0.83vw] overflow-hidden">
-          <img
+          <ShimmerImage
             src="/images/esg-builder-canvas.png"
             alt="Specification Workbench — full builder canvas with node-based composition tree"
-            className="w-full object-contain pointer-events-none"
+            width={5376}
+            height={3584}
+            className="shimmer w-full h-auto object-contain pointer-events-none"
+            sizes="93vw"
           />
         </div>
       </motion.div>
@@ -651,10 +671,13 @@ export default function ESGPage() {
           ].map((view) => (
             <div key={view.alt} className="flex-1 flex flex-col">
               <div className="h-[17vw] flex items-start justify-center">
-                <img
+                <ShimmerImage
                   src={view.img}
                   alt={view.alt}
-                  className="w-full h-full object-contain object-top pointer-events-none"
+                  width={1728}
+                  height={960}
+                  className="shimmer w-full h-full object-contain object-top pointer-events-none"
+                  sizes="30vw"
                 />
               </div>
               <p className="font-sans text-[0.76vw] font-normal text-[#878787] leading-[1.6] tracking-[0.104vw] mt-[1.11vw]">
@@ -711,10 +734,13 @@ export default function ESGPage() {
                 - FOR CLIENTS
               </span>
             </div>
-            <img
+            <ShimmerImage
               src="/images/esg-toggle-off.png"
               alt="Toggle OFF — clean tree view without formulas, suitable for client presentations"
-              className="w-full object-contain pointer-events-none"
+              width={1944}
+              height={832}
+              className="shimmer w-full h-auto object-contain pointer-events-none"
+              sizes="45vw"
             />
           </div>
 
@@ -731,10 +757,13 @@ export default function ESGPage() {
                 - FOR RESEARCHERS
               </span>
             </div>
-            <img
+            <ShimmerImage
               src="/images/esg-toggle-on.png"
               alt="Toggle ON — tree view with formulas visible for researcher verification"
-              className="w-full object-contain pointer-events-none"
+              width={1940}
+              height={968}
+              className="shimmer w-full h-auto object-contain pointer-events-none"
+              sizes="45vw"
             />
           </div>
         </div>

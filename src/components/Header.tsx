@@ -37,7 +37,7 @@ export default function Header({ activeItem }: { activeItem?: string } = {}) {
 
         <motion.a
           href="/"
-          className="absolute left-[calc(3.33vw-16px)] top-8"
+          className="absolute left-[calc(3.33vw-16px)] top-8 transition-opacity duration-200 hover:opacity-60"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.3, duration: 0.6 }}

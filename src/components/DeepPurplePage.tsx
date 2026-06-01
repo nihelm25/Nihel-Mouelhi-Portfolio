@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import ShimmerImage from "./ShimmerImage";
 import Header from "./Header";
 
 /* ── Animation preset ── */
@@ -47,10 +48,14 @@ export default function DeepPurplePage() {
           {...fadeUp}
           transition={{ delay: 0.2, duration: 0.7 }}
         >
-          <img
+          <ShimmerImage
             src="/images/deep-purple/hero.png"
             alt="Deep Purple — Desktop browser and mobile phone side by side"
-            className="w-full object-cover object-top pointer-events-none"
+            width={5376}
+            height={2460}
+            className="shimmer w-full h-auto object-cover object-top pointer-events-none"
+            sizes="93vw"
+            priority
           />
         </motion.div>
 
@@ -318,10 +323,13 @@ export default function DeepPurplePage() {
         </p>
 
         {/* Research session photos */}
-        <img
+        <ShimmerImage
           src="/images/deep-purple/photos.png"
           alt="User research sessions — remote interviews with customers and advisors"
-          className="w-full pointer-events-none mt-[2.78vw]"
+          width={5376}
+          height={1572}
+          className="shimmer w-full h-auto pointer-events-none mt-[2.78vw]"
+          sizes="93vw"
         />
 
         {/* User quotes below photos */}
@@ -456,10 +464,13 @@ export default function DeepPurplePage() {
                 className="rounded-[1.11vw] overflow-hidden w-full"
                 style={{ boxShadow: "0px 4px 20px 0px rgba(0,0,0,0.10)" }}
               >
-                <img
+                <ShimmerImage
                   src={screen.src}
                   alt={screen.alt}
-                  className="w-full object-contain pointer-events-none"
+                  width={1024}
+                  height={2195}
+                  className="shimmer w-full h-auto object-contain pointer-events-none"
+                  sizes="18vw"
                 />
               </div>
               <p className="font-sans text-[0.76vw] font-semibold text-[#9c4221] tracking-[0.092vw] mt-[0.83vw]">
@@ -493,10 +504,13 @@ export default function DeepPurplePage() {
             className="relative overflow-hidden rounded-[0.56vw]"
             style={{ boxShadow: "0px 2px 8px 0px rgba(0,0,0,0.08)" }}
           >
-            <img
+            <ShimmerImage
               src="/images/deep-purple/browser.png"
               alt="Deep Purple — Desktop view of the loan simulator"
-              className="w-full object-cover object-top pointer-events-none"
+              width={5376}
+              height={3296}
+              className="shimmer w-full h-auto object-cover object-top pointer-events-none"
+              sizes="93vw"
             />
           </div>
         </div>

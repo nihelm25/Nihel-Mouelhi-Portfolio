@@ -14,9 +14,12 @@ export default function LandingPage() {
     <section className="relative w-full h-full bg-cream overflow-hidden flex flex-col">
       <Header />
 
-      {/* Nav clearance + centering zone */}
-      <div className="flex-1 flex items-center px-[3.33vw] pt-[28vh]">
-        <div className="flex items-center justify-between w-full gap-[2vw]">
+      {/* Header spacer — clears the vertical nav */}
+      <div className="shrink-0 h-[17vw]" />
+
+      {/* Main content */}
+      <div className="flex-1 flex items-start px-[3.33vw]">
+        <div className="flex items-start justify-between w-full gap-[2vw]">
           {/* Left column */}
           <div className="flex flex-col gap-[2.5vh] flex-1 min-w-0">
             <motion.div
@@ -95,7 +98,7 @@ export default function LandingPage() {
 
           {/* Right column */}
           <motion.div
-            className="flex flex-col gap-[1.5vh] items-start w-[36.67vw] shrink-0 mt-[10vh]"
+            className="flex flex-col gap-[1.5vh] items-start w-[36.67vw] shrink-0"
             initial={{ opacity: 0, x: 40 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.5, duration: 0.8 }}

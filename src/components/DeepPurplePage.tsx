@@ -318,24 +318,11 @@ export default function DeepPurplePage() {
         </p>
 
         {/* Research session photos */}
-        <div className="mt-[2.78vw] relative">
-          <img
-            src="/images/deep-purple/photos.png"
-            alt="User research sessions — remote interviews with customers and advisors"
-            className="w-full pointer-events-none"
-          />
-          {/* Emoji privacy overlays matching Figma design */}
-          <div
-            className="absolute pointer-events-none select-none flex items-center justify-center"
-            style={{ left: "4%", top: "3%", width: "7%", height: "24%", fontSize: "min(5vw, 72px)", lineHeight: 1 }}
-            aria-hidden="true"
-          >&#x1F469;</div>
-          <div
-            className="absolute pointer-events-none select-none flex items-center justify-center"
-            style={{ left: "5%", top: "55%", width: "7%", height: "24%", fontSize: "min(5vw, 72px)", lineHeight: 1 }}
-            aria-hidden="true"
-          >&#x1F9D1;&#x200D;&#x1F9B1;</div>
-        </div>
+        <img
+          src="/images/deep-purple/photos.png"
+          alt="User research sessions — remote interviews with customers and advisors"
+          className="w-full pointer-events-none mt-[2.78vw]"
+        />
 
         {/* User quotes below photos */}
         <div className="flex gap-[1.67vw] mt-[0.83vw]">

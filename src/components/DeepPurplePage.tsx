@@ -18,15 +18,15 @@ export default function DeepPurplePage() {
       <Header activeItem="WORK" />
 
       {/* Header spacer */}
-      <div className="h-[19.4vw]" />
+      <div className="h-[19.4vw] max-lg:h-[100px]" />
 
       {/* ═══════════════════════════════════════════════════
           HERO
          ═══════════════════════════════════════════════════ */}
-      <div className="px-[3.33vw]">
+      <div className="px-[3.33vw] max-lg:px-5">
         {/* Label */}
         <motion.p
-          className="font-sans text-[0.76vw] font-semibold text-[#888] tracking-[0.092vw]"
+          className="font-sans text-[0.76vw] max-lg:text-[11px] font-semibold text-[#888] tracking-[0.092vw]"
           {...fadeUp}
         >
           CASE STUDY, 04 &middot; 2020&ndash;2021 &middot; PRODUCT DESIGNER
@@ -35,7 +35,7 @@ export default function DeepPurplePage() {
 
         {/* Title */}
         <motion.h1
-          className="font-sans text-[5vw] font-light text-[#555] tracking-[-0.15vw] mt-[1.39vw]"
+          className="font-sans text-[5vw] max-lg:text-[32px] font-light text-[#555] tracking-[-0.15vw] mt-[1.39vw] max-lg:mt-3"
           {...fadeUp}
           transition={{ delay: 0.1, duration: 0.6 }}
         >
@@ -44,7 +44,7 @@ export default function DeepPurplePage() {
 
         {/* Hero product shots */}
         <motion.div
-          className="mt-[2.78vw]"
+          className="mt-[2.78vw] max-lg:mt-6 -mx-[3.33vw] max-lg:-mx-5"
           {...fadeUp}
           transition={{ delay: 0.2, duration: 0.7 }}
         >
@@ -54,19 +54,19 @@ export default function DeepPurplePage() {
             width={5376}
             height={2460}
             className="shimmer w-full h-auto object-cover object-top pointer-events-none"
-            sizes="93vw"
+            sizes="100vw"
             priority
           />
         </motion.div>
 
         {/* Hero bottom row: meta + intro */}
         <motion.div
-          className="flex gap-[4.44vw] mt-[2.78vw]"
+          className="flex max-lg:flex-col gap-[4.44vw] max-lg:gap-6 mt-[2.78vw] max-lg:mt-6"
           {...fadeUp}
           transition={{ delay: 0.3, duration: 0.6 }}
         >
           {/* Left: meta column */}
-          <div className="w-[25.63vw] shrink-0 flex flex-col gap-[1.94vw]">
+          <div className="w-[25.63vw] max-lg:w-full shrink-0 flex flex-col gap-[1.94vw] max-lg:gap-4">
             {[
               { label: "COMPANY", value: "BPCE (Natixis group)" },
               { label: "ROLE", value: "Product designer (team of 4)" },
@@ -81,11 +81,11 @@ export default function DeepPurplePage() {
                   "Consumer banking · Dual-persona UX · Credit products",
               },
             ].map((item) => (
-              <div key={item.label} className="flex flex-col gap-[0.35vw]">
-                <p className="font-sans text-[0.76vw] font-semibold text-[#888] tracking-[0.092vw]">
+              <div key={item.label} className="flex flex-col gap-[0.35vw] max-lg:gap-1">
+                <p className="font-sans text-[0.76vw] max-lg:text-[11px] font-semibold text-[#888] tracking-[0.092vw]">
                   {item.label}
                 </p>
-                <p className="font-sans text-[0.97vw] font-normal text-[#555]">
+                <p className="font-sans text-[0.97vw] max-lg:text-[14px] font-normal text-[#555]">
                   {item.value}
                 </p>
               </div>
@@ -94,7 +94,7 @@ export default function DeepPurplePage() {
 
           {/* Right: intro paragraph */}
           <div className="flex-1">
-            <p className="font-sans text-[1.53vw] font-normal text-[#555] leading-[1.45] tracking-[-0.023vw]">
+            <p className="font-sans text-[1.53vw] max-lg:text-[16px] font-normal text-[#555] leading-[1.45] tracking-[-0.023vw]">
               BPCE&rsquo;s client-facing banking app, Deep Purple, served
               customers. Advisors served the same customers on a separate
               desktop app, Izivente: different vocabulary, different defaults,
@@ -112,15 +112,15 @@ export default function DeepPurplePage() {
       {/* ═══════════════════════════════════════════════════
           01 / THE MANDATE
          ═══════════════════════════════════════════════════ */}
-      <motion.div className="px-[3.33vw] mt-[4.44vw]" {...fadeUp}>
-        <p className="font-sans text-[0.76vw] font-semibold text-[#888] tracking-[0.092vw]">
+      <motion.div className="px-[3.33vw] max-lg:px-5 mt-[4.44vw] max-lg:mt-10" {...fadeUp}>
+        <p className="font-sans text-[0.76vw] max-lg:text-[11px] font-semibold text-[#888] tracking-[0.092vw]">
           01 / THE MANDATE
         </p>
-        <h2 className="font-sans text-[3.06vw] font-light text-[#555] tracking-[-0.061vw] leading-[1.1] mt-[1.11vw]">
+        <h2 className="font-sans text-[3.06vw] max-lg:text-[24px] font-light text-[#555] tracking-[-0.061vw] leading-[1.1] mt-[1.11vw] max-lg:mt-3">
           I didn&rsquo;t choose the products. I chose{" "}
           <span className="font-semibold text-[#9c4221]">the unification.</span>
         </h2>
-        <p className="font-sans text-[1.25vw] font-normal text-[#555] leading-[1.5] tracking-[-0.013vw] mt-[1.67vw]">
+        <p className="font-sans text-[1.25vw] max-lg:text-[15px] font-normal text-[#555] leading-[1.5] tracking-[-0.013vw] mt-[1.67vw] max-lg:mt-4">
           BPCE Financement is the loan-specialized subsidiary inside the BPCE
           Group. The mandate I inherited was clear: redesign the credit products
           inside Deep Purple, the client-facing banking app: personal loan,
@@ -135,7 +135,7 @@ export default function DeepPurplePage() {
         </p>
 
         {/* Three scope cards */}
-        <div className="flex gap-[1.67vw] mt-[2.78vw]">
+        <div className="flex max-lg:flex-col gap-[1.67vw] max-lg:gap-4 mt-[2.78vw] max-lg:mt-6">
           {[
             {
               category: "FIXED-INSTALLMENT CONSUMER LOAN",
@@ -156,15 +156,15 @@ export default function DeepPurplePage() {
           ].map((card) => (
             <div
               key={card.category}
-              className="flex-1 bg-[#f2efe8] rounded-[0.97vw] px-[1.67vw] py-[1.94vw] flex flex-col gap-[0.83vw]"
+              className="flex-1 bg-[#f2efe8] rounded-[0.97vw] max-lg:rounded-[8px] px-[1.67vw] max-lg:px-5 py-[1.94vw] max-lg:py-5 flex flex-col gap-[0.83vw] max-lg:gap-2"
             >
-              <p className="font-sans text-[0.76vw] font-semibold text-[#888] tracking-[0.092vw]">
+              <p className="font-sans text-[0.76vw] max-lg:text-[11px] font-semibold text-[#888] tracking-[0.092vw]">
                 {card.category}
               </p>
-              <p className="font-sans text-[1.25vw] font-semibold text-[#555] leading-[1.3] tracking-[-0.013vw]">
+              <p className="font-sans text-[1.25vw] max-lg:text-[15px] font-semibold text-[#555] leading-[1.3] tracking-[-0.013vw]">
                 {card.title}
               </p>
-              <p className="font-sans text-[0.97vw] font-normal text-[#555] leading-[1.45]">
+              <p className="font-sans text-[0.97vw] max-lg:text-[14px] font-normal text-[#555] leading-[1.45]">
                 {card.body}
               </p>
             </div>
@@ -175,17 +175,17 @@ export default function DeepPurplePage() {
       {/* ═══════════════════════════════════════════════════
           02 / THE INVISIBLE COST
          ═══════════════════════════════════════════════════ */}
-      <motion.div className="px-[3.33vw] mt-[4.44vw]" {...fadeUp}>
-        <p className="font-sans text-[0.76vw] font-semibold text-[#888] tracking-[0.092vw]">
+      <motion.div className="px-[3.33vw] max-lg:px-5 mt-[4.44vw] max-lg:mt-10" {...fadeUp}>
+        <p className="font-sans text-[0.76vw] max-lg:text-[11px] font-semibold text-[#888] tracking-[0.092vw]">
           02 / THE INVISIBLE COST
         </p>
-        <h2 className="font-sans text-[3.06vw] font-light text-[#555] tracking-[-0.061vw] leading-[1.1] mt-[1.11vw]">
+        <h2 className="font-sans text-[3.06vw] max-lg:text-[24px] font-light text-[#555] tracking-[-0.061vw] leading-[1.1] mt-[1.11vw] max-lg:mt-3">
           Two apps. One conversation.{" "}
           <span className="font-semibold text-[#9c4221]">
             Four kinds of cost.
           </span>
         </h2>
-        <p className="font-sans text-[1.25vw] font-normal text-[#555] leading-[1.5] tracking-[-0.013vw] mt-[1.67vw]">
+        <p className="font-sans text-[1.25vw] max-lg:text-[15px] font-normal text-[#555] leading-[1.5] tracking-[-0.013vw] mt-[1.67vw] max-lg:mt-4">
           Deep Purple was the customer&rsquo;s app. Izivente was the
           advisor&rsquo;s. When a customer called the bank about their credit,
           the advisor opened a different screen: different defaults, different
@@ -196,7 +196,7 @@ export default function DeepPurplePage() {
         </p>
 
         {/* 4 cost cards — 2×2 grid */}
-        <div className="grid grid-cols-2 gap-[1.67vw] mt-[2.78vw]">
+        <div className="grid grid-cols-2 max-lg:grid-cols-1 gap-[1.67vw] max-lg:gap-4 mt-[2.78vw] max-lg:mt-6">
           {[
             {
               category: "DRIFT",
@@ -223,13 +223,13 @@ export default function DeepPurplePage() {
               key={card.category}
               className="bg-[#f2efe8] rounded-[0.97vw] px-[1.67vw] py-[1.94vw] flex flex-col gap-[0.83vw]"
             >
-              <p className="font-sans text-[0.76vw] font-semibold text-[#888] tracking-[0.092vw]">
+              <p className="font-sans text-[0.76vw] max-lg:text-[11px] font-semibold text-[#888] tracking-[0.092vw]">
                 {card.category}
               </p>
-              <p className="font-sans text-[1.25vw] font-semibold text-[#555] leading-[1.3] tracking-[-0.013vw]">
+              <p className="font-sans text-[1.25vw] max-lg:text-[15px] font-semibold text-[#555] leading-[1.3] tracking-[-0.013vw]">
                 {card.title}
               </p>
-              <p className="font-sans text-[0.97vw] font-normal text-[#555] leading-[1.45]">
+              <p className="font-sans text-[0.97vw] max-lg:text-[14px] font-normal text-[#555] leading-[1.45]">
                 {card.body}
               </p>
             </div>
@@ -240,15 +240,15 @@ export default function DeepPurplePage() {
       {/* ═══════════════════════════════════════════════════
           03 / THE REFRAME
          ═══════════════════════════════════════════════════ */}
-      <motion.div className="px-[3.33vw] mt-[4.44vw]" {...fadeUp}>
-        <p className="font-sans text-[0.76vw] font-semibold text-[#888] tracking-[0.092vw]">
+      <motion.div className="px-[3.33vw] max-lg:px-5 mt-[4.44vw] max-lg:mt-10" {...fadeUp}>
+        <p className="font-sans text-[0.76vw] max-lg:text-[11px] font-semibold text-[#888] tracking-[0.092vw]">
           03 / THE REFRAME
         </p>
-        <h2 className="font-sans text-[3.06vw] font-light text-[#555] tracking-[-0.061vw] leading-[1.1] mt-[1.11vw]">
+        <h2 className="font-sans text-[3.06vw] max-lg:text-[24px] font-light text-[#555] tracking-[-0.061vw] leading-[1.1] mt-[1.11vw] max-lg:mt-3">
           One product. Two roles.{" "}
           <span className="font-semibold text-[#9c4221]">Same software.</span>
         </h2>
-        <p className="font-sans text-[1.25vw] font-normal text-[#555] leading-[1.5] tracking-[-0.013vw] mt-[1.67vw]">
+        <p className="font-sans text-[1.25vw] max-lg:text-[15px] font-normal text-[#555] leading-[1.5] tracking-[-0.013vw] mt-[1.67vw] max-lg:mt-4">
           The right unit of design wasn&rsquo;t an app or a screen. It was a
           role-aware product surface that both Deep Purple and Izivente could
           render. Same calculations. Same copy. Same defaults. Customer mode
@@ -260,43 +260,43 @@ export default function DeepPurplePage() {
         </p>
 
         {/* Reframe diagram: Customer mode → Izivente engine → Advisor mode */}
-        <div className="bg-[#f2efe8] rounded-[1.11vw] p-[3.33vw] flex items-center gap-[2.22vw] mt-[2.22vw]">
+        <div className="bg-[#f2efe8] rounded-[1.11vw] max-lg:rounded-[12px] p-[3.33vw] max-lg:p-5 flex max-lg:flex-col items-center gap-[2.22vw] max-lg:gap-4 mt-[2.22vw] max-lg:mt-6">
           {/* Customer mode */}
-          <div className="flex-1 bg-white border border-[#bab5ad] rounded-[0.83vw] px-[1.94vw] py-[1.67vw] flex flex-col gap-[0.69vw]">
-            <p className="font-sans text-[0.97vw] font-semibold text-[#555] tracking-[-0.01vw]">
+          <div className="flex-1 max-lg:w-full bg-white border border-[#bab5ad] rounded-[0.83vw] max-lg:rounded-[8px] px-[1.94vw] max-lg:px-4 py-[1.67vw] max-lg:py-4 flex flex-col gap-[0.69vw] max-lg:gap-2">
+            <p className="font-sans text-[0.97vw] max-lg:text-[14px] font-semibold text-[#555] tracking-[-0.01vw]">
               Customer mode
             </p>
-            <p className="font-sans text-[0.9vw] font-normal text-[#524d57] leading-[1.45]">
+            <p className="font-sans text-[0.9vw] max-lg:text-[13px] font-normal text-[#524d57] leading-[1.45]">
               Self-serve. Plain language. Educational scaffolding. Soft handoff
               to advisor available at every step.
             </p>
           </div>
 
-          <span className="font-sans text-[2.22vw] font-light text-[#888]">
+          <span className="font-sans text-[2.22vw] max-lg:text-[20px] font-light text-[#888] max-lg:rotate-90">
             &rarr;
           </span>
 
           {/* Izivente engine */}
-          <div className="flex-1 bg-[#5a2a82] rounded-[0.83vw] px-[1.94vw] py-[1.67vw] flex flex-col gap-[0.69vw]">
-            <p className="font-sans text-[0.97vw] font-semibold text-white tracking-[-0.01vw]">
+          <div className="flex-1 max-lg:w-full bg-[#5a2a82] rounded-[0.83vw] max-lg:rounded-[8px] px-[1.94vw] max-lg:px-4 py-[1.67vw] max-lg:py-4 flex flex-col gap-[0.69vw] max-lg:gap-2">
+            <p className="font-sans text-[0.97vw] max-lg:text-[14px] font-semibold text-white tracking-[-0.01vw]">
               Izivente engine
             </p>
-            <p className="font-sans text-[0.9vw] font-normal text-white/85 leading-[1.45]">
+            <p className="font-sans text-[0.9vw] max-lg:text-[13px] font-normal text-white/85 leading-[1.45]">
               One calculation. One copy library. One regulatory audit trail. The
               shared surface both surfaces render.
             </p>
           </div>
 
-          <span className="font-sans text-[2.22vw] font-light text-[#888]">
+          <span className="font-sans text-[2.22vw] max-lg:text-[20px] font-light text-[#888] max-lg:rotate-90">
             &rarr;
           </span>
 
           {/* Advisor mode */}
-          <div className="flex-1 bg-white border border-[#bab5ad] rounded-[0.83vw] px-[1.94vw] py-[1.67vw] flex flex-col gap-[0.69vw]">
-            <p className="font-sans text-[0.97vw] font-semibold text-[#555] tracking-[-0.01vw]">
+          <div className="flex-1 max-lg:w-full bg-white border border-[#bab5ad] rounded-[0.83vw] max-lg:rounded-[8px] px-[1.94vw] max-lg:px-4 py-[1.67vw] max-lg:py-4 flex flex-col gap-[0.69vw] max-lg:gap-2">
+            <p className="font-sans text-[0.97vw] max-lg:text-[14px] font-semibold text-[#555] tracking-[-0.01vw]">
               Advisor mode
             </p>
-            <p className="font-sans text-[0.9vw] font-normal text-[#524d57] leading-[1.45]">
+            <p className="font-sans text-[0.9vw] max-lg:text-[13px] font-normal text-[#524d57] leading-[1.45]">
               Same surface, with elevation: customer state visibility,
               role-aware override authority, audit-logged actions.
             </p>
@@ -307,14 +307,14 @@ export default function DeepPurplePage() {
       {/* ═══════════════════════════════════════════════════
           04 / RESEARCH
          ═══════════════════════════════════════════════════ */}
-      <motion.div className="px-[3.33vw] mt-[4.44vw]" {...fadeUp}>
-        <p className="font-sans text-[0.76vw] font-semibold text-[#888] tracking-[0.092vw]">
+      <motion.div className="px-[3.33vw] max-lg:px-5 mt-[4.44vw] max-lg:mt-10" {...fadeUp}>
+        <p className="font-sans text-[0.76vw] max-lg:text-[11px] font-semibold text-[#888] tracking-[0.092vw]">
           04 / RESEARCH
         </p>
-        <h2 className="font-sans text-[3.06vw] font-light text-[#555] tracking-[-0.061vw] leading-[1.1] mt-[1.11vw]">
+        <h2 className="font-sans text-[3.06vw] max-lg:text-[24px] font-light text-[#555] tracking-[-0.061vw] leading-[1.1] mt-[1.11vw] max-lg:mt-3">
           What customers couldn&rsquo;t say themselves.
         </h2>
-        <p className="font-sans text-[1.25vw] font-normal text-[#555] leading-[1.5] tracking-[-0.013vw] mt-[1.67vw]">
+        <p className="font-sans text-[1.25vw] max-lg:text-[15px] font-normal text-[#555] leading-[1.5] tracking-[-0.013vw] mt-[1.67vw] max-lg:mt-4">
           Before unification could be a viable thesis, I had to learn what was
           actually breaking. With the team I led, we ran customer interviews and
           grouped what we heard into four categories. Customers couldn&rsquo;t
@@ -328,32 +328,32 @@ export default function DeepPurplePage() {
           alt="User research sessions — remote interviews with customers and advisors"
           width={5376}
           height={1572}
-          className="shimmer w-full h-auto pointer-events-none mt-[2.78vw]"
+          className="shimmer w-full h-auto pointer-events-none mt-[2.78vw] max-lg:mt-6"
           sizes="93vw"
         />
 
         {/* User quotes below photos */}
-        <div className="flex gap-[1.67vw] mt-[0.83vw]">
-          <p className="flex-1 font-sans text-[0.97vw] font-normal text-[#555] leading-[1.55]">
+        <div className="flex max-lg:flex-col gap-[1.67vw] max-lg:gap-3 mt-[0.83vw] max-lg:mt-3">
+          <p className="flex-1 font-sans text-[0.97vw] max-lg:text-[14px] font-normal text-[#555] leading-[1.55]">
             &ldquo;I like this new approach. Everything is well-explained, there
             are no hidden costs, and the interface is incredibly neat and easy to
             use.&rdquo; &mdash; MA, BP
           </p>
-          <p className="flex-1 font-sans text-[0.97vw] font-normal text-[#555] leading-[1.55]">
+          <p className="flex-1 font-sans text-[0.97vw] max-lg:text-[14px] font-normal text-[#555] leading-[1.55]">
             &ldquo;In a few clicks, I was able to simulate my credit power
             easily.&rdquo; &mdash; AS, CE
           </p>
         </div>
 
         {/* Photo caption */}
-        <p className="font-sans text-[0.9vw] font-normal text-[#555] leading-[1.45] mt-[0.56vw]">
+        <p className="font-sans text-[0.9vw] max-lg:text-[13px] font-normal text-[#555] leading-[1.45] mt-[0.56vw] max-lg:mt-2">
           Customer interviews. The quote that anchored the redesign: &ldquo;I
           never know if the simulator answer is the answer, or just one
           answer.&rdquo;
         </p>
 
         {/* 4 research insight cards — 2×2 grid */}
-        <div className="grid grid-cols-2 gap-[1.67vw] mt-[2.78vw]">
+        <div className="grid grid-cols-2 max-lg:grid-cols-1 gap-[1.67vw] max-lg:gap-4 mt-[2.78vw] max-lg:mt-6">
           {[
             {
               category: "LANGUAGE",
@@ -379,15 +379,15 @@ export default function DeepPurplePage() {
           ].map((card) => (
             <div
               key={card.category}
-              className="bg-[#f2efe8] rounded-[0.28vw] px-[1.67vw] py-[1.94vw] flex flex-col gap-[0.83vw]"
+              className="bg-[#f2efe8] rounded-[0.28vw] max-lg:rounded-[4px] px-[1.67vw] max-lg:px-5 py-[1.94vw] max-lg:py-5 flex flex-col gap-[0.83vw] max-lg:gap-2"
             >
-              <p className="font-sans text-[0.76vw] font-semibold text-[#888] tracking-[0.092vw]">
+              <p className="font-sans text-[0.76vw] max-lg:text-[11px] font-semibold text-[#888] tracking-[0.092vw]">
                 {card.category}
               </p>
-              <p className="font-sans text-[1.25vw] font-semibold text-[#555] leading-[1.3] tracking-[-0.013vw]">
+              <p className="font-sans text-[1.25vw] max-lg:text-[15px] font-semibold text-[#555] leading-[1.3] tracking-[-0.013vw]">
                 {card.title}
               </p>
-              <p className="font-sans text-[0.97vw] font-normal text-[#555] leading-[1.45]">
+              <p className="font-sans text-[0.97vw] max-lg:text-[14px] font-normal text-[#555] leading-[1.45]">
                 {card.body}
               </p>
             </div>
@@ -398,17 +398,17 @@ export default function DeepPurplePage() {
       {/* ═══════════════════════════════════════════════════
           05 / CUSTOMER MODE — THE SIMULATOR
          ═══════════════════════════════════════════════════ */}
-      <motion.div className="px-[3.33vw] mt-[4.44vw]" {...fadeUp}>
-        <p className="font-sans text-[0.76vw] font-semibold text-[#888] tracking-[0.092vw]">
+      <motion.div className="px-[3.33vw] max-lg:px-5 mt-[4.44vw] max-lg:mt-10" {...fadeUp}>
+        <p className="font-sans text-[0.76vw] max-lg:text-[11px] font-semibold text-[#888] tracking-[0.092vw]">
           05 / CUSTOMER MODE
         </p>
-        <h2 className="font-sans text-[3.06vw] font-light text-[#555] tracking-[-0.061vw] leading-[1.1] mt-[1.11vw]">
+        <h2 className="font-sans text-[3.06vw] max-lg:text-[24px] font-light text-[#555] tracking-[-0.061vw] leading-[1.1] mt-[1.11vw] max-lg:mt-3">
           A simulator that{" "}
           <span className="font-semibold text-[#9c4221]">
             teaches while it calculates.
           </span>
         </h2>
-        <p className="font-sans text-[1.25vw] font-normal text-[#555] leading-[1.5] tracking-[-0.013vw] mt-[1.67vw]">
+        <p className="font-sans text-[1.25vw] max-lg:text-[15px] font-normal text-[#555] leading-[1.5] tracking-[-0.013vw] mt-[1.67vw] max-lg:mt-4">
           The customer view is the larger of the two surfaces. Most users will
           only ever use this one. It had to teach without being condescending,
           calculate without obscuring, and surface advisor support without making
@@ -416,12 +416,12 @@ export default function DeepPurplePage() {
         </p>
 
         {/* END-TO-END FLOW · CUSTOMER label */}
-        <p className="font-sans text-[0.76vw] font-semibold text-[#888] tracking-[0.092vw] mt-[2.78vw]">
+        <p className="font-sans text-[0.76vw] max-lg:text-[11px] font-semibold text-[#888] tracking-[0.092vw] mt-[2.78vw] max-lg:mt-6">
           END-TO-END FLOW &middot; CUSTOMER
         </p>
 
         {/* 5 mobile flow screens — horizontal row */}
-        <div className="flex gap-[1.67vw] mt-[1.11vw]">
+        <div className="flex gap-[1.67vw] max-lg:gap-4 mt-[1.11vw] max-lg:mt-3 max-lg:overflow-x-auto max-lg:pb-4 max-lg:-mx-5 max-lg:px-5">
           {[
             {
               src: "/images/deep-purple/flow-0-credits.png",
@@ -459,9 +459,9 @@ export default function DeepPurplePage() {
               desc: "Soft handoff. Advisor calls only if precision needed. Self-serve next steps.",
             },
           ].map((screen) => (
-            <div key={screen.src} className="flex-1 flex flex-col items-start">
+            <div key={screen.src} className="flex-1 max-lg:min-w-[200px] max-lg:shrink-0 flex flex-col items-start">
               <div
-                className="rounded-[1.11vw] overflow-hidden w-full"
+                className="rounded-[1.11vw] max-lg:rounded-[8px] overflow-hidden w-full"
                 style={{ boxShadow: "0px 4px 20px 0px rgba(0,0,0,0.10)" }}
               >
                 <ShimmerImage
@@ -473,13 +473,13 @@ export default function DeepPurplePage() {
                   sizes="18vw"
                 />
               </div>
-              <p className="font-sans text-[0.76vw] font-semibold text-[#9c4221] tracking-[0.092vw] mt-[0.83vw]">
+              <p className="font-sans text-[0.76vw] max-lg:text-[11px] font-semibold text-[#9c4221] tracking-[0.092vw] mt-[0.83vw] max-lg:mt-2">
                 {screen.num}
               </p>
-              <p className="font-sans text-[0.97vw] font-semibold text-[#555] mt-[0.28vw]">
+              <p className="font-sans text-[0.97vw] max-lg:text-[14px] font-semibold text-[#555] mt-[0.28vw] max-lg:mt-1">
                 {screen.label}
               </p>
-              <p className="font-sans text-[0.76vw] font-normal text-[#555] leading-[1.45] mt-[0.28vw]">
+              <p className="font-sans text-[0.76vw] max-lg:text-[11px] font-normal text-[#555] leading-[1.45] mt-[0.28vw] max-lg:mt-1">
                 {screen.desc}
               </p>
             </div>
@@ -487,21 +487,21 @@ export default function DeepPurplePage() {
         </div>
 
         {/* RESPONSIVE · DESKTOP label */}
-        <p className="font-sans text-[0.76vw] font-semibold text-[#888] tracking-[0.092vw] mt-[2.78vw]">
+        <p className="font-sans text-[0.76vw] max-lg:text-[11px] font-semibold text-[#888] tracking-[0.092vw] mt-[2.78vw] max-lg:mt-6">
           RESPONSIVE &middot; DESKTOP &#8805; 1024PX
         </p>
 
         {/* Caption before browser */}
-        <p className="font-sans text-[0.97vw] font-normal text-[#555] leading-[1.5] mt-[0.83vw]">
+        <p className="font-sans text-[0.97vw] max-lg:text-[14px] font-normal text-[#555] leading-[1.5] mt-[0.83vw] max-lg:mt-2">
           Same simulator, same product surface. At desktop width the bottom tab
           bar swaps out for a top horizontal nav. Customers and advisors see the
           same screens; only the chrome adapts.
         </p>
 
         {/* Large browser screenshot below */}
-        <div className="mt-[1.67vw]">
+        <div className="mt-[1.67vw] max-lg:mt-4">
           <div
-            className="relative overflow-hidden rounded-[0.56vw]"
+            className="relative overflow-hidden rounded-[0.56vw] max-lg:rounded-[4px]"
             style={{ boxShadow: "0px 2px 8px 0px rgba(0,0,0,0.08)" }}
           >
             <ShimmerImage
@@ -519,8 +519,8 @@ export default function DeepPurplePage() {
       {/* ═══════════════════════════════════════════════════
           DESIGN PRINCIPLES
          ═══════════════════════════════════════════════════ */}
-      <motion.div className="px-[3.33vw] mt-[2.78vw]" {...fadeUp}>
-        <div className="flex flex-col gap-[1.11vw]">
+      <motion.div className="px-[3.33vw] max-lg:px-5 mt-[2.78vw] max-lg:mt-6" {...fadeUp}>
+        <div className="flex flex-col gap-[1.11vw] max-lg:gap-3">
           {[
             {
               category: "PLAIN-LANGUAGE WRAP",
@@ -554,18 +554,18 @@ export default function DeepPurplePage() {
           ].map((principle) => (
             <div
               key={principle.category}
-              className="bg-[#f2efe8] rounded-[0.28vw] flex gap-[2.22vw] items-start px-[2.22vw] py-[1.67vw]"
+              className="bg-[#f2efe8] rounded-[0.28vw] max-lg:rounded-[4px] flex max-lg:flex-col gap-[2.22vw] max-lg:gap-2 items-start px-[2.22vw] max-lg:px-5 py-[1.67vw] max-lg:py-5"
             >
-              <div className="w-[15.28vw] shrink-0">
-                <p className="font-sans text-[0.76vw] font-semibold text-[#888] tracking-[0.092vw]">
+              <div className="w-[15.28vw] max-lg:w-full shrink-0">
+                <p className="font-sans text-[0.76vw] max-lg:text-[11px] font-semibold text-[#888] tracking-[0.092vw]">
                   {principle.category}
                 </p>
               </div>
-              <div className="flex-1 flex flex-col gap-[0.42vw]">
-                <p className="font-sans text-[1.18vw] font-semibold text-[#555] leading-[1.3] tracking-[-0.012vw]">
+              <div className="flex-1 flex flex-col gap-[0.42vw] max-lg:gap-1">
+                <p className="font-sans text-[1.18vw] max-lg:text-[15px] font-semibold text-[#555] leading-[1.3] tracking-[-0.012vw]">
                   {principle.title}
                 </p>
-                <p className="font-sans text-[0.97vw] font-normal text-[#555] leading-[1.45]">
+                <p className="font-sans text-[0.97vw] max-lg:text-[14px] font-normal text-[#555] leading-[1.45]">
                   {principle.body}
                 </p>
               </div>
@@ -577,17 +577,17 @@ export default function DeepPurplePage() {
       {/* ═══════════════════════════════════════════════════
           06 / IZIVENTE: THE CONCEPT SPRINT
          ═══════════════════════════════════════════════════ */}
-      <motion.div className="px-[3.33vw] mt-[4.44vw]" {...fadeUp}>
-        <p className="font-sans text-[0.76vw] font-semibold text-[#888] tracking-[0.092vw]">
+      <motion.div className="px-[3.33vw] max-lg:px-5 mt-[4.44vw] max-lg:mt-10" {...fadeUp}>
+        <p className="font-sans text-[0.76vw] max-lg:text-[11px] font-semibold text-[#888] tracking-[0.092vw]">
           06 / IZIVENTE: THE CONCEPT SPRINT
         </p>
-        <h2 className="font-sans text-[3.06vw] font-light text-[#555] tracking-[-0.061vw] leading-[1.1] mt-[1.11vw]">
+        <h2 className="font-sans text-[3.06vw] max-lg:text-[24px] font-light text-[#555] tracking-[-0.061vw] leading-[1.1] mt-[1.11vw] max-lg:mt-3">
           Advisor-side: a sprint to{" "}
           <span className="font-semibold text-[#9c4221]">
             fund the unification.
           </span>
         </h2>
-        <p className="font-sans text-[1.25vw] font-normal text-[#555] leading-[1.5] tracking-[-0.013vw] mt-[1.67vw]">
+        <p className="font-sans text-[1.25vw] max-lg:text-[15px] font-normal text-[#555] leading-[1.5] tracking-[-0.013vw] mt-[1.67vw] max-lg:mt-4">
           Izivente was the advisor-facing desktop app. It was not in my shipped
           scope. Leadership hadn&rsquo;t yet committed engineering capacity to
           redesigning it. I led a one-week design sprint to produce a concept
@@ -601,7 +601,7 @@ export default function DeepPurplePage() {
         </p>
 
         {/* 3 outcome cards */}
-        <div className="flex gap-[1.67vw] mt-[2.78vw]">
+        <div className="flex max-lg:flex-col gap-[1.67vw] max-lg:gap-4 mt-[2.78vw] max-lg:mt-6">
           {[
             {
               category: "VISIBILITY",
@@ -623,13 +623,13 @@ export default function DeepPurplePage() {
               key={card.category}
               className="flex-1 bg-[#f2efe8] rounded-[0.28vw] px-[1.67vw] py-[1.94vw] flex flex-col gap-[0.83vw]"
             >
-              <p className="font-sans text-[0.76vw] font-semibold text-[#888] tracking-[0.092vw]">
+              <p className="font-sans text-[0.76vw] max-lg:text-[11px] font-semibold text-[#888] tracking-[0.092vw]">
                 {card.category}
               </p>
-              <p className="font-sans text-[1.25vw] font-semibold text-[#555] leading-[1.3] tracking-[-0.013vw]">
+              <p className="font-sans text-[1.25vw] max-lg:text-[15px] font-semibold text-[#555] leading-[1.3] tracking-[-0.013vw]">
                 {card.title}
               </p>
-              <p className="font-sans text-[0.97vw] font-normal text-[#555] leading-[1.45]">
+              <p className="font-sans text-[0.97vw] max-lg:text-[14px] font-normal text-[#555] leading-[1.45]">
                 {card.body}
               </p>
             </div>
@@ -640,17 +640,17 @@ export default function DeepPurplePage() {
       {/* ═══════════════════════════════════════════════════
           07 / WHAT SHIPPED — RESULTS
          ═══════════════════════════════════════════════════ */}
-      <motion.div className="px-[3.33vw] mt-[4.44vw]" {...fadeUp}>
-        <p className="font-sans text-[0.76vw] font-semibold text-[#888] tracking-[0.092vw]">
+      <motion.div className="px-[3.33vw] max-lg:px-5 mt-[4.44vw] max-lg:mt-10" {...fadeUp}>
+        <p className="font-sans text-[0.76vw] max-lg:text-[11px] font-semibold text-[#888] tracking-[0.092vw]">
           07 / WHAT SHIPPED
         </p>
-        <h2 className="font-sans text-[3.06vw] font-light text-[#555] tracking-[-0.061vw] leading-[1.1] mt-[1.11vw]">
+        <h2 className="font-sans text-[3.06vw] max-lg:text-[24px] font-light text-[#555] tracking-[-0.061vw] leading-[1.1] mt-[1.11vw] max-lg:mt-3">
           <span className="font-semibold text-[#9c4221]">Consumer loan</span>
           {" "}first, then sequential rollout.
         </h2>
 
         {/* 4-stat row */}
-        <div className="flex gap-[2.22vw] mt-[2.78vw]">
+        <div className="flex max-lg:flex-wrap gap-[2.22vw] max-lg:gap-6 mt-[2.78vw] max-lg:mt-6">
           {[
             {
               value: "+€1M",
@@ -675,15 +675,15 @@ export default function DeepPurplePage() {
           ].map((stat) => (
             <div
               key={stat.value}
-              className="flex-1 flex flex-col gap-[0.56vw]"
+              className="flex-1 max-lg:basis-[calc(50%-12px)] flex flex-col gap-[0.56vw] max-lg:gap-1"
             >
-              <p className="font-sans text-[3.89vw] font-light text-[#555] tracking-[-0.078vw] leading-none">
+              <p className="font-sans text-[3.89vw] max-lg:text-[32px] font-light text-[#555] tracking-[-0.078vw] leading-none">
                 {stat.value}
               </p>
-              <p className="font-sans text-[0.76vw] font-semibold text-[#888] tracking-[0.092vw]">
+              <p className="font-sans text-[0.76vw] max-lg:text-[10px] font-semibold text-[#888] tracking-[0.092vw]">
                 {stat.label}
               </p>
-              <p className="font-sans text-[0.97vw] font-normal text-[#555] leading-[1.45]">
+              <p className="font-sans text-[0.97vw] max-lg:text-[13px] font-normal text-[#555] leading-[1.45]">
                 {stat.desc}
               </p>
             </div>
@@ -691,11 +691,11 @@ export default function DeepPurplePage() {
         </div>
 
         {/* What these numbers proved — callout */}
-        <div className="bg-[#f2efe8] rounded-[0.28vw] px-[1.67vw] py-[1.39vw] mt-[2.22vw] flex flex-col gap-[0.42vw]">
-          <p className="font-sans text-[0.76vw] font-semibold text-[#888] tracking-[0.092vw]">
+        <div className="bg-[#f2efe8] rounded-[0.28vw] max-lg:rounded-[4px] px-[1.67vw] max-lg:px-5 py-[1.39vw] max-lg:py-5 mt-[2.22vw] max-lg:mt-6 flex flex-col gap-[0.42vw] max-lg:gap-2">
+          <p className="font-sans text-[0.76vw] max-lg:text-[11px] font-semibold text-[#888] tracking-[0.092vw]">
             WHAT THESE NUMBERS PROVED
           </p>
-          <p className="font-sans text-[0.97vw] font-normal text-[#555] leading-[1.5]">
+          <p className="font-sans text-[0.97vw] max-lg:text-[14px] font-normal text-[#555] leading-[1.5]">
             +&euro;1M and &minus;42% are first-month indicators on consumer
             loan, the first product to ship under the unified flow. They paid
             back the redesign&rsquo;s engineering cost in weeks and gave
@@ -712,24 +712,24 @@ export default function DeepPurplePage() {
       {/* ═══════════════════════════════════════════════════
           08 / REFLECTION
          ═══════════════════════════════════════════════════ */}
-      <motion.div className="px-[3.33vw] mt-[4.44vw]" {...fadeUp}>
-        <p className="font-sans text-[0.76vw] font-semibold text-[#888] tracking-[0.092vw]">
+      <motion.div className="px-[3.33vw] max-lg:px-5 mt-[4.44vw] max-lg:mt-10" {...fadeUp}>
+        <p className="font-sans text-[0.76vw] max-lg:text-[11px] font-semibold text-[#888] tracking-[0.092vw]">
           08 / FIVE YEARS LATER
         </p>
-        <h2 className="font-sans text-[3.06vw] font-light text-[#555] tracking-[-0.061vw] leading-[1.1] mt-[1.11vw]">
+        <h2 className="font-sans text-[3.06vw] max-lg:text-[24px] font-light text-[#555] tracking-[-0.061vw] leading-[1.1] mt-[1.11vw] max-lg:mt-3">
           What junior-me missed, and what junior-me got right.
         </h2>
 
         {/* Two-column reflection */}
-        <div className="flex gap-[4.44vw] mt-[2.78vw]">
-          <div className="flex-1 flex flex-col gap-[0.83vw]">
-            <p className="font-sans text-[0.76vw] font-semibold text-[#888] tracking-[0.092vw]">
+        <div className="flex max-lg:flex-col gap-[4.44vw] max-lg:gap-8 mt-[2.78vw] max-lg:mt-6">
+          <div className="flex-1 flex flex-col gap-[0.83vw] max-lg:gap-2">
+            <p className="font-sans text-[0.76vw] max-lg:text-[11px] font-semibold text-[#888] tracking-[0.092vw]">
               DIFFERENTLY
             </p>
-            <p className="font-sans text-[1.67vw] font-semibold text-[#555] leading-[1.25] tracking-[-0.025vw]">
+            <p className="font-sans text-[1.67vw] max-lg:text-[18px] font-semibold text-[#555] leading-[1.25] tracking-[-0.025vw] max-lg:tracking-normal">
               I&rsquo;d talk to advisors, not just customers.
             </p>
-            <p className="font-sans text-[1.04vw] font-normal text-[#555] leading-[1.5]">
+            <p className="font-sans text-[1.04vw] max-lg:text-[14px] font-normal text-[#555] leading-[1.5]">
               I interviewed customers thoroughly and learned what they
               couldn&rsquo;t articulate. I didn&rsquo;t interview the people on
               the receiving end of every confused call: the advisors. Junior-me
@@ -741,14 +741,14 @@ export default function DeepPurplePage() {
               from the start.
             </p>
           </div>
-          <div className="flex-1 flex flex-col gap-[0.83vw]">
-            <p className="font-sans text-[0.76vw] font-semibold text-[#888] tracking-[0.092vw]">
+          <div className="flex-1 flex flex-col gap-[0.83vw] max-lg:gap-2">
+            <p className="font-sans text-[0.76vw] max-lg:text-[11px] font-semibold text-[#888] tracking-[0.092vw]">
               AGAIN
             </p>
-            <p className="font-sans text-[1.67vw] font-semibold text-[#555] leading-[1.25] tracking-[-0.025vw]">
+            <p className="font-sans text-[1.67vw] max-lg:text-[18px] font-semibold text-[#555] leading-[1.25] tracking-[-0.025vw]">
               Treating the brief as the floor, not the ceiling.
             </p>
-            <p className="font-sans text-[1.04vw] font-normal text-[#555] leading-[1.5]">
+            <p className="font-sans text-[1.04vw] max-lg:text-[14px] font-normal text-[#555] leading-[1.5]">
               The mandate was &ldquo;redesign the credit products in Deep
               Purple.&rdquo; Junior-me did that, but also recognized that the
               actual problem was bigger than the brief, and led the Izivente
@@ -763,11 +763,13 @@ export default function DeepPurplePage() {
       {/* ═══════════════════════════════════════════════════
           Closing navigation
          ═══════════════════════════════════════════════════ */}
-      <div className="px-[3.33vw] mt-[4.44vw]">
-        <div className="flex items-center">
+      <div className="h-[5vw] max-lg:h-[60px]" />
+
+      <div className="fixed bottom-0 left-0 right-0 z-40 bg-cream/90 backdrop-blur-sm border-t border-[#d9d9d9]">
+        <div className="flex items-center px-[3.33vw] max-lg:px-5 py-[1.39vw] max-lg:py-4">
           <a
             href="/work"
-            className="font-sans text-[1.39vw] font-normal text-[#555] hover:underline underline-offset-4"
+            className="font-sans text-[1.39vw] max-lg:text-[16px] font-normal text-[#555] hover:underline underline-offset-4"
           >
             &larr; Back to work
           </a>
@@ -777,8 +779,8 @@ export default function DeepPurplePage() {
       {/* ═══════════════════════════════════════════════════
           Footer
          ═══════════════════════════════════════════════════ */}
-      <div className="flex items-center justify-between px-[3.33vw] py-[2vh] mt-[3.33vw]">
-        <span className="font-sans text-[0.76vw] text-text-secondary whitespace-nowrap">
+      <div className="flex items-center justify-between px-[3.33vw] max-lg:px-5 py-[2vh] mt-[3.33vw] max-lg:mt-8">
+        <span className="font-sans text-[0.76vw] max-lg:text-[11px] text-text-secondary whitespace-nowrap">
           &copy; 2026 Nihel Mouelhi. All rights reserved.
         </span>
       </div>

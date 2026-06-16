@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import WorkplaceSolutionsPage from "@/components/WorkplaceSolutionsPage";
+import ProtectedWorkplaceSolutions from "./ProtectedWorkplaceSolutions";
 
 export const metadata: Metadata = {
   title: "Workplace Solutions — JP Morgan",
@@ -14,9 +14,5 @@ export const metadata: Metadata = {
 };
 
 export default function WorkplaceSolutions() {
-  return (
-    <main className="w-screen min-h-screen bg-cream">
-      <WorkplaceSolutionsPage />
-    </main>
-  );
+  return <ProtectedWorkplaceSolutions />;
 }

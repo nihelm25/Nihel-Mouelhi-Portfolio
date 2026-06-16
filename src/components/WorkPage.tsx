@@ -6,12 +6,14 @@ import Header from "./Header";
 
 type CaseCardProps = {
   heading: string;
+  company: string;
   tags: string[];
   metrics: { value: string; label: string }[];
   visualBg: string;
   visualContent: React.ReactNode;
   index: number;
   href?: string;
+  locked?: boolean;
 };
 
 /* ── Reusable browser-chrome wrapper ── */
@@ -64,7 +66,7 @@ function JPMorganVisual() {
       alt="JP Morgan Workplace Solutions Dashboard"
       fill
       className="object-cover pointer-events-none"
-      sizes="64vw"
+      sizes="(max-width: 1024px) 100vw, 64vw"
     />
   );
 }
@@ -77,7 +79,7 @@ function SAFEVisual() {
       alt="SAFE Surveillance Platform"
       fill
       className="object-cover pointer-events-none"
-      sizes="64vw"
+      sizes="(max-width: 1024px) 100vw, 64vw"
     />
   );
 }
@@ -90,7 +92,7 @@ function ESGVisual() {
       alt="ESG Workspace"
       fill
       className="object-cover pointer-events-none"
-      sizes="64vw"
+      sizes="(max-width: 1024px) 100vw, 64vw"
     />
   );
 }
@@ -103,7 +105,7 @@ function DeepPurpleVisual() {
       alt="Deep Purple BPCE Banking"
       fill
       className="object-cover pointer-events-none"
-      sizes="64vw"
+      sizes="(max-width: 1024px) 100vw, 64vw"
     />
   );
 }
@@ -112,6 +114,7 @@ function DeepPurpleVisual() {
 const projects: Omit<CaseCardProps, "index">[] = [
   {
     heading: "Replacing a legacy equity platform for a global participant base",
+    company: "JP Morgan Chase",
     tags: ["B2C", "FINTECH", "EQUITY"],
     metrics: [
       { value: "$19B", label: "Assets under administration" },
@@ -120,10 +123,12 @@ const projects: Omit<CaseCardProps, "index">[] = [
     visualBg: "#0a5264",
     visualContent: <JPMorganVisual />,
     href: "/work/workplace-solutions",
+    locked: true,
   },
   {
     heading:
       "AI that augments a 14-person control room without breaking the chain of command",
+    company: "Thales",
     tags: ["B2B", "AI", "TRANSPORT"],
     metrics: [
       { value: "~5min", label: "Report to interception target" },
@@ -136,6 +141,7 @@ const projects: Omit<CaseCardProps, "index">[] = [
   {
     heading:
       "Unifying two opaque internal tools into one workspace for ESG methodologies",
+    company: "JP Morgan Chase & Co",
     tags: ["B2E", "B2C", "FINTECH"],
     metrics: [
       { value: "2→1", label: "Legacy tools consolidated" },
@@ -144,9 +150,11 @@ const projects: Omit<CaseCardProps, "index">[] = [
     visualBg: "#1a4a73",
     visualContent: <ESGVisual />,
     href: "/work/specificationworkbench",
+    locked: true,
   },
   {
     heading: "One unified product surface for BPCE credit products",
+    company: "BPCE Group",
     tags: ["B2C", "B2E", "BANKING"],
     metrics: [
       { value: "+€1M", label: "Funding requests,\nfirst month" },
@@ -160,16 +168,18 @@ const projects: Omit<CaseCardProps, "index">[] = [
 
 function CaseCard({
   heading,
+  company,
   tags,
   metrics,
   visualBg,
   visualContent,
   index,
   href,
+  locked,
 }: CaseCardProps) {
   const card = (
     <motion.div
-      className={`bg-[#faf6ee] rounded-[1.39vw] overflow-hidden flex w-full border border-[#d9d9d9] transition-all duration-300 ease-out${href ? " cursor-pointer hover:shadow-[0px_8px_24px_0px_rgba(100,100,100,0.25)] hover:border-[#bbb]" : ""}`}
+      className={`bg-[#faf6ee] rounded-[1.39vw] max-lg:rounded-[12px] overflow-hidden flex max-lg:flex-col-reverse w-full border border-[#d9d9d9] transition-all duration-300 ease-out${href ? " cursor-pointer hover:shadow-[0px_8px_24px_0px_rgba(100,100,100,0.25)] hover:border-[#bbb]" : ""}`}
       style={{ boxShadow: "0px 4px 4px 0px rgba(127,127,127,0.25)" }}
       initial={{ opacity: 0, y: 40 }}
       animate={{ opacity: 1, y: 0 }}
@@ -177,16 +187,25 @@ function CaseCard({
       whileHover={href ? { y: -4 } : undefined}
     >
       {/* Left -- text content */}
-      <div className="w-[36.11%] shrink-0 p-[3.33vw] flex flex-col justify-between">
-        <div className="flex flex-col gap-[1.1vw]">
-          <h3 className="font-sans font-light text-[1.8vw] leading-[1.25] tracking-[-0.045vw] text-[#555]">
+      <div className="w-[36.11%] max-lg:w-full shrink-0 p-[3.33vw] max-lg:p-5 flex flex-col justify-between max-lg:gap-5">
+        <div className="flex flex-col gap-[1.1vw] max-lg:gap-3">
+          <p className="font-sans font-semibold text-[0.76vw] max-lg:text-[11px] text-[#888] tracking-[0.092vw] uppercase">
+            {company}
+          </p>
+          <h3 className="font-sans font-light text-[1.8vw] max-lg:text-[18px] leading-[1.25] tracking-[-0.045vw] text-[#555]">
             {heading}
           </h3>
-          <div className="flex gap-[0.56vw] items-center flex-wrap">
+          <div className="flex gap-[0.56vw] max-lg:gap-2 items-center flex-wrap">
+            {locked && (
+              <span className="flex items-center gap-[0.28vw] max-lg:gap-1 border border-[#6b6b6b] rounded-full px-[1.1vw] max-lg:px-3 py-[0.56vw] max-lg:py-1.5 font-sans text-[0.625vw] max-lg:text-[10px] tracking-[1.62px] text-[#555] whitespace-nowrap">
+                <svg className="w-[0.7vw] max-lg:w-[11px] h-[0.7vw] max-lg:h-[11px]" viewBox="0 0 16 16" fill="currentColor"><path d="M11.5 6V4.5a3.5 3.5 0 1 0-7 0V6H3v8h10V6h-1.5ZM6 4.5a2 2 0 1 1 4 0V6H6V4.5Z"/></svg>
+                NDA
+              </span>
+            )}
             {tags.map((tag) => (
               <span
                 key={tag}
-                className="border border-[#6b6b6b] rounded-full px-[1.1vw] py-[0.56vw] font-sans text-[0.625vw] tracking-[1.62px] text-[#555] whitespace-nowrap"
+                className="border border-[#6b6b6b] rounded-full px-[1.1vw] max-lg:px-3 py-[0.56vw] max-lg:py-1.5 font-sans text-[0.625vw] max-lg:text-[10px] tracking-[1.62px] text-[#555] whitespace-nowrap"
               >
                 {tag}
               </span>
@@ -194,15 +213,15 @@ function CaseCard({
           </div>
         </div>
 
-        <div className="flex flex-col gap-[1.1vw]">
+        <div className="flex flex-col gap-[1.1vw] max-lg:gap-3">
           <div className="h-px bg-[#c6c6c6] w-full" />
-          <div className="flex gap-[1.39vw] items-start text-[#555]">
+          <div className="flex gap-[1.39vw] max-lg:gap-4 items-start text-[#555]">
             {metrics.map((m) => (
               <div key={m.value} className="flex flex-col flex-1">
-                <p className="font-sans font-bold text-[3.06vw] tracking-[-0.12vw] leading-none whitespace-nowrap">
+                <p className="font-sans font-bold text-[3.06vw] max-lg:text-[28px] tracking-[-0.12vw] leading-none whitespace-nowrap">
                   {m.value}
                 </p>
-                <p className="font-sans font-light text-[0.76vw] leading-[1.45] mt-[0.28vw] whitespace-pre-line">
+                <p className="font-sans font-light text-[0.76vw] max-lg:text-[11px] leading-[1.45] mt-[0.28vw] whitespace-pre-line">
                   {m.label}
                 </p>
               </div>
@@ -213,7 +232,7 @@ function CaseCard({
 
       {/* Right -- visual */}
       <div
-        className="flex-1 relative overflow-hidden min-h-[36.11vw] border-l border-[rgba(255,255,255,0.06)] group-hover/card:scale-[1.02] transition-transform duration-500 ease-out"
+        className="flex-1 relative overflow-hidden min-h-[36.11vw] max-lg:min-h-[200px] max-lg:aspect-[16/10] border-l max-lg:border-l-0 border-[rgba(255,255,255,0.06)] group-hover/card:scale-[1.02] transition-transform duration-500 ease-out"
         style={{ backgroundColor: visualBg }}
       >
         {visualContent}
@@ -238,26 +257,26 @@ export default function WorkPage() {
       <Header activeItem="WORK" />
 
       {/* Header spacer */}
-      <div className="h-[19.4vw]" />
+      <div className="h-[19.4vw] max-lg:h-[100px]" />
 
-      {/* Project cards — sticky stacking */}
-      <div className="px-[3.33vw] pb-[2.22vw]">
+      {/* Project cards — sticky stacking (desktop), normal flow (mobile) */}
+      <div className="px-[3.33vw] max-lg:px-5 pb-[2.22vw] max-lg:pb-6">
         {projects.map((project, i) => (
           <div
             key={i}
-            className={`sticky ${i < projects.length - 1 ? "mb-[5vw]" : ""}`}
+            className={`sticky max-lg:static ${i < projects.length - 1 ? "mb-[5vw] max-lg:mb-6" : ""}`}
             style={{ zIndex: i + 1, top: `${2 + i * 1.4}vw` }}
           >
             <CaseCard {...project} index={i} />
           </div>
         ))}
-        {/* Spacer so the last card can reach its sticky position */}
-        <div className="h-[25vw]" />
+        {/* Spacer so the last card can reach its sticky position — desktop only */}
+        <div className="h-[25vw] max-lg:h-0" />
       </div>
 
       {/* Footer */}
-      <div className="flex items-center justify-between px-[3.33vw] py-[2vh]">
-        <span className="font-sans text-[0.76vw] text-text-secondary whitespace-nowrap">
+      <div className="flex items-center justify-between px-[3.33vw] max-lg:px-5 py-[2vh]">
+        <span className="font-sans text-[0.76vw] max-lg:text-[11px] text-text-secondary whitespace-nowrap">
           &copy; 2026 Nihel Mouelhi. All rights reserved.
         </span>
       </div>

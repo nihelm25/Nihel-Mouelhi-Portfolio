@@ -23,14 +23,14 @@ function ComplexityCard({
   body: string;
 }) {
   return (
-    <div className="bg-[#f2efe8] rounded-[0.28vw] px-[1.67vw] py-[1.94vw] flex flex-col gap-[0.83vw]">
-      <p className="font-sans text-[0.76vw] font-semibold text-[#888] tracking-[0.092vw]">
+    <div className="bg-[#f2efe8] rounded-[0.28vw] max-lg:rounded-[4px] px-[1.67vw] max-lg:px-5 py-[1.94vw] max-lg:py-5 flex flex-col gap-[0.83vw] max-lg:gap-3">
+      <p className="font-sans text-[0.76vw] max-lg:text-[11px] font-semibold text-[#888] tracking-[0.092vw]">
         {label}
       </p>
-      <p className="font-sans text-[1.25vw] font-semibold text-[#555] leading-[1.3] tracking-[-0.013vw]">
+      <p className="font-sans text-[1.25vw] max-lg:text-[16px] font-semibold text-[#555] leading-[1.3] tracking-[-0.013vw]">
         {title}
       </p>
-      <p className="font-sans text-[0.97vw] font-normal text-[#555] leading-[1.45]">
+      <p className="font-sans text-[0.97vw] max-lg:text-[14px] font-normal text-[#555] leading-[1.45]">
         {body}
       </p>
     </div>
@@ -43,15 +43,15 @@ export default function WorkplaceSolutionsPage() {
       <Header activeItem="WORK" />
 
       {/* Header spacer */}
-      <div className="h-[19.4vw]" />
+      <div className="h-[19.4vw] max-lg:h-[100px]" />
 
       {/* ═══════════════════════════════════════════════════
           HERO
          ═══════════════════════════════════════════════════ */}
-      <div className="px-[3.33vw]">
+      <div className="px-[3.33vw] max-lg:px-5">
         {/* Label */}
         <motion.p
-          className="font-sans text-[0.76vw] font-semibold text-[#888] tracking-[0.092vw]"
+          className="font-sans text-[0.76vw] max-lg:text-[11px] font-semibold text-[#888] tracking-[0.092vw]"
           {...fadeUp}
         >
           CASE STUDY, 01 &middot; 2025&ndash;2026 &middot; PRODUCT DESIGNER
@@ -60,7 +60,7 @@ export default function WorkplaceSolutionsPage() {
 
         {/* Title */}
         <motion.h1
-          className="font-sans text-[5vw] font-light text-[#555] tracking-[-0.15vw] mt-[1.39vw]"
+          className="font-sans text-[5vw] max-lg:text-[32px] font-light text-[#555] tracking-[-0.15vw] mt-[1.39vw]"
           {...fadeUp}
           transition={{ delay: 0.1, duration: 0.6 }}
         >
@@ -69,11 +69,11 @@ export default function WorkplaceSolutionsPage() {
 
         {/* Hero browser frame */}
         <motion.div
-          className="mt-[2.78vw]"
+          className="mt-[2.78vw] max-lg:mt-6"
           {...fadeUp}
           transition={{ delay: 0.2, duration: 0.7 }}
         >
-          <div className="relative max-h-[49.17vw] overflow-hidden rounded-[0.56vw]" style={{ boxShadow: "0px 2px 8px 0px rgba(0,0,0,0.08)" }}>
+          <div className="relative max-h-[49.17vw] max-lg:max-h-none overflow-hidden rounded-[0.56vw] max-lg:rounded-[6px]" style={{ boxShadow: "0px 2px 8px 0px rgba(0,0,0,0.08)" }}>
             <ShimmerImage
               src="/images/dashboard-screenshot.png"
               alt="Workplace Solutions Dashboard"
@@ -90,12 +90,12 @@ export default function WorkplaceSolutionsPage() {
 
         {/* Hero bottom row: meta + intro */}
         <motion.div
-          className="flex gap-[4.44vw] mt-[2.78vw]"
+          className="flex max-lg:flex-col gap-[4.44vw] max-lg:gap-6 mt-[2.78vw]"
           {...fadeUp}
           transition={{ delay: 0.3, duration: 0.6 }}
         >
           {/* Left: meta column */}
-          <div className="w-[25.63vw] shrink-0 flex flex-col gap-[1.94vw]">
+          <div className="w-[25.63vw] max-lg:w-full shrink-0 flex flex-col gap-[1.94vw] max-lg:gap-4">
             {[
               {
                 label: "COMPANY",
@@ -109,11 +109,11 @@ export default function WorkplaceSolutionsPage() {
                   "Product strategy · Regulation as design · Multi-product UX",
               },
             ].map((item) => (
-              <div key={item.label} className="flex flex-col gap-[0.35vw]">
-                <p className="font-sans text-[0.76vw] font-semibold text-[#888] tracking-[0.092vw]">
+              <div key={item.label} className="flex flex-col gap-[0.35vw] max-lg:gap-1">
+                <p className="font-sans text-[0.76vw] max-lg:text-[11px] font-semibold text-[#888] tracking-[0.092vw]">
                   {item.label}
                 </p>
-                <p className="font-sans text-[0.97vw] font-normal text-[#555]">
+                <p className="font-sans text-[0.97vw] max-lg:text-[14px] font-normal text-[#555]">
                   {item.value}
                 </p>
               </div>
@@ -122,7 +122,7 @@ export default function WorkplaceSolutionsPage() {
 
           {/* Right: intro paragraph */}
           <div className="flex-1">
-            <p className="font-sans text-[1.53vw] font-normal text-[#555] leading-[1.45] tracking-[-0.023vw]">
+            <p className="font-sans text-[1.53vw] max-lg:text-[16px] font-normal text-[#555] leading-[1.45] tracking-[-0.023vw]">
               At J.P. Morgan Workplace Solutions, a first-time enrollee and a
               CEO clearing a sale window use the same platform. It&rsquo;s the
               equity-management system public and private companies use to
@@ -141,15 +141,15 @@ export default function WorkplaceSolutionsPage() {
       {/* ═══════════════════════════════════════════════════
           01 / THE MANDATE
          ═══════════════════════════════════════════════════ */}
-      <motion.div className="px-[3.33vw] mt-[4.44vw]" {...fadeUp}>
-        <p className="font-sans text-[0.76vw] font-semibold text-[#888] tracking-[0.092vw]">
+      <motion.div className="px-[3.33vw] max-lg:px-5 mt-[4.44vw] max-lg:mt-10" {...fadeUp}>
+        <p className="font-sans text-[0.76vw] max-lg:text-[11px] font-semibold text-[#888] tracking-[0.092vw]">
           01 / THE MANDATE
         </p>
-        <h2 className="font-sans text-[3.06vw] font-light text-[#555] tracking-[-0.061vw] leading-[1.1] mt-[1.11vw]">
+        <h2 className="font-sans text-[3.06vw] max-lg:text-[24px] font-light text-[#555] tracking-[-0.061vw] leading-[1.1] mt-[1.11vw]">
           Replace a legacy platform without losing{" "}
           <span className="font-semibold text-[#9c4221]">our users.</span>
         </h2>
-        <p className="font-sans text-[1.25vw] font-normal text-[#555] leading-[1.5] tracking-[-0.013vw] mt-[1.67vw]">
+        <p className="font-sans text-[1.25vw] max-lg:text-[15px] font-normal text-[#555] leading-[1.5] tracking-[-0.013vw] mt-[1.67vw]">
           The brief was a migration: move every participant from the old
           platform onto a new one, expand to a global client base across dozens
           of jurisdictions, and add private-company plan types the legacy system
@@ -166,15 +166,15 @@ export default function WorkplaceSolutionsPage() {
       {/* ═══════════════════════════════════════════════════
           02 / THE COMPLEXITY
          ═══════════════════════════════════════════════════ */}
-      <motion.div className="px-[3.33vw] mt-[4.44vw]" {...fadeUp}>
-        <p className="font-sans text-[0.76vw] font-semibold text-[#888] tracking-[0.092vw]">
+      <motion.div className="px-[3.33vw] max-lg:px-5 mt-[4.44vw] max-lg:mt-10" {...fadeUp}>
+        <p className="font-sans text-[0.76vw] max-lg:text-[11px] font-semibold text-[#888] tracking-[0.092vw]">
           02 / THE COMPLEXITY
         </p>
-        <h2 className="font-sans text-[3.06vw] font-light text-[#555] tracking-[-0.061vw] leading-[1.1] mt-[1.11vw]">
+        <h2 className="font-sans text-[3.06vw] max-lg:text-[24px] font-light text-[#555] tracking-[-0.061vw] leading-[1.1] mt-[1.11vw]">
           Combinatorial complexity,{" "}
           <span className="font-semibold text-[#9c4221]">by design.</span>
         </h2>
-        <p className="font-sans text-[1.25vw] font-normal text-[#555] leading-[1.5] tracking-[-0.013vw] mt-[1.67vw]">
+        <p className="font-sans text-[1.25vw] max-lg:text-[15px] font-normal text-[#555] leading-[1.5] tracking-[-0.013vw] mt-[1.67vw]">
           Equity isn&rsquo;t one product. It&rsquo;s a matrix. Regulation
           differs by jurisdiction; plan rules differ by client; customization
           differs by contract; users range from a junior employee enrolling in
@@ -186,7 +186,7 @@ export default function WorkplaceSolutionsPage() {
         </p>
 
         {/* 2x2 card grid */}
-        <div className="grid grid-cols-2 gap-[1.67vw] mt-[2.22vw]">
+        <div className="grid grid-cols-2 max-lg:grid-cols-1 gap-[1.67vw] max-lg:gap-4 mt-[2.22vw]">
           <ComplexityCard
             label="JURISDICTION"
             title="Regulation by country."
@@ -213,17 +213,17 @@ export default function WorkplaceSolutionsPage() {
       {/* ═══════════════════════════════════════════════════
           03 / THE REFRAME
          ═══════════════════════════════════════════════════ */}
-      <motion.div className="px-[3.33vw] mt-[4.44vw]" {...fadeUp}>
-        <p className="font-sans text-[0.76vw] font-semibold text-[#888] tracking-[0.092vw]">
+      <motion.div className="px-[3.33vw] max-lg:px-5 mt-[4.44vw] max-lg:mt-10" {...fadeUp}>
+        <p className="font-sans text-[0.76vw] max-lg:text-[11px] font-semibold text-[#888] tracking-[0.092vw]">
           03 / THE REFRAME
         </p>
-        <h2 className="font-sans text-[3.06vw] font-light text-[#555] tracking-[-0.061vw] leading-[1.1] mt-[1.11vw]">
+        <h2 className="font-sans text-[3.06vw] max-lg:text-[24px] font-light text-[#555] tracking-[-0.061vw] leading-[1.1] mt-[1.11vw]">
           Two journeys,{" "}
           <span className="font-semibold text-[#9c4221]">
             one decision pipeline.
           </span>
         </h2>
-        <p className="font-sans text-[1.25vw] font-normal text-[#555] leading-[1.5] tracking-[-0.013vw] mt-[1.67vw]">
+        <p className="font-sans text-[1.25vw] max-lg:text-[15px] font-normal text-[#555] leading-[1.5] tracking-[-0.013vw] mt-[1.67vw]">
           View &amp; manage and model &amp; transact were scoped as two journey
           lines with two backlogs. Looked at from the participant&rsquo;s side,
           they&rsquo;re a single pipeline: I want to know what I have. I want to
@@ -233,16 +233,16 @@ export default function WorkplaceSolutionsPage() {
         </p>
 
         {/* 3-column pipeline */}
-        <div className="flex items-stretch gap-[0.83vw] mt-[2.22vw]">
+        <div className="flex max-lg:flex-col items-stretch gap-[0.83vw] max-lg:gap-4 mt-[2.22vw]">
           {/* VIEW */}
-          <div className="flex-1 bg-[#f2efe8] rounded-[0.28vw] px-[1.67vw] py-[1.94vw] flex flex-col gap-[0.83vw]">
-            <p className="font-sans text-[0.76vw] font-semibold text-[#888] tracking-[0.092vw]">
+          <div className="flex-1 bg-[#f2efe8] rounded-[0.28vw] max-lg:rounded-[4px] px-[1.67vw] max-lg:px-5 py-[1.94vw] max-lg:py-5 flex flex-col gap-[0.83vw] max-lg:gap-3">
+            <p className="font-sans text-[0.76vw] max-lg:text-[11px] font-semibold text-[#888] tracking-[0.092vw]">
               VIEW
             </p>
-            <p className="font-sans text-[1.25vw] font-semibold text-[#555] leading-[1.3] tracking-[-0.013vw]">
+            <p className="font-sans text-[1.25vw] max-lg:text-[16px] font-semibold text-[#555] leading-[1.3] tracking-[-0.013vw]">
               What do I have?
             </p>
-            <p className="font-sans text-[0.97vw] font-normal text-[#555] leading-[1.45]">
+            <p className="font-sans text-[0.97vw] max-lg:text-[14px] font-normal text-[#555] leading-[1.45]">
               Dashboard and portfolio. Holdings, vesting schedules, grants,
               contribution plans, surfaced in plain language with insights
               answering the questions a participant would otherwise call to ask.
@@ -250,21 +250,21 @@ export default function WorkplaceSolutionsPage() {
           </div>
 
           {/* Arrow */}
-          <div className="flex items-center shrink-0">
-            <span className="font-sans text-[2.22vw] text-[#ccc] font-light">
+          <div className="flex items-center shrink-0 max-lg:justify-center">
+            <span className="font-sans text-[2.22vw] max-lg:text-[20px] text-[#ccc] font-light max-lg:rotate-90">
               &rarr;
             </span>
           </div>
 
           {/* MODEL */}
-          <div className="flex-1 bg-[#f2efe8] rounded-[0.28vw] px-[1.67vw] py-[1.94vw] flex flex-col gap-[0.83vw]">
-            <p className="font-sans text-[0.76vw] font-semibold text-[#888] tracking-[0.092vw]">
+          <div className="flex-1 bg-[#f2efe8] rounded-[0.28vw] max-lg:rounded-[4px] px-[1.67vw] max-lg:px-5 py-[1.94vw] max-lg:py-5 flex flex-col gap-[0.83vw] max-lg:gap-3">
+            <p className="font-sans text-[0.76vw] max-lg:text-[11px] font-semibold text-[#888] tracking-[0.092vw]">
               MODEL
             </p>
-            <p className="font-sans text-[1.25vw] font-semibold text-[#555] leading-[1.3] tracking-[-0.013vw]">
+            <p className="font-sans text-[1.25vw] max-lg:text-[16px] font-semibold text-[#555] leading-[1.3] tracking-[-0.013vw]">
               What could I do with it?
             </p>
-            <p className="font-sans text-[0.97vw] font-normal text-[#555] leading-[1.45]">
+            <p className="font-sans text-[0.97vw] max-lg:text-[14px] font-normal text-[#555] leading-[1.45]">
               Simulators that let participants test scenarios, exercise timing,
               post-tax proceeds, contribution percentage, withdrawal impact,
               before any commitment. Confidence is built here.
@@ -272,21 +272,21 @@ export default function WorkplaceSolutionsPage() {
           </div>
 
           {/* Arrow */}
-          <div className="flex items-center shrink-0">
-            <span className="font-sans text-[2.22vw] text-[#ccc] font-light">
+          <div className="flex items-center shrink-0 max-lg:justify-center">
+            <span className="font-sans text-[2.22vw] max-lg:text-[20px] text-[#ccc] font-light max-lg:rotate-90">
               &rarr;
             </span>
           </div>
 
           {/* TRANSACT */}
-          <div className="flex-1 bg-[#f2efe8] rounded-[0.28vw] px-[1.67vw] py-[1.94vw] flex flex-col gap-[0.83vw]">
-            <p className="font-sans text-[0.76vw] font-semibold text-[#888] tracking-[0.092vw]">
+          <div className="flex-1 bg-[#f2efe8] rounded-[0.28vw] max-lg:rounded-[4px] px-[1.67vw] max-lg:px-5 py-[1.94vw] max-lg:py-5 flex flex-col gap-[0.83vw] max-lg:gap-3">
+            <p className="font-sans text-[0.76vw] max-lg:text-[11px] font-semibold text-[#888] tracking-[0.092vw]">
               TRANSACT
             </p>
-            <p className="font-sans text-[1.25vw] font-semibold text-[#555] leading-[1.3] tracking-[-0.013vw]">
+            <p className="font-sans text-[1.25vw] max-lg:text-[16px] font-semibold text-[#555] leading-[1.3] tracking-[-0.013vw]">
               Do it.
             </p>
-            <p className="font-sans text-[0.97vw] font-normal text-[#555] leading-[1.45]">
+            <p className="font-sans text-[0.97vw] max-lg:text-[14px] font-normal text-[#555] leading-[1.45]">
               Exercise, sell, transfer, preclear, enroll, change contribution.
               Whatever the participant modeled in the previous step is what
               they&rsquo;re confirming here: same numbers, same assumptions, no
@@ -299,15 +299,15 @@ export default function WorkplaceSolutionsPage() {
       {/* ═══════════════════════════════════════════════════
           04 / TRANSLATING REGULATION
          ═══════════════════════════════════════════════════ */}
-      <motion.div className="px-[3.33vw] mt-[4.44vw]" {...fadeUp}>
-        <p className="font-sans text-[0.76vw] font-semibold text-[#888] tracking-[0.092vw]">
+      <motion.div className="px-[3.33vw] max-lg:px-5 mt-[4.44vw] max-lg:mt-10" {...fadeUp}>
+        <p className="font-sans text-[0.76vw] max-lg:text-[11px] font-semibold text-[#888] tracking-[0.092vw]">
           04 / TRANSLATING REGULATION
         </p>
-        <h2 className="font-sans text-[3.06vw] font-light text-[#555] tracking-[-0.061vw] leading-[1.1] mt-[1.11vw]">
+        <h2 className="font-sans text-[3.06vw] max-lg:text-[24px] font-light text-[#555] tracking-[-0.061vw] leading-[1.1] mt-[1.11vw]">
           Compliance, as a guardrail,{" "}
           <span className="font-semibold text-[#9c4221]">not a gate.</span>
         </h2>
-        <p className="font-sans text-[1.25vw] font-normal text-[#555] leading-[1.5] tracking-[-0.013vw] mt-[1.67vw]">
+        <p className="font-sans text-[1.25vw] max-lg:text-[15px] font-normal text-[#555] leading-[1.5] tracking-[-0.013vw] mt-[1.67vw]">
           Equity products are regulated end-to-end: what you can show, what you
           must disclose, what a participant must acknowledge before acting. The
           legacy platform treated compliance as a series of gates: dense legal
@@ -318,7 +318,7 @@ export default function WorkplaceSolutionsPage() {
         </p>
 
         {/* 2x2 card grid */}
-        <div className="grid grid-cols-2 gap-[1.67vw] mt-[2.22vw]">
+        <div className="grid grid-cols-2 max-lg:grid-cols-1 gap-[1.67vw] max-lg:gap-4 mt-[2.22vw]">
           <ComplexityCard
             label="PLAIN-LANGUAGE WRAP"
             title="Regulated terms get a sentence in human English."
@@ -345,17 +345,17 @@ export default function WorkplaceSolutionsPage() {
       {/* ═══════════════════════════════════════════════════
           05 / DEEP DIVE: ESPP & PRECLEARANCE
          ═══════════════════════════════════════════════════ */}
-      <motion.div className="px-[3.33vw] mt-[4.44vw]" {...fadeUp}>
-        <p className="font-sans text-[0.76vw] font-semibold text-[#888] tracking-[0.092vw]">
+      <motion.div className="px-[3.33vw] max-lg:px-5 mt-[4.44vw] max-lg:mt-10" {...fadeUp}>
+        <p className="font-sans text-[0.76vw] max-lg:text-[11px] font-semibold text-[#888] tracking-[0.092vw]">
           05 / DEEP DIVE: ESPP &amp; PRECLEARANCE
         </p>
-        <h2 className="font-sans text-[3.06vw] font-light text-[#555] tracking-[-0.061vw] leading-[1.1] mt-[1.11vw]">
+        <h2 className="font-sans text-[3.06vw] max-lg:text-[24px] font-light text-[#555] tracking-[-0.061vw] leading-[1.1] mt-[1.11vw]">
           Two products,{" "}
           <span className="font-semibold text-[#9c4221]">
             same principles.
           </span>
         </h2>
-        <p className="font-sans text-[1.25vw] font-normal text-[#555] leading-[1.5] tracking-[-0.013vw] mt-[1.67vw]">
+        <p className="font-sans text-[1.25vw] max-lg:text-[15px] font-normal text-[#555] leading-[1.5] tracking-[-0.013vw] mt-[1.67vw]">
           ESPP and Preclearance live at opposite ends of the participant
           journey. ESPP is the most-enrolled plan and a long-term commitment:
           enroll once, then live with the decision through months of payroll
@@ -369,17 +369,17 @@ export default function WorkplaceSolutionsPage() {
       </motion.div>
 
       {/* ── 5.1 / ESPP ── */}
-      <motion.div className="px-[3.33vw] mt-[4.44vw]" {...fadeUp}>
-        <p className="font-sans text-[0.76vw] font-semibold text-[#888] tracking-[0.092vw]">
+      <motion.div className="px-[3.33vw] max-lg:px-5 mt-[4.44vw] max-lg:mt-10" {...fadeUp}>
+        <p className="font-sans text-[0.76vw] max-lg:text-[11px] font-semibold text-[#888] tracking-[0.092vw]">
           5.1 / ESPP
         </p>
-        <h2 className="font-sans text-[1.67vw] font-normal text-[#555] mt-[0.83vw]">
+        <h2 className="font-sans text-[1.67vw] max-lg:text-[20px] font-normal text-[#555] mt-[0.83vw]">
           Enroll once,{" "}
           <span className="font-semibold text-[#9c4221]">
             manage for months.
           </span>
         </h2>
-        <p className="font-sans text-[1.25vw] font-normal text-[#555] leading-[1.5] tracking-[-0.013vw] mt-[1.67vw]">
+        <p className="font-sans text-[1.25vw] max-lg:text-[15px] font-normal text-[#555] leading-[1.5] tracking-[-0.013vw] mt-[1.67vw]">
           ESPP: summary view. The view and the management actions sit on one
           screen: current period status, contribution amount, estimated
           purchase, plus the things a participant might do mid-period (change
@@ -392,8 +392,8 @@ export default function WorkplaceSolutionsPage() {
 
         {/* Browser frame */}
         <div className="flex justify-center mt-[2.22vw]">
-          <div className="w-[70vw]">
-            <div className="relative rounded-[0.56vw] overflow-hidden" style={{ boxShadow: "0px 2px 8px 0px rgba(0,0,0,0.08)" }}>
+          <div className="w-[70vw] max-lg:w-full">
+            <div className="relative rounded-[0.56vw] max-lg:rounded-[6px] overflow-hidden" style={{ boxShadow: "0px 2px 8px 0px rgba(0,0,0,0.08)" }}>
               <ShimmerImage
                 src="/images/espp-screenshot.png"
                 alt="ESPP summary view"
@@ -410,11 +410,11 @@ export default function WorkplaceSolutionsPage() {
       </motion.div>
 
       {/* ── 5.2 / PRECLEARANCE ── */}
-      <motion.div className="px-[3.33vw] mt-[4.44vw]" {...fadeUp}>
-        <p className="font-sans text-[0.76vw] font-semibold text-[#888] tracking-[0.092vw]">
+      <motion.div className="px-[3.33vw] max-lg:px-5 mt-[4.44vw] max-lg:mt-10" {...fadeUp}>
+        <p className="font-sans text-[0.76vw] max-lg:text-[11px] font-semibold text-[#888] tracking-[0.092vw]">
           5.2 / PRECLEARANCE
         </p>
-        <h2 className="font-sans text-[1.67vw] font-normal text-[#555] mt-[0.83vw]">
+        <h2 className="font-sans text-[1.67vw] max-lg:text-[20px] font-normal text-[#555] mt-[0.83vw]">
           The compliance flow,{" "}
           <span className="font-semibold text-[#9c4221]">
             made approachable.
@@ -422,9 +422,9 @@ export default function WorkplaceSolutionsPage() {
         </h2>
 
         {/* Two browser frames side by side */}
-        <div className="flex gap-[1.67vw] mt-[2.22vw]">
+        <div className="flex max-lg:flex-col gap-[1.67vw] max-lg:gap-4 mt-[2.22vw]">
           <div className="flex-1">
-            <div className="relative rounded-[0.56vw] overflow-hidden" style={{ boxShadow: "0px 2px 8px 0px rgba(0,0,0,0.08)" }}>
+            <div className="relative rounded-[0.56vw] max-lg:rounded-[6px] overflow-hidden" style={{ boxShadow: "0px 2px 8px 0px rgba(0,0,0,0.08)" }}>
               <ShimmerImage
                 src="/images/sell-shares-screenshot.png"
                 alt="Sell shares flow"
@@ -437,7 +437,7 @@ export default function WorkplaceSolutionsPage() {
             </div>
           </div>
           <div className="flex-1">
-            <div className="relative rounded-[0.56vw] overflow-hidden" style={{ boxShadow: "0px 2px 8px 0px rgba(0,0,0,0.08)" }}>
+            <div className="relative rounded-[0.56vw] max-lg:rounded-[6px] overflow-hidden" style={{ boxShadow: "0px 2px 8px 0px rgba(0,0,0,0.08)" }}>
               <ShimmerImage
                 src="/images/preclearance-screenshot.png"
                 alt="Preclearance request"
@@ -452,7 +452,7 @@ export default function WorkplaceSolutionsPage() {
         </div>
 
         {/* Caption */}
-        <p className="font-sans text-[0.97vw] font-normal text-[#555] leading-[1.45] mt-[1.39vw]">
+        <p className="font-sans text-[0.97vw] max-lg:text-[15px] font-normal text-[#555] leading-[1.45] mt-[1.39vw]">
           Preclearance request. Most participants encounter this flow rarely,
           and none of them want to misread it. The form on top is simple: which
           shares, how many, which sale method. The required SEC acknowledgment
@@ -465,17 +465,17 @@ export default function WorkplaceSolutionsPage() {
       {/* ═══════════════════════════════════════════════════
           06 / THE SYSTEM
          ═══════════════════════════════════════════════════ */}
-      <motion.div className="px-[3.33vw] mt-[4.44vw]" {...fadeUp}>
-        <p className="font-sans text-[0.76vw] font-semibold text-[#888] tracking-[0.092vw]">
+      <motion.div className="px-[3.33vw] max-lg:px-5 mt-[4.44vw] max-lg:mt-10" {...fadeUp}>
+        <p className="font-sans text-[0.76vw] max-lg:text-[11px] font-semibold text-[#888] tracking-[0.092vw]">
           06 / THE SYSTEM
         </p>
-        <h2 className="font-sans text-[3.06vw] font-light text-[#555] tracking-[-0.061vw] leading-[1.1] mt-[1.11vw]">
+        <h2 className="font-sans text-[3.06vw] max-lg:text-[24px] font-light text-[#555] tracking-[-0.061vw] leading-[1.1] mt-[1.11vw]">
           A design system that{" "}
           <span className="font-semibold text-[#9c4221]">
             couldn&rsquo;t fork.
           </span>
         </h2>
-        <p className="font-sans text-[1.25vw] font-normal text-[#555] leading-[1.5] tracking-[-0.013vw] mt-[1.67vw]">
+        <p className="font-sans text-[1.25vw] max-lg:text-[15px] font-normal text-[#555] leading-[1.5] tracking-[-0.013vw] mt-[1.67vw]">
           With 100+ clients, 50+ jurisdictions, and a product surface spanning
           enrollment, portfolio management, trading, and reporting, a
           component-level fork would have been fatal. The design system had to
@@ -494,16 +494,16 @@ export default function WorkplaceSolutionsPage() {
       {/* ═══════════════════════════════════════════════════
           07 / WHAT SHIPPED
          ═══════════════════════════════════════════════════ */}
-      <motion.div className="px-[3.33vw] mt-[4.44vw]" {...fadeUp}>
-        <p className="font-sans text-[0.76vw] font-semibold text-[#888] tracking-[0.092vw]">
+      <motion.div className="px-[3.33vw] max-lg:px-5 mt-[4.44vw] max-lg:mt-10" {...fadeUp}>
+        <p className="font-sans text-[0.76vw] max-lg:text-[11px] font-semibold text-[#888] tracking-[0.092vw]">
           07 / WHAT SHIPPED
         </p>
-        <h2 className="font-sans text-[3.06vw] font-light text-[#555] tracking-[-0.061vw] leading-[1.1] mt-[1.11vw]">
+        <h2 className="font-sans text-[3.06vw] max-lg:text-[24px] font-light text-[#555] tracking-[-0.061vw] leading-[1.1] mt-[1.11vw]">
           A full platform replacement, and the numbers kept growing.
         </h2>
 
         {/* 4-stat row */}
-        <div className="flex gap-[2.22vw] mt-[2.78vw]">
+        <div className="flex max-lg:flex-wrap gap-[2.22vw] max-lg:gap-6 mt-[2.78vw]">
           {[
             {
               value: "200K",
@@ -526,14 +526,14 @@ export default function WorkplaceSolutionsPage() {
               desc: "Geographies covered, each with its own regulatory floor and plan rules.",
             },
           ].map((stat) => (
-            <div key={stat.value} className="flex-1 flex flex-col gap-[0.83vw]">
-              <p className="font-sans text-[3.89vw] font-light text-[#555] tracking-[-0.078vw]">
+            <div key={stat.value} className="flex-1 max-lg:basis-[calc(50%-12px)] flex flex-col gap-[0.83vw] max-lg:gap-2">
+              <p className="font-sans text-[3.89vw] max-lg:text-[32px] font-light text-[#555] tracking-[-0.078vw]">
                 {stat.value}
               </p>
-              <p className="font-sans text-[0.76vw] font-semibold text-[#888] tracking-[0.092vw]">
+              <p className="font-sans text-[0.76vw] max-lg:text-[11px] font-semibold text-[#888] tracking-[0.092vw]">
                 {stat.label}
               </p>
-              <p className="font-sans text-[0.97vw] font-normal text-[#555] leading-[1.45]">
+              <p className="font-sans text-[0.97vw] max-lg:text-[14px] font-normal text-[#555] leading-[1.45]">
                 {stat.desc}
               </p>
             </div>
@@ -541,11 +541,11 @@ export default function WorkplaceSolutionsPage() {
         </div>
 
         {/* "What these numbers proved" card */}
-        <div className="bg-[#f2efe8] rounded-[0.28vw] px-[1.67vw] py-[1.39vw] mt-[2.22vw]">
-          <p className="font-sans text-[0.76vw] font-semibold text-[#888] tracking-[0.092vw]">
+        <div className="bg-[#f2efe8] rounded-[0.28vw] max-lg:rounded-[4px] px-[1.67vw] max-lg:px-5 py-[1.39vw] max-lg:py-5 mt-[2.22vw]">
+          <p className="font-sans text-[0.76vw] max-lg:text-[11px] font-semibold text-[#888] tracking-[0.092vw]">
             WHAT THESE NUMBERS PROVED
           </p>
-          <p className="font-sans text-[1.25vw] font-normal text-[#555] leading-[1.5] tracking-[-0.013vw] mt-[0.83vw]">
+          <p className="font-sans text-[1.25vw] max-lg:text-[15px] font-normal text-[#555] leading-[1.5] tracking-[-0.013vw] mt-[0.83vw]">
             The migration (still in progress) proved the system could handle
             real positions, pending transactions, and vesting schedules, every
             account landing exactly where it needed to. We migrated 200K
@@ -559,17 +559,17 @@ export default function WorkplaceSolutionsPage() {
       {/* ═══════════════════════════════════════════════════
           08 / WHAT I LEARNED
          ═══════════════════════════════════════════════════ */}
-      <motion.div className="px-[3.33vw] mt-[4.44vw]" {...fadeUp}>
-        <p className="font-sans text-[0.76vw] font-semibold text-[#888] tracking-[0.092vw]">
+      <motion.div className="px-[3.33vw] max-lg:px-5 mt-[4.44vw] max-lg:mt-10" {...fadeUp}>
+        <p className="font-sans text-[0.76vw] max-lg:text-[11px] font-semibold text-[#888] tracking-[0.092vw]">
           08 / WHAT I LEARNED
         </p>
-        <h2 className="font-sans text-[3.06vw] font-light text-[#555] tracking-[-0.061vw] leading-[1.1] mt-[1.11vw]">
+        <h2 className="font-sans text-[3.06vw] max-lg:text-[24px] font-light text-[#555] tracking-[-0.061vw] leading-[1.1] mt-[1.11vw]">
           How working in regulated finance{" "}
           <span className="font-semibold text-[#9c4221]">
             reshaped my approach.
           </span>
         </h2>
-        <p className="font-sans text-[1.25vw] font-normal text-[#555] leading-[1.5] tracking-[-0.013vw] mt-[1.67vw]">
+        <p className="font-sans text-[1.25vw] max-lg:text-[15px] font-normal text-[#555] leading-[1.5] tracking-[-0.013vw] mt-[1.67vw]">
           Constraints used to feel like something I had to design around. This
           project changed that. Working in equity meant treating regulation,
           tax, and plan rules as the actual material of the design, instead of
@@ -585,17 +585,19 @@ export default function WorkplaceSolutionsPage() {
       {/* ═══════════════════════════════════════════════════
           Closing navigation
          ═══════════════════════════════════════════════════ */}
-      <div className="px-[3.33vw] mt-[4.44vw]">
-        <div className="flex items-center justify-between">
+      <div className="h-[5vw] max-lg:h-[60px]" />
+
+      <div className="fixed bottom-0 left-0 right-0 z-40 bg-cream/90 backdrop-blur-sm border-t border-[#d9d9d9]">
+        <div className="flex items-center justify-between px-[3.33vw] max-lg:px-5 py-[1.39vw] max-lg:py-4">
           <a
             href="/work"
-            className="font-sans text-[1.39vw] font-normal text-[#555] hover:underline underline-offset-4"
+            className="font-sans text-[1.39vw] max-lg:text-[16px] font-normal text-[#555] hover:underline underline-offset-4"
           >
             &larr; Back to work
           </a>
           <a
             href="/work/safe"
-            className="font-sans text-[1.39vw] font-normal text-[#555] hover:underline underline-offset-4"
+            className="font-sans text-[1.39vw] max-lg:text-[16px] font-normal text-[#555] hover:underline underline-offset-4"
           >
             Next case study &rarr;
           </a>
@@ -605,8 +607,8 @@ export default function WorkplaceSolutionsPage() {
       {/* ═══════════════════════════════════════════════════
           Footer
          ═══════════════════════════════════════════════════ */}
-      <div className="flex items-center justify-between px-[3.33vw] py-[2vh] mt-[3.33vw]">
-        <span className="font-sans text-[0.76vw] text-text-secondary whitespace-nowrap">
+      <div className="flex items-center justify-between px-[3.33vw] max-lg:px-5 py-[2vh] mt-[3.33vw] max-lg:mt-8">
+        <span className="font-sans text-[0.76vw] max-lg:text-[11px] text-text-secondary whitespace-nowrap">
           &copy; 2026 Nihel Mouelhi. All rights reserved.
         </span>
       </div>

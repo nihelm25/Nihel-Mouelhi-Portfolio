@@ -18,15 +18,15 @@ export default function SafePage() {
       <Header activeItem="WORK" />
 
       {/* Header spacer */}
-      <div className="h-[19.4vw]" />
+      <div className="h-[19.4vw] max-lg:h-[100px]" />
 
       {/* ═══════════════════════════════════════════════════
           HERO
          ═══════════════════════════════════════════════════ */}
-      <div className="px-[3.33vw]">
+      <div className="px-[3.33vw] max-lg:px-5">
         {/* Label */}
         <motion.p
-          className="font-sans text-[0.76vw] font-semibold text-[#888] tracking-[0.092vw]"
+          className="font-sans text-[0.76vw] max-lg:text-[11px] font-semibold text-[#888] tracking-[0.092vw]"
           {...fadeUp}
         >
           CASE STUDY, 02 &middot; 2021 &middot; PRODUCT DESIGNER &middot; B2B
@@ -34,7 +34,7 @@ export default function SafePage() {
 
         {/* Title */}
         <motion.h1
-          className="font-sans text-[5vw] font-light text-[#555] tracking-[-0.15vw] mt-[1.39vw]"
+          className="font-sans text-[5vw] max-lg:text-[32px] font-light text-[#555] tracking-[-0.15vw] mt-[1.39vw] max-lg:mt-3"
           {...fadeUp}
           transition={{ delay: 0.1, duration: 0.6 }}
         >
@@ -43,7 +43,7 @@ export default function SafePage() {
 
         {/* Hero product shots */}
         <motion.div
-          className="mt-[2.78vw]"
+          className="mt-[2.78vw] max-lg:mt-6 -mx-[3.33vw] max-lg:-mx-5"
           {...fadeUp}
           transition={{ delay: 0.2, duration: 0.7 }}
         >
@@ -53,19 +53,19 @@ export default function SafePage() {
             width={5376}
             height={2519}
             className="shimmer w-full h-auto object-cover object-top pointer-events-none"
-            sizes="93vw"
+            sizes="97vw"
             priority
           />
         </motion.div>
 
         {/* Hero bottom row: meta + intro */}
         <motion.div
-          className="flex gap-[4.44vw] mt-[2.78vw]"
+          className="flex max-lg:flex-col gap-[4.44vw] max-lg:gap-6 mt-[2.78vw] max-lg:mt-6"
           {...fadeUp}
           transition={{ delay: 0.3, duration: 0.6 }}
         >
           {/* Left: meta column */}
-          <div className="w-[25.63vw] shrink-0 flex flex-col gap-[1.94vw]">
+          <div className="w-[25.63vw] max-lg:w-full shrink-0 flex flex-col gap-[1.94vw] max-lg:gap-4">
             {[
               { label: "COMPANY", value: "Thales × SNCF" },
               { label: "ROLE", value: "Product designer (team of 6)" },
@@ -80,11 +80,11 @@ export default function SafePage() {
                   "AI/operator-augmentation · Service design · Cross-platform UX",
               },
             ].map((item) => (
-              <div key={item.label} className="flex flex-col gap-[0.35vw]">
-                <p className="font-sans text-[0.76vw] font-semibold text-[#888] tracking-[0.092vw]">
+              <div key={item.label} className="flex flex-col gap-[0.35vw] max-lg:gap-1">
+                <p className="font-sans text-[0.76vw] max-lg:text-[11px] font-semibold text-[#888] tracking-[0.092vw]">
                   {item.label}
                 </p>
-                <p className="font-sans text-[0.97vw] font-normal text-[#555]">
+                <p className="font-sans text-[0.97vw] max-lg:text-[14px] font-normal text-[#555]">
                   {item.value}
                 </p>
               </div>
@@ -93,7 +93,7 @@ export default function SafePage() {
 
           {/* Right: intro paragraph */}
           <div className="flex-1">
-            <p className="font-sans text-[1.53vw] font-normal text-[#555] leading-[1.45] tracking-[-0.023vw]">
+            <p className="font-sans text-[1.53vw] max-lg:text-[16px] font-normal text-[#555] leading-[1.45] tracking-[-0.023vw]">
               AI that augments a 14-person control room, without disrupting the
               chain of command that already gets it right in minutes. The brief
               was &ldquo;help operator monitor more cameras.&rdquo; After a day
@@ -106,22 +106,22 @@ export default function SafePage() {
       {/* ═══════════════════════════════════════════════════
           01 / WHAT EVERYONE ASSUMES
          ═══════════════════════════════════════════════════ */}
-      <motion.div className="px-[3.33vw] mt-[4.44vw]" {...fadeUp}>
-        <p className="font-sans text-[0.76vw] font-semibold text-[#888] tracking-[0.092vw]">
+      <motion.div className="px-[3.33vw] max-lg:px-5 mt-[4.44vw] max-lg:mt-10" {...fadeUp}>
+        <p className="font-sans text-[0.76vw] max-lg:text-[11px] font-semibold text-[#888] tracking-[0.092vw]">
           01 / WHAT EVERYONE ASSUMES
         </p>
-        <h2 className="font-sans text-[3.06vw] font-light text-[#555] tracking-[-0.061vw] leading-[1.1] mt-[1.11vw]">
+        <h2 className="font-sans text-[3.06vw] max-lg:text-[24px] font-light text-[#555] tracking-[-0.061vw] leading-[1.1] mt-[1.11vw] max-lg:mt-3">
           Surveillance design has{" "}
           <span className="font-semibold text-[#9c4221]">
             a default story.
           </span>
         </h2>
-        <p className="font-sans text-[1.25vw] font-normal text-[#555] leading-[1.5] tracking-[-0.013vw] mt-[1.67vw]">
+        <p className="font-sans text-[1.25vw] max-lg:text-[15px] font-normal text-[#555] leading-[1.5] tracking-[-0.013vw] mt-[1.67vw] max-lg:mt-4">
           One overwhelmed operator. A wall of video feeds. Too much to see, too
           little time. The fix: AI watches the cameras so the human doesn&rsquo;t
           have to.
         </p>
-        <p className="font-sans text-[1.25vw] font-normal text-[#555] leading-[1.5] tracking-[-0.013vw] mt-[1.67vw]">
+        <p className="font-sans text-[1.25vw] max-lg:text-[15px] font-normal text-[#555] leading-[1.5] tracking-[-0.013vw] mt-[1.67vw] max-lg:mt-4">
           It&rsquo;s the framing every AI surveillance product starts from.
           It&rsquo;s also the framing we walked into Thales &times; SNCF
           expecting to validate.
@@ -131,18 +131,18 @@ export default function SafePage() {
       {/* ═══════════════════════════════════════════════════
           02 / WHAT THE SHADOW SHOWED
          ═══════════════════════════════════════════════════ */}
-      <motion.div className="px-[3.33vw] mt-[4.44vw]" {...fadeUp}>
-        <p className="font-sans text-[0.76vw] font-semibold text-[#888] tracking-[0.092vw]">
+      <motion.div className="px-[3.33vw] max-lg:px-5 mt-[4.44vw] max-lg:mt-10" {...fadeUp}>
+        <p className="font-sans text-[0.76vw] max-lg:text-[11px] font-semibold text-[#888] tracking-[0.092vw]">
           02 / WHAT THE SHADOW SHOWED
         </p>
-        <h2 className="font-sans text-[3.06vw] font-light text-[#555] tracking-[-0.061vw] leading-[1.1] mt-[1.11vw]">
+        <h2 className="font-sans text-[3.06vw] max-lg:text-[24px] font-light text-[#555] tracking-[-0.061vw] leading-[1.1] mt-[1.11vw] max-lg:mt-3">
           I spent half a shift in the room. The brief was wrong.
         </h2>
-        <p className="font-sans text-[1.53vw] font-normal text-[#555] leading-[1.55] mt-[1.67vw]">
+        <p className="font-sans text-[1.53vw] max-lg:text-[16px] font-normal text-[#555] leading-[1.55] mt-[1.67vw] max-lg:mt-4">
           The control room wasn&rsquo;t one operator drowning. It was fourteen
           people moving in concert.
         </p>
-        <p className="font-sans text-[1.25vw] font-normal text-[#555] leading-[1.67] tracking-[-0.013vw] mt-[1.67vw]">
+        <p className="font-sans text-[1.25vw] max-lg:text-[15px] font-normal text-[#555] leading-[1.67] tracking-[-0.013vw] mt-[1.67vw] max-lg:mt-4">
           Video patrollers scanned feeds in shifts. Analysts cross-referenced
           evidence across cameras and time-stamps. Investigators traced movement
           and built the chain of events. A control room lead held the authority
@@ -150,7 +150,7 @@ export default function SafePage() {
           talkie-walkie, both ways. From the first signal of an incident to
           dispatching agents on the ground, the team moved in minutes, not hours.
         </p>
-        <p className="font-sans text-[1.25vw] font-normal text-[#555] leading-[1.67] tracking-[-0.013vw] mt-[1.67vw]">
+        <p className="font-sans text-[1.25vw] max-lg:text-[15px] font-normal text-[#555] leading-[1.67] tracking-[-0.013vw] mt-[1.67vw] max-lg:mt-4">
           What I expected was a person buried under information. What I found was
           a high-performance team with a working escalation chain. The design
           problem wasn&rsquo;t &ldquo;make one operator faster.&rdquo; It was:
@@ -159,33 +159,33 @@ export default function SafePage() {
         </p>
 
         {/* Time goal stat */}
-        <div className="flex items-start mt-[2.78vw] gap-[4.44vw] border-t border-[#bab5ad] pt-[1.67vw]">
-          <div className="flex flex-col gap-[0.56vw]">
-            <p className="font-sans text-[3.89vw] font-semibold text-[#555] tracking-[-0.139vw] leading-[1.14]">
+        <div className="flex max-lg:flex-col items-start mt-[2.78vw] max-lg:mt-6 gap-[4.44vw] max-lg:gap-4 border-t border-[#bab5ad] pt-[1.67vw] max-lg:pt-4">
+          <div className="flex flex-col gap-[0.56vw] max-lg:gap-1">
+            <p className="font-sans text-[3.89vw] max-lg:text-[32px] font-semibold text-[#555] tracking-[-0.139vw] leading-[1.14]">
               ~15 min
             </p>
-            <p className="font-sans text-[0.76vw] font-normal text-[#9c4221] tracking-[0.104vw]">
+            <p className="font-sans text-[0.76vw] max-lg:text-[11px] font-normal text-[#9c4221] tracking-[0.104vw]">
               CURRENT
             </p>
-            <p className="font-sans text-[0.9vw] font-normal text-[#555] leading-[1.54] w-[20.83vw]">
+            <p className="font-sans text-[0.9vw] max-lg:text-[13px] font-normal text-[#555] leading-[1.54] w-[20.83vw] max-lg:w-full">
               Time from incident signal to suspect interception, end-to-end.
             </p>
           </div>
 
-          <div className="flex items-center pt-[0.56vw]">
-            <span className="font-sans text-[3.89vw] text-[#9c4221] font-normal">
+          <div className="flex items-center pt-[0.56vw] max-lg:rotate-90 max-lg:self-center">
+            <span className="font-sans text-[3.89vw] max-lg:text-[24px] text-[#9c4221] font-normal">
               &rarr;
             </span>
           </div>
 
-          <div className="flex flex-col gap-[0.56vw]">
-            <p className="font-sans text-[3.89vw] font-semibold text-[#555] tracking-[-0.139vw] leading-[1.14]">
+          <div className="flex flex-col gap-[0.56vw] max-lg:gap-1">
+            <p className="font-sans text-[3.89vw] max-lg:text-[32px] font-semibold text-[#555] tracking-[-0.139vw] leading-[1.14]">
               &le; 5 min
             </p>
-            <p className="font-sans text-[0.76vw] font-normal text-[#9c4221] tracking-[0.104vw]">
+            <p className="font-sans text-[0.76vw] max-lg:text-[11px] font-normal text-[#9c4221] tracking-[0.104vw]">
               TEAM&rsquo;S TARGET
             </p>
-            <p className="font-sans text-[0.9vw] font-normal text-[#555] leading-[1.54] w-[20.83vw]">
+            <p className="font-sans text-[0.9vw] max-lg:text-[13px] font-normal text-[#555] leading-[1.54] w-[20.83vw] max-lg:w-full">
               The threshold the team set. Anything slower meant the suspect had
               already moved beyond reach.
             </p>
@@ -193,12 +193,12 @@ export default function SafePage() {
         </div>
 
         {/* Pull quote */}
-        <div className="bg-[#f5f0e8] rounded-[0.28vw] mt-[2.78vw] px-[2.22vw] py-[1.94vw] border-l-[3px] border-[#9c4221]">
-          <p className="font-sans text-[1.53vw] font-medium text-[#555] leading-[1.45]">
+        <div className="bg-[#f5f0e8] rounded-[0.28vw] max-lg:rounded-[4px] mt-[2.78vw] max-lg:mt-6 px-[2.22vw] max-lg:px-5 py-[1.94vw] max-lg:py-5 border-l-[3px] border-[#9c4221]">
+          <p className="font-sans text-[1.53vw] max-lg:text-[16px] font-medium text-[#555] leading-[1.45]">
             The decision was: do not replace the chain. Compress the work inside
             it.
           </p>
-          <p className="font-sans text-[0.69vw] font-normal text-[#9c4221] tracking-[0.139vw] mt-[0.83vw]">
+          <p className="font-sans text-[0.69vw] max-lg:text-[10px] font-normal text-[#9c4221] tracking-[0.139vw] mt-[0.83vw] max-lg:mt-2">
             WHAT I TOOK BACK FROM THE SHADOW DAY
           </p>
         </div>
@@ -207,17 +207,17 @@ export default function SafePage() {
       {/* ═══════════════════════════════════════════════════
           03 / THE ARTIFACT
          ═══════════════════════════════════════════════════ */}
-      <motion.div className="px-[3.33vw] mt-[4.44vw]" {...fadeUp}>
-        <p className="font-sans text-[0.76vw] font-semibold text-[#888] tracking-[0.092vw]">
+      <motion.div className="px-[3.33vw] max-lg:px-5 mt-[4.44vw] max-lg:mt-10" {...fadeUp}>
+        <p className="font-sans text-[0.76vw] max-lg:text-[11px] font-semibold text-[#888] tracking-[0.092vw]">
           03 / THE ARTIFACT
         </p>
-        <h2 className="font-sans text-[3.06vw] font-light text-[#555] tracking-[-0.061vw] leading-[1.1] mt-[1.11vw]">
+        <h2 className="font-sans text-[3.06vw] max-lg:text-[24px] font-light text-[#555] tracking-[-0.061vw] leading-[1.1] mt-[1.11vw] max-lg:mt-3">
           What we found in{" "}
           <span className="font-semibold text-[#9c4221]">
             the control room.
           </span>
         </h2>
-        <p className="font-sans text-[1.25vw] font-normal text-[#555] leading-[1.5] tracking-[-0.013vw] mt-[1.67vw]">
+        <p className="font-sans text-[1.25vw] max-lg:text-[15px] font-normal text-[#555] leading-[1.5] tracking-[-0.013vw] mt-[1.67vw] max-lg:mt-4">
           A diagram I drew to align Thales engineering and SNCF stakeholders on
           the system we&rsquo;d actually walked into: the existing workflow,
           before we proposed anything. It became the spec for every design
@@ -225,7 +225,7 @@ export default function SafePage() {
         </p>
 
         {/* System map diagram */}
-        <div className="bg-[#f5f0e8] rounded-[0.28vw] mt-[2.22vw] px-[3.89vw] py-[3.89vw]">
+        <div className="bg-[#f5f0e8] rounded-[0.28vw] max-lg:rounded-[8px] mt-[2.22vw] max-lg:mt-6 px-[3.89vw] max-lg:px-5 py-[3.89vw] max-lg:py-5 max-lg:overflow-x-auto max-lg:-mx-5 max-lg:mx-0">
           {/* Header labels */}
           <div className="flex mb-[1.67vw]">
             <div className="w-[15.28vw]">
@@ -241,7 +241,7 @@ export default function SafePage() {
           </div>
 
           {/* Role boxes row */}
-          <div className="flex items-start gap-0">
+          <div className="flex items-start gap-0 max-lg:min-w-[700px]">
             {/* Field Agent */}
             <div className="w-[15.28vw] shrink-0 bg-[#faf6ee] border border-[#bab5ad] rounded-[0.28vw] p-[1.25vw] relative overflow-hidden">
               <div className="absolute left-0 top-0 bottom-0 w-[0.21vw] bg-[rgba(156,66,33,0.5)]" />
@@ -398,7 +398,7 @@ export default function SafePage() {
         </div>
 
         {/* Caption */}
-        <p className="font-sans text-[0.76vw] font-normal text-[#888] leading-[1.6] tracking-[0.104vw] mt-[1.39vw]">
+        <p className="font-sans text-[0.76vw] max-lg:text-[11px] font-normal text-[#888] leading-[1.6] tracking-[0.104vw] mt-[1.39vw] max-lg:mt-3">
           BEFORE STATE: fourteen operators across four roles in the control room,
           plus field agents on the ground. Communication runs both ways over
           talkie-walkie. The chain works, but everything is voice: a description
@@ -409,11 +409,11 @@ export default function SafePage() {
       {/* ═══════════════════════════════════════════════════
           04 / THE STRATEGIC MOVE
          ═══════════════════════════════════════════════════ */}
-      <motion.div className="px-[3.33vw] mt-[4.44vw]" {...fadeUp}>
-        <p className="font-sans text-[0.76vw] font-semibold text-[#888] tracking-[0.092vw]">
+      <motion.div className="px-[3.33vw] max-lg:px-5 mt-[4.44vw] max-lg:mt-10" {...fadeUp}>
+        <p className="font-sans text-[0.76vw] max-lg:text-[11px] font-semibold text-[#888] tracking-[0.092vw]">
           04 / THE STRATEGIC MOVE
         </p>
-        <h2 className="font-sans text-[3.06vw] font-light text-[#555] tracking-[-0.061vw] leading-[1.1] mt-[1.11vw]">
+        <h2 className="font-sans text-[3.06vw] max-lg:text-[24px] font-light text-[#555] tracking-[-0.061vw] leading-[1.1] mt-[1.11vw] max-lg:mt-3">
           Compress the work. Preserve the chain.{" "}
           <span className="font-semibold text-[#9c4221]">
             Close the loop.
@@ -421,7 +421,7 @@ export default function SafePage() {
         </h2>
 
         {/* 3 Pillars */}
-        <div className="flex gap-[2.22vw] mt-[2.78vw]">
+        <div className="flex max-lg:flex-col gap-[2.22vw] max-lg:gap-6 mt-[2.78vw] max-lg:mt-6">
           {[
             {
               num: "01",
@@ -439,15 +439,15 @@ export default function SafePage() {
               body: "The agent who reported the incident is the agent who receives the answer. Photo, last known location, suggested route. No one hands off into a black box.",
             },
           ].map((pillar) => (
-            <div key={pillar.num} className="flex-1 flex flex-col gap-[0.83vw]">
-              <div className="h-[0.21vw] bg-[#9c4221] w-full" />
-              <p className="font-sans text-[0.76vw] font-semibold text-[#9c4221] tracking-[0.092vw]">
+            <div key={pillar.num} className="flex-1 flex flex-col gap-[0.83vw] max-lg:gap-2">
+              <div className="h-[0.21vw] max-lg:h-[2px] bg-[#9c4221] w-full" />
+              <p className="font-sans text-[0.76vw] max-lg:text-[11px] font-semibold text-[#9c4221] tracking-[0.092vw]">
                 {pillar.num}
               </p>
-              <p className="font-sans text-[1.25vw] font-semibold text-[#555] leading-[1.3] tracking-[-0.013vw]">
+              <p className="font-sans text-[1.25vw] max-lg:text-[15px] font-semibold text-[#555] leading-[1.3] tracking-[-0.013vw]">
                 {pillar.title}
               </p>
-              <p className="font-sans text-[0.97vw] font-normal text-[#555] leading-[1.45]">
+              <p className="font-sans text-[0.97vw] max-lg:text-[14px] font-normal text-[#555] leading-[1.45]">
                 {pillar.body}
               </p>
             </div>
@@ -455,9 +455,9 @@ export default function SafePage() {
         </div>
 
         {/* Role needs grid */}
-        <div className="bg-[#f2efe8] rounded-[0.28vw] mt-[2.78vw]">
-          <div className="px-[2.78vw] py-[2.22vw]">
-            <p className="font-sans text-[0.76vw] font-semibold text-[#9c4221] tracking-[0.092vw] mb-[1.11vw]">
+        <div className="bg-[#f2efe8] rounded-[0.28vw] max-lg:rounded-[8px] mt-[2.78vw] max-lg:mt-6">
+          <div className="px-[2.78vw] max-lg:px-5 py-[2.22vw] max-lg:py-5">
+            <p className="font-sans text-[0.76vw] max-lg:text-[11px] font-semibold text-[#9c4221] tracking-[0.092vw] mb-[1.11vw] max-lg:mb-3">
               WHAT EACH ROLE NEEDS FROM AI
             </p>
             {[
@@ -484,12 +484,12 @@ export default function SafePage() {
             ].map((row) => (
               <div
                 key={row.role}
-                className="flex items-center py-[1.11vw] border-t border-[#d9d9d9]"
+                className="flex max-lg:flex-col items-center max-lg:items-start py-[1.11vw] max-lg:py-3 border-t border-[#d9d9d9]"
               >
-                <p className="font-sans text-[0.97vw] font-bold text-[#555] w-[15.28vw] shrink-0">
+                <p className="font-sans text-[0.97vw] max-lg:text-[13px] font-bold text-[#555] w-[15.28vw] max-lg:w-full shrink-0">
                   {row.role}
                 </p>
-                <p className="font-sans text-[0.97vw] font-normal text-[#555] leading-[1.45]">
+                <p className="font-sans text-[0.97vw] max-lg:text-[14px] font-normal text-[#555] leading-[1.45] max-lg:mt-1">
                   {row.need}
                 </p>
               </div>
@@ -501,17 +501,17 @@ export default function SafePage() {
       {/* ═══════════════════════════════════════════════════
           05 / THE DESIGN — Control Room
          ═══════════════════════════════════════════════════ */}
-      <motion.div className="px-[3.33vw] mt-[4.44vw]" {...fadeUp}>
-        <p className="font-sans text-[0.76vw] font-semibold text-[#888] tracking-[0.092vw]">
+      <motion.div className="px-[3.33vw] max-lg:px-5 mt-[4.44vw] max-lg:mt-10" {...fadeUp}>
+        <p className="font-sans text-[0.76vw] max-lg:text-[11px] font-semibold text-[#888] tracking-[0.092vw]">
           05 / THE DESIGN
         </p>
-        <h2 className="font-sans text-[3.06vw] font-light text-[#555] tracking-[-0.061vw] leading-[1.1] mt-[1.11vw]">
+        <h2 className="font-sans text-[3.06vw] max-lg:text-[24px] font-light text-[#555] tracking-[-0.061vw] leading-[1.1] mt-[1.11vw] max-lg:mt-3">
           Inside the analyst&rsquo;s{" "}
           <span className="font-semibold text-[#9c4221]">
             working surface.
           </span>
         </h2>
-        <p className="font-sans text-[1.25vw] font-normal text-[#555] leading-[1.5] tracking-[-0.013vw] mt-[1.67vw]">
+        <p className="font-sans text-[1.25vw] max-lg:text-[15px] font-normal text-[#555] leading-[1.5] tracking-[-0.013vw] mt-[1.67vw] max-lg:mt-4">
           The analyst&rsquo;s working surface. An incoming chat from a field
           agent triggers an AI-assisted search: ranked candidates, traceable
           evidence, a clear route to escalation. The control room lead&rsquo;s
@@ -519,9 +519,9 @@ export default function SafePage() {
         </p>
 
         {/* Control room screenshot */}
-        <div className="mt-[2.22vw]">
+        <div className="mt-[2.22vw] max-lg:mt-6">
           <div
-            className="relative overflow-hidden rounded-[0.56vw]"
+            className="relative overflow-hidden rounded-[0.56vw] max-lg:rounded-[4px]"
             style={{ boxShadow: "0px 2px 8px 0px rgba(0,0,0,0.08)" }}
           >
             <ShimmerImage
@@ -536,7 +536,7 @@ export default function SafePage() {
         </div>
 
         {/* Caption */}
-        <p className="font-sans text-[0.76vw] font-normal text-[#878787] leading-[1.6] tracking-[0.104vw] mt-[1.39vw]">
+        <p className="font-sans text-[0.76vw] max-lg:text-[11px] font-normal text-[#878787] leading-[1.6] tracking-[0.104vw] mt-[1.39vw] max-lg:mt-3">
           ANALYST WORKING SURFACE: incoming chat from a field agent on the left,
           AI-ranked match candidates with confidence and traceable evidence in
           the center, full escalation chain visible on the right. The control
@@ -548,15 +548,15 @@ export default function SafePage() {
       {/* ═══════════════════════════════════════════════════
           06 / CLOSING THE LOOP — Field Agent Mobile
          ═══════════════════════════════════════════════════ */}
-      <motion.div className="px-[3.33vw] mt-[4.44vw]" {...fadeUp}>
-        <p className="font-sans text-[0.76vw] font-semibold text-[#888] tracking-[0.092vw]">
+      <motion.div className="px-[3.33vw] max-lg:px-5 mt-[4.44vw] max-lg:mt-10" {...fadeUp}>
+        <p className="font-sans text-[0.76vw] max-lg:text-[11px] font-semibold text-[#888] tracking-[0.092vw]">
           06 / CLOSING THE LOOP
         </p>
-        <h2 className="font-sans text-[3.06vw] font-light text-[#555] tracking-[-0.061vw] leading-[1.1] mt-[1.11vw]">
+        <h2 className="font-sans text-[3.06vw] max-lg:text-[24px] font-light text-[#555] tracking-[-0.061vw] leading-[1.1] mt-[1.11vw] max-lg:mt-3">
           Back to the agent{" "}
           <span className="font-semibold text-[#9c4221]">who reported.</span>
         </h2>
-        <p className="font-sans text-[1.25vw] font-normal text-[#555] leading-[1.5] tracking-[-0.013vw] mt-[1.67vw]">
+        <p className="font-sans text-[1.25vw] max-lg:text-[15px] font-normal text-[#555] leading-[1.5] tracking-[-0.013vw] mt-[1.67vw] max-lg:mt-4">
           Once the control room lead approves, the field agent gets a push
           notification with everything they need: a photo of the suspect, last
           known location, suggested route. The conversation that started with
@@ -564,31 +564,31 @@ export default function SafePage() {
         </p>
 
         {/* Mobile phone mockups */}
-        <div className="flex justify-center gap-[2.22vw] mt-[2.22vw]">
-          <div className="w-[22%]">
+        <div className="flex justify-center gap-[2.22vw] max-lg:gap-4 mt-[2.22vw] max-lg:mt-6">
+          <div className="w-[22%] max-lg:w-[42%]">
             <ShimmerImage
               src="/images/safe-phone-intel.png"
               alt="SAFE field agent mobile — Intel view with suspect identification"
               width={1440}
               height={3344}
               className="shimmer w-full h-auto object-contain pointer-events-none"
-              sizes="20vw"
+              sizes="(max-width: 1024px) 42vw, 20vw"
             />
           </div>
-          <div className="w-[22%]">
+          <div className="w-[22%] max-lg:w-[42%]">
             <ShimmerImage
               src="/images/safe-phone-conversation.png"
               alt="SAFE field agent mobile — Conversation view with chat messages"
               width={1440}
               height={3344}
               className="shimmer w-full h-auto object-contain pointer-events-none"
-              sizes="20vw"
+              sizes="(max-width: 1024px) 42vw, 20vw"
             />
           </div>
         </div>
 
         {/* Caption */}
-        <p className="font-sans text-[0.76vw] font-normal text-[#878787] leading-[1.6] tracking-[0.104vw] mt-[1.39vw]">
+        <p className="font-sans text-[0.76vw] max-lg:text-[11px] font-normal text-[#878787] leading-[1.6] tracking-[0.104vw] mt-[1.39vw] max-lg:mt-3">
           Chat-based incident reporting on the right (the field agent),
           confirmed-suspect handoff on the left (the answer back). The same
           conversation, both sides. Two minutes from report to identification.
@@ -598,17 +598,17 @@ export default function SafePage() {
       {/* ═══════════════════════════════════════════════════
           07 / WHAT SHIPPED
          ═══════════════════════════════════════════════════ */}
-      <motion.div className="px-[3.33vw] mt-[4.44vw]" {...fadeUp}>
-        <p className="font-sans text-[0.76vw] font-semibold text-[#888] tracking-[0.092vw]">
+      <motion.div className="px-[3.33vw] max-lg:px-5 mt-[4.44vw] max-lg:mt-10" {...fadeUp}>
+        <p className="font-sans text-[0.76vw] max-lg:text-[11px] font-semibold text-[#888] tracking-[0.092vw]">
           07 / WHAT SHIPPED
         </p>
-        <h2 className="font-sans text-[3.06vw] font-light text-[#555] tracking-[-0.061vw] leading-[1.1] mt-[1.11vw]">
+        <h2 className="font-sans text-[3.06vw] max-lg:text-[24px] font-light text-[#555] tracking-[-0.061vw] leading-[1.1] mt-[1.11vw] max-lg:mt-3">
           Pilot, in{" "}
           <span className="font-semibold text-[#9c4221]">operator hands.</span>
         </h2>
 
         {/* 4-stat row */}
-        <div className="flex gap-[2.22vw] mt-[2.78vw]">
+        <div className="flex max-lg:flex-wrap gap-[2.22vw] max-lg:gap-6 mt-[2.78vw] max-lg:mt-6">
           {[
             {
               value: "Shipped",
@@ -633,15 +633,15 @@ export default function SafePage() {
           ].map((stat) => (
             <div
               key={stat.value}
-              className="flex-1 flex flex-col gap-[0.83vw]"
+              className="flex-1 max-lg:basis-[calc(50%-12px)] flex flex-col gap-[0.83vw] max-lg:gap-1"
             >
-              <p className="font-sans text-[3.89vw] font-light text-[#555] tracking-[-0.078vw] leading-none">
+              <p className="font-sans text-[3.89vw] max-lg:text-[32px] font-light text-[#555] tracking-[-0.078vw] leading-none">
                 {stat.value}
               </p>
-              <p className="font-sans text-[0.76vw] font-semibold text-[#888] tracking-[0.092vw]">
+              <p className="font-sans text-[0.76vw] max-lg:text-[10px] font-semibold text-[#888] tracking-[0.092vw]">
                 {stat.label}
               </p>
-              <p className="font-sans text-[0.97vw] font-normal text-[#555] leading-[1.45]">
+              <p className="font-sans text-[0.97vw] max-lg:text-[13px] font-normal text-[#555] leading-[1.45]">
                 {stat.desc}
               </p>
             </div>
@@ -649,11 +649,11 @@ export default function SafePage() {
         </div>
 
         {/* "What I can and can't claim" card */}
-        <div className="bg-[#f2efe8] rounded-[0.28vw] px-[1.94vw] py-[1.53vw] mt-[2.22vw]">
-          <p className="font-sans text-[0.76vw] font-semibold text-[#888] tracking-[0.092vw]">
+        <div className="bg-[#f2efe8] rounded-[0.28vw] max-lg:rounded-[4px] px-[1.94vw] max-lg:px-5 py-[1.53vw] max-lg:py-5 mt-[2.22vw] max-lg:mt-6">
+          <p className="font-sans text-[0.76vw] max-lg:text-[11px] font-semibold text-[#888] tracking-[0.092vw]">
             WHAT I CAN AND CAN&rsquo;T CLAIM
           </p>
-          <p className="font-sans text-[1.25vw] font-normal text-[#555] leading-[1.5] tracking-[-0.013vw] mt-[0.83vw]">
+          <p className="font-sans text-[1.25vw] max-lg:text-[15px] font-normal text-[#555] leading-[1.5] tracking-[-0.013vw] mt-[0.83vw] max-lg:mt-2">
             Safe shipped to pilot and was used by SNCF operators on shift. The
             rollout plan extended toward roughly 40,000 cameras across the Paris
             underground network. I left Thales before adoption metrics were
@@ -669,38 +669,38 @@ export default function SafePage() {
       {/* ═══════════════════════════════════════════════════
           08 / FIVE YEARS LATER
          ═══════════════════════════════════════════════════ */}
-      <motion.div className="px-[3.33vw] mt-[4.44vw]" {...fadeUp}>
-        <p className="font-sans text-[0.76vw] font-semibold text-[#888] tracking-[0.092vw]">
+      <motion.div className="px-[3.33vw] max-lg:px-5 mt-[4.44vw] max-lg:mt-10" {...fadeUp}>
+        <p className="font-sans text-[0.76vw] max-lg:text-[11px] font-semibold text-[#888] tracking-[0.092vw]">
           08 / FIVE YEARS LATER
         </p>
-        <h2 className="font-sans text-[3.06vw] font-light text-[#555] tracking-[-0.061vw] leading-[1.1] mt-[1.11vw]">
+        <h2 className="font-sans text-[3.06vw] max-lg:text-[24px] font-light text-[#555] tracking-[-0.061vw] leading-[1.1] mt-[1.11vw] max-lg:mt-3">
           What I&rsquo;d do differently, and what I&rsquo;d do again.
         </h2>
 
         {/* Two-column reflection */}
-        <div className="flex gap-[4.44vw] mt-[2.78vw]">
-          <div className="flex-1 flex flex-col gap-[0.83vw]">
-            <p className="font-sans text-[0.76vw] font-semibold text-[#888] tracking-[0.092vw]">
+        <div className="flex max-lg:flex-col gap-[4.44vw] max-lg:gap-8 mt-[2.78vw] max-lg:mt-6">
+          <div className="flex-1 flex flex-col gap-[0.83vw] max-lg:gap-2">
+            <p className="font-sans text-[0.76vw] max-lg:text-[11px] font-semibold text-[#888] tracking-[0.092vw]">
               DIFFERENTLY
             </p>
-            <p className="font-sans text-[1.53vw] font-semibold text-[#555] leading-[1.3] tracking-[-0.023vw]">
+            <p className="font-sans text-[1.53vw] max-lg:text-[18px] font-semibold text-[#555] leading-[1.3] tracking-[-0.023vw]">
               I&rsquo;d build the metrics into the design, not after it.
             </p>
-            <p className="font-sans text-[0.97vw] font-normal text-[#555] leading-[1.45]">
+            <p className="font-sans text-[0.97vw] max-lg:text-[14px] font-normal text-[#555] leading-[1.45]">
               We shipped without an instrumented adoption plan. Today I&rsquo;d
               argue for that as part of the design: what we measure, who reads
               the dashboard, what triggers a revisit. Lead-level work treats
               measurement as a design surface.
             </p>
           </div>
-          <div className="flex-1 flex flex-col gap-[0.83vw]">
-            <p className="font-sans text-[0.76vw] font-semibold text-[#888] tracking-[0.092vw]">
+          <div className="flex-1 flex flex-col gap-[0.83vw] max-lg:gap-2">
+            <p className="font-sans text-[0.76vw] max-lg:text-[11px] font-semibold text-[#888] tracking-[0.092vw]">
               AGAIN
             </p>
-            <p className="font-sans text-[1.53vw] font-semibold text-[#555] leading-[1.3] tracking-[-0.023vw]">
+            <p className="font-sans text-[1.53vw] max-lg:text-[18px] font-semibold text-[#555] leading-[1.3] tracking-[-0.023vw]">
               I&rsquo;d shadow before I sketch.
             </p>
-            <p className="font-sans text-[0.97vw] font-normal text-[#555] leading-[1.45]">
+            <p className="font-sans text-[0.97vw] max-lg:text-[14px] font-normal text-[#555] leading-[1.45]">
               The single best decision I made on Safe was sitting in the room
               for a full shift before opening Figma. Every senior project
               I&rsquo;ve done since starts the same way. You cannot design a
@@ -713,17 +713,19 @@ export default function SafePage() {
       {/* ═══════════════════════════════════════════════════
           Closing navigation
          ═══════════════════════════════════════════════════ */}
-      <div className="px-[3.33vw] mt-[4.44vw]">
-        <div className="flex items-center justify-between">
+      <div className="h-[5vw] max-lg:h-[60px]" />
+
+      <div className="fixed bottom-0 left-0 right-0 z-40 bg-cream/90 backdrop-blur-sm border-t border-[#d9d9d9]">
+        <div className="flex items-center justify-between px-[3.33vw] max-lg:px-5 py-[1.39vw] max-lg:py-4">
           <a
             href="/work"
-            className="font-sans text-[1.39vw] font-normal text-[#555] hover:underline underline-offset-4"
+            className="font-sans text-[1.39vw] max-lg:text-[16px] font-normal text-[#555] hover:underline underline-offset-4"
           >
             &larr; Back to work
           </a>
           <a
             href="/work/specificationworkbench"
-            className="font-sans text-[1.39vw] font-normal text-[#555] hover:underline underline-offset-4"
+            className="font-sans text-[1.39vw] max-lg:text-[16px] font-normal text-[#555] hover:underline underline-offset-4"
           >
             Next case study &rarr;
           </a>
@@ -733,8 +735,8 @@ export default function SafePage() {
       {/* ═══════════════════════════════════════════════════
           Footer
          ═══════════════════════════════════════════════════ */}
-      <div className="flex items-center justify-between px-[3.33vw] py-[2vh] mt-[3.33vw]">
-        <span className="font-sans text-[0.76vw] text-text-secondary whitespace-nowrap">
+      <div className="flex items-center justify-between px-[3.33vw] max-lg:px-5 py-[2vh] mt-[3.33vw] max-lg:mt-8">
+        <span className="font-sans text-[0.76vw] max-lg:text-[11px] text-text-secondary whitespace-nowrap">
           &copy; 2026 Nihel Mouelhi. All rights reserved.
         </span>
       </div>

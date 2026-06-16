@@ -17,7 +17,7 @@ export default function LoadingScreen({
         exit={{ opacity: 0 }}
         transition={{ duration: 0.5, ease: "easeInOut" }}
       >
-        <div className="flex flex-col items-center gap-[1.5vw]">
+        <div className="flex flex-col items-center gap-[1.5vw] max-lg:gap-4">
           <motion.div
             initial={{ scale: 0.3, opacity: 0 }}
             animate={{
@@ -31,11 +31,11 @@ export default function LoadingScreen({
             }}
             onAnimationComplete={onComplete}
           >
-            <Logo className="w-[8.33vw] h-[8.33vw]" />
+            <Logo className="w-[8.33vw] max-lg:w-[80px] h-[8.33vw] max-lg:h-[80px]" />
           </motion.div>
 
           <motion.p
-            className="font-sans text-[1.1vw] tracking-[2.2px] text-text-secondary text-center"
+            className="font-sans text-[1.1vw] max-lg:text-[14px] tracking-[2.2px] text-text-secondary text-center"
             initial={{ opacity: 0, y: 8 }}
             animate={{
               opacity: [0, 1, 1, 0],

@@ -92,28 +92,28 @@ const fadeUp = {
 function TestimonialCard({ t, i }: { t: (typeof testimonials)[number]; i: number }) {
   return (
     <motion.div
-      className="bg-[#f5f0e6] border border-[#ede7db] rounded-[1.11vw] p-[1.67vw] flex flex-col gap-[1.11vw] overflow-hidden w-[31.88vw]"
+      className="bg-[#f5f0e6] border border-[#ede7db] rounded-[1.11vw] max-lg:rounded-[8px] p-[1.67vw] max-lg:p-5 flex flex-col gap-[1.11vw] max-lg:gap-4 overflow-hidden w-[31.88vw] max-lg:w-full"
       {...fadeUp}
       transition={{ delay: 0.1 + i * 0.12, duration: 0.6 }}
     >
-      <div className="font-sans text-[1.04vw] leading-[1.6] text-[#333] flex-1">
+      <div className="font-sans text-[1.04vw] max-lg:text-[14px] leading-[1.6] text-[#333] flex-1">
         {t.text.split("\n").map((line, j) => (
           <p key={j} className={j < t.text.split("\n").length - 1 ? "mb-[0.83vw]" : ""}>
             {line}
           </p>
         ))}
       </div>
-      <div className="flex items-center gap-[0.83vw]">
+      <div className="flex items-center gap-[0.83vw] max-lg:gap-3">
         <div className="flex flex-col gap-[0.14vw] flex-1">
-          <span className="font-sans font-semibold text-[0.97vw] text-[#333]">
+          <span className="font-sans font-semibold text-[0.97vw] max-lg:text-[14px] text-[#333]">
             {t.name}
           </span>
-          <span className="font-sans text-[0.83vw] text-[#666]">
+          <span className="font-sans text-[0.83vw] max-lg:text-[12px] text-[#666]">
             {t.role}
           </span>
         </div>
-        <div className="w-[1.39vw] h-[1.39vw] bg-[#0967c2] rounded-[0.28vw] flex items-center justify-center">
-          <span className="font-sans font-semibold text-[0.83vw] text-white leading-none">
+        <div className="w-[1.39vw] max-lg:w-[18px] h-[1.39vw] max-lg:h-[18px] bg-[#0967c2] rounded-[0.28vw] max-lg:rounded-[3px] flex items-center justify-center">
+          <span className="font-sans font-semibold text-[0.83vw] max-lg:text-[11px] text-white leading-none">
             in
           </span>
         </div>
@@ -128,13 +128,13 @@ export default function AboutPage() {
       <Header activeItem="ABOUT" />
 
       {/* Header spacer */}
-      <div className="h-[19.4vw]" />
+      <div className="h-[19.4vw] max-lg:h-[100px]" />
 
       {/* ── About hero ── */}
-      <div className="flex gap-[6.94vw] items-center px-[3.33vw]">
+      <div className="flex max-lg:flex-col gap-[6.94vw] max-lg:gap-8 items-center max-lg:items-start px-[3.33vw] max-lg:px-5">
         {/* Portrait */}
         <motion.div
-          className="relative w-[38vw] h-[45.28vw] rounded-[1.39vw] overflow-hidden shrink-0"
+          className="relative w-[38vw] max-lg:w-full h-[45.28vw] max-lg:h-[300px] rounded-[1.39vw] max-lg:rounded-[12px] overflow-hidden shrink-0"
           {...fadeUp}
           transition={{ delay: 0.2, duration: 0.7 }}
         >
@@ -143,24 +143,24 @@ export default function AboutPage() {
             alt="Nihel Mouelhi"
             fill
             className="object-cover"
-            sizes="38vw"
+            sizes="(max-width: 1023px) 100vw, 38vw"
             priority
           />
         </motion.div>
 
         {/* Bio text */}
-        <div className="flex flex-col gap-[2.22vw] flex-1 min-w-0 overflow-hidden">
+        <div className="flex flex-col gap-[2.22vw] max-lg:gap-6 flex-1 min-w-0 overflow-hidden max-lg:overflow-visible max-lg:w-full">
           <motion.div
             {...fadeUp}
             transition={{ delay: 0.3, duration: 0.7 }}
           >
-            <h1 className="font-sans font-normal text-[3.89vw] leading-[1.15] text-text-primary">
+            <h1 className="font-sans font-normal text-[3.89vw] max-lg:text-[28px] leading-[1.15] text-text-primary">
               Interior architect turned product designer, building for millions.
             </h1>
           </motion.div>
 
           <motion.div
-            className="flex flex-col gap-[1.11vw] font-sans text-[1.11vw] leading-[1.5] text-text-primary"
+            className="flex flex-col gap-[1.11vw] max-lg:gap-4 font-sans text-[1.11vw] max-lg:text-[15px] leading-[1.5] text-text-primary"
             {...fadeUp}
             transition={{ delay: 0.4, duration: 0.7 }}
           >
@@ -183,7 +183,7 @@ export default function AboutPage() {
           </motion.div>
 
           <motion.div
-            className="flex items-center gap-[1.39vw] text-[1.11vw] leading-[1.5]"
+            className="flex items-center gap-[1.39vw] max-lg:gap-3 text-[1.11vw] max-lg:text-[13px] leading-[1.5]"
             {...fadeUp}
             transition={{ delay: 0.5, duration: 0.7 }}
           >
@@ -211,42 +211,42 @@ export default function AboutPage() {
       </div>
 
       {/* ── Field Notes ── */}
-      <div className="mt-[3.33vw] flex flex-col gap-[2.22vw]">
+      <div className="mt-[3.33vw] max-lg:mt-8 flex flex-col gap-[2.22vw] max-lg:gap-6">
         <motion.div
-          className="flex flex-col gap-[0.56vw] px-[3.33vw]"
+          className="flex flex-col gap-[0.56vw] px-[3.33vw] max-lg:px-5"
           {...fadeUp}
           transition={{ duration: 0.7 }}
         >
-          <p className="font-sans text-[1.11vw] text-text-primary">
+          <p className="font-sans text-[1.11vw] max-lg:text-[13px] text-text-primary">
             FIELD NOTES
           </p>
-          <h2 className="font-sans font-normal text-[3.89vw] leading-[1.15] text-text-primary">
+          <h2 className="font-sans font-normal text-[3.89vw] max-lg:text-[28px] leading-[1.15] text-text-primary">
             Where it started, how I think, what&rsquo;s next.
           </h2>
         </motion.div>
 
-        <div className="flex gap-[2.99vw] px-[3.33vw]">
+        <div className="flex max-lg:flex-col gap-[2.99vw] max-lg:gap-6 px-[3.33vw] max-lg:px-5">
           {fieldNotes.map((note, i) => (
             <motion.div
               key={note.title}
-              className="flex flex-col gap-[1.67vw] flex-1"
+              className="flex flex-col gap-[1.67vw] max-lg:gap-4 flex-1"
               {...fadeUp}
               transition={{ delay: 0.1 + i * 0.12, duration: 0.6 }}
             >
-              <div className="relative w-full h-[20.83vw] rounded-[1.39vw] overflow-hidden border border-[#6b6b6b]">
+              <div className="relative w-full h-[20.83vw] max-lg:h-[200px] rounded-[1.39vw] max-lg:rounded-[8px] overflow-hidden border border-[#d9d9d9]">
                 <ShimmerImage
                   src={note.image}
                   alt={note.title}
                   fill
                   className="object-cover"
-                  sizes="30vw"
+                  sizes="(max-width: 1023px) 100vw, 30vw"
                 />
               </div>
-              <div className="flex flex-col gap-[1.11vw]">
-                <h3 className="font-sans font-semibold text-[1.67vw] leading-[1.2] text-text-primary">
+              <div className="flex flex-col gap-[1.11vw] max-lg:gap-2">
+                <h3 className="font-sans font-semibold text-[1.67vw] max-lg:text-[18px] leading-[1.2] text-text-primary">
                   {note.title}
                 </h3>
-                <p className="font-sans text-[1.11vw] leading-[1.5] text-text-primary">
+                <p className="font-sans text-[1.11vw] max-lg:text-[15px] leading-[1.5] text-text-primary">
                   {note.description}
                 </p>
               </div>
@@ -256,21 +256,21 @@ export default function AboutPage() {
       </div>
 
       {/* ── Design Principles ── */}
-      <div className="mt-[3.33vw] px-[3.33vw]">
+      <div className="mt-[3.33vw] max-lg:mt-8 px-[3.33vw] max-lg:px-5">
         <motion.div
-          className="flex flex-col gap-[0.56vw] mb-[2.22vw]"
+          className="flex flex-col gap-[0.56vw] mb-[2.22vw] max-lg:mb-6"
           {...fadeUp}
           transition={{ duration: 0.7 }}
         >
-          <p className="font-sans text-[1.11vw] text-text-primary">
+          <p className="font-sans text-[1.11vw] max-lg:text-[13px] text-text-primary">
             MY DESIGN PRINCIPLES
           </p>
-          <h2 className="font-sans font-normal text-[3.89vw] leading-[1.15] text-text-primary">
+          <h2 className="font-sans font-normal text-[3.89vw] max-lg:text-[28px] leading-[1.15] text-text-primary">
             Four rules I design by.
           </h2>
         </motion.div>
 
-        <div className="grid grid-cols-2 gap-x-[1.67vw] gap-y-[2.22vw]">
+        <div className="grid grid-cols-2 max-lg:grid-cols-1 gap-x-[1.67vw] gap-y-[2.22vw] max-lg:gap-y-6">
           {principles.map((p, i) => (
             <motion.div
               key={p.number}
@@ -278,11 +278,11 @@ export default function AboutPage() {
               {...fadeUp}
               transition={{ delay: 0.1 + i * 0.1, duration: 0.6 }}
             >
-              <p className="font-sans text-[1.11vw] text-[#bbb]">{p.number}</p>
-              <h3 className="font-sans font-semibold text-[1.67vw] leading-[1.3] text-text-primary">
+              <p className="font-sans text-[1.11vw] max-lg:text-[13px] text-[#bbb]">{p.number}</p>
+              <h3 className="font-sans font-semibold text-[1.67vw] max-lg:text-[18px] leading-[1.3] text-text-primary">
                 {p.title}
               </h3>
-              <p className="font-sans text-[1.11vw] leading-[1.5] text-text-primary">
+              <p className="font-sans text-[1.11vw] max-lg:text-[15px] leading-[1.5] text-text-primary">
                 {p.description}
               </p>
             </motion.div>
@@ -291,29 +291,29 @@ export default function AboutPage() {
       </div>
 
       {/* ── Testimonials ── */}
-      <div className="mt-[3.33vw] px-[3.33vw]">
+      <div className="mt-[3.33vw] max-lg:mt-8 px-[3.33vw] max-lg:px-5">
         <motion.div
-          className="flex flex-col gap-[0.56vw] mb-[2.22vw]"
+          className="flex flex-col gap-[0.56vw] mb-[2.22vw] max-lg:mb-6"
           {...fadeUp}
           transition={{ duration: 0.7 }}
         >
-          <p className="font-sans text-[1.11vw] text-text-primary">
+          <p className="font-sans text-[1.11vw] max-lg:text-[13px] text-text-primary">
             IN THEIR WORDS
           </p>
-          <h2 className="font-sans font-normal text-[3.89vw] leading-[1.15] text-text-primary">
+          <h2 className="font-sans font-normal text-[3.89vw] max-lg:text-[28px] leading-[1.15] text-text-primary">
             A few perspectives on working together
           </h2>
         </motion.div>
 
         <div className="relative">
           {/* Row 1 */}
-          <div className="flex gap-[1.67vw] mb-[1.67vw]">
+          <div className="flex max-lg:flex-col gap-[1.67vw] max-lg:gap-4 mb-[1.67vw] max-lg:mb-4">
             {testimonials.slice(0, 2).map((t, i) => (
               <TestimonialCard key={i} t={t} i={i} />
             ))}
           </div>
           {/* Row 2 — offset for staggered feel */}
-          <div className="flex gap-[1.67vw] pl-[14vw]">
+          <div className="flex max-lg:flex-col gap-[1.67vw] max-lg:gap-4 pl-[14vw] max-lg:pl-0">
             {testimonials.slice(2).map((t, i) => (
               <TestimonialCard key={i + 2} t={t} i={i + 2} />
             ))}
@@ -322,8 +322,8 @@ export default function AboutPage() {
       </div>
 
       {/* Footer */}
-      <div className="flex items-center justify-between px-[3.33vw] py-[2vh] mt-[3.33vw]">
-        <span className="font-sans text-[0.76vw] text-text-secondary whitespace-nowrap">
+      <div className="flex items-center justify-between px-[3.33vw] max-lg:px-5 py-[2vh] mt-[3.33vw] max-lg:mt-8">
+        <span className="font-sans text-[0.76vw] max-lg:text-[11px] text-text-secondary whitespace-nowrap">
           © 2026 Nihel Mouelhi. All rights reserved.
         </span>
       </div>

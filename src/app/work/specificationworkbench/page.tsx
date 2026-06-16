@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import ESGPage from "@/components/ESGPage";
+import ProtectedESG from "./ProtectedESG";
 
 export const metadata: Metadata = {
   title: "Specification Workbench — ESG",
@@ -14,9 +14,5 @@ export const metadata: Metadata = {
 };
 
 export default function ESG() {
-  return (
-    <main className="w-screen min-h-screen bg-cream">
-      <ESGPage />
-    </main>
-  );
+  return <ProtectedESG />;
 }

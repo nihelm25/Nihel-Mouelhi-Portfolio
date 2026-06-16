@@ -9,7 +9,7 @@ export default function HomeClient() {
   const [isLoading, setIsLoading] = useState(true);
 
   return (
-    <main className="w-screen h-screen overflow-hidden bg-cream">
+    <main className="w-screen min-h-screen bg-cream">
       <AnimatePresence mode="wait">
         {isLoading ? (
           <motion.div
@@ -23,7 +23,7 @@ export default function HomeClient() {
         ) : (
           <motion.div
             key="landing"
-            className="w-full h-full"
+            className="w-full min-h-screen"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, ease: "easeOut" }}

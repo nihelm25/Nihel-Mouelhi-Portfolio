@@ -20,7 +20,7 @@ export default function LandingPage() {
       <div className="flex-1 flex flex-col justify-end px-[3.33vw] max-lg:px-5 max-lg:pt-4 pb-[8vw] max-lg:pb-10">
         <div className="flex flex-col items-start text-left gap-[4vw] max-lg:gap-8">
             <motion.div
-              className="font-serif text-[3.96vw] max-lg:text-[32px] font-semibold text-text-primary leading-[1.1]"
+              className="font-serif text-[4.16vw] max-lg:text-[32px] font-semibold text-text-primary leading-[1.1]"
               style={{ fontVariationSettings: "'SOFT' 0, 'WONK' 1" }}
               {...fadeUp}
               transition={{ delay: 0.2, duration: 0.7 }}

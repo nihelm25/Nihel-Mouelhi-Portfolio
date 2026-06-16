@@ -16,8 +16,18 @@ export default function Header({ activeItem }: { activeItem?: string } = {}) {
   return (
     <>
       <header className="absolute top-0 left-0 right-0 z-40">
-        <div className="relative flex items-start justify-between pt-8 px-[3.33vw] max-lg:px-5 w-full">
-          <nav className="flex gap-8 items-center ml-auto max-lg:hidden">
+        <div className="flex items-center justify-between pt-8 px-[3.33vw] max-lg:px-5 w-full">
+          <motion.a
+            href="/"
+            className="transition-opacity duration-200 hover:opacity-60"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.3, duration: 0.6 }}
+          >
+            <Logo className="w-[64px] h-[64px] max-lg:w-[44px] max-lg:h-[44px]" />
+          </motion.a>
+
+          <nav className="flex gap-8 items-center max-lg:hidden">
             {navItems.map((item, i) => (
               <motion.a
                 key={item.label}
@@ -35,17 +45,6 @@ export default function Header({ activeItem }: { activeItem?: string } = {}) {
               </motion.a>
             ))}
           </nav>
-
-          <motion.a
-            href="/"
-            className="absolute left-[calc(3.33vw-16px)] max-lg:left-3 top-8 max-lg:top-5 transition-opacity duration-200 hover:opacity-60"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.3, duration: 0.6 }}
-          >
-            <Logo className="w-[64px] h-[64px] max-lg:w-[44px] max-lg:h-[44px]" />
-          </motion.a>
-
 
           {/* Mobile hamburger button */}
           <motion.button

@@ -114,7 +114,7 @@ function DeepPurpleVisual() {
 const projects: Omit<CaseCardProps, "index">[] = [
   {
     heading: "Replacing a legacy equity platform for a global participant base",
-    company: "JP Morgan Chase",
+    company: "JP Morgan Chase & Co",
     tags: ["B2C", "FINTECH", "EQUITY"],
     metrics: [
       { value: "$19B", label: "Assets under administration" },

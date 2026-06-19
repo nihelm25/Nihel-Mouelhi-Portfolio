@@ -148,10 +148,10 @@ export default function AboutPage() {
       <div className="h-[19.4vw] max-lg:h-[100px]" />
 
       {/* ── About hero ── */}
-      <div className="flex max-lg:flex-col gap-[6.94vw] max-lg:gap-8 items-start px-[3.33vw] max-lg:px-5">
+      <div className="grid grid-cols-2 max-lg:grid-cols-1 gap-x-[1.67vw] max-lg:gap-8 items-start px-[3.33vw] max-lg:px-5">
         {/* Portrait */}
         <motion.div
-          className="relative w-[38vw] max-lg:w-full self-stretch max-lg:self-auto max-lg:h-[300px] rounded-[1.39vw] max-lg:rounded-[12px] overflow-hidden shrink-0"
+          className="relative max-lg:w-full self-stretch max-lg:self-auto max-lg:h-[300px] rounded-[1.39vw] max-lg:rounded-[12px] overflow-hidden"
           {...fadeUp}
           transition={{ delay: 0.2, duration: 0.7 }}
         >
@@ -166,7 +166,7 @@ export default function AboutPage() {
         </motion.div>
 
         {/* Bio text */}
-        <div className="flex flex-col gap-[2.22vw] max-lg:gap-6 flex-1 min-w-0 overflow-hidden max-lg:overflow-visible max-lg:w-full">
+        <div className="flex flex-col gap-[2.22vw] max-lg:gap-6 min-w-0 overflow-hidden max-lg:overflow-visible max-lg:w-full">
           <motion.div
             {...fadeUp}
             transition={{ delay: 0.3, duration: 0.7 }}
@@ -361,14 +361,14 @@ export default function AboutPage() {
       {/* ── Get in Touch ── */}
       <div id="contact" className="mt-[6.94vw] max-lg:mt-16 px-[3.33vw] max-lg:px-5 pb-[3.33vw] max-lg:pb-8">
         <div className="border-t border-divider pt-[3.33vw] max-lg:pt-8">
-          <div className="flex max-lg:flex-col gap-[6vw] max-lg:gap-8 items-start">
+          <div className="grid grid-cols-2 max-lg:grid-cols-1 gap-x-[1.67vw] max-lg:gap-8 items-start">
             <motion.div
-              className="w-[40%] max-lg:w-full flex flex-col gap-[1.11vw] max-lg:gap-3"
+              className="max-lg:w-full flex flex-col gap-[1.11vw] max-lg:gap-3"
               {...fadeUp}
               transition={{ duration: 0.7 }}
             >
               <h2 className="font-sans font-normal text-[3.89vw] max-lg:text-[28px] leading-[1.15] text-text-primary">
-                Let&rsquo;s turn ambitious ideas into products.
+                Let&rsquo;s turn ambitious<br />ideas into products.
               </h2>
               <div className="flex items-center gap-[0.56vw] max-lg:gap-2 mt-[0.56vw] max-lg:mt-1">
                 <div className="w-[0.83vw] max-lg:w-[10px] h-[0.83vw] max-lg:h-[10px] rounded-full bg-[#28ca41]" />
@@ -378,7 +378,7 @@ export default function AboutPage() {
               </div>
             </motion.div>
 
-            <div className="flex-1 max-lg:w-full flex flex-col gap-[3.33vw] max-lg:gap-6">
+            <div className="max-lg:w-full flex flex-col gap-[3.33vw] max-lg:gap-6">
               {contactSections.map((section, i) => (
                 <motion.div
                   key={section.label}

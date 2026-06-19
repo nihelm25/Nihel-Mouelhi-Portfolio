@@ -7,7 +7,7 @@ import Logo from "./Logo";
 const navItems = [
   { label: "WORK", href: "/work" },
   { label: "ABOUT", href: "/about" },
-  { label: "CONTACT", href: "/contact" },
+  { label: "CONTACT", href: "/about#contact" },
 ];
 
 export default function Header({ activeItem }: { activeItem?: string } = {}) {

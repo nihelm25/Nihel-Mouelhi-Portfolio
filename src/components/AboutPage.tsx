@@ -4,6 +4,23 @@ import { motion } from "framer-motion";
 import ShimmerImage from "./ShimmerImage";
 import Header from "./Header";
 
+const contactSections = [
+  {
+    label: "EMAIL",
+    value: "nihel.mouelhi@gmail.com",
+    href: "mailto:nihel.mouelhi@gmail.com",
+  },
+  {
+    label: "CONNECT",
+    value: "Linkedin",
+    href: "https://www.linkedin.com/in/nihel-mouelhi-047552a8/",
+  },
+  {
+    label: "LOCATION",
+    value: "Los Angeles, CA",
+  },
+];
+
 const companies = [
   "J.P. Morgan Chase & Co.",
   "XP Health",
@@ -27,9 +44,9 @@ const fieldNotes = [
   },
   {
     image: "/images/field-figjam.jpg",
-    title: "What's next",
+    title: "What I'm building",
     description:
-      "Multi-agent UX pipeline sketch, capstone on AI augmentation in design.",
+      "A multi-agent pipeline that automates design intake and discovery, end-to-end.",
   },
 ];
 
@@ -131,10 +148,10 @@ export default function AboutPage() {
       <div className="h-[19.4vw] max-lg:h-[100px]" />
 
       {/* ── About hero ── */}
-      <div className="flex max-lg:flex-col gap-[6.94vw] max-lg:gap-8 items-center max-lg:items-start px-[3.33vw] max-lg:px-5">
+      <div className="flex max-lg:flex-col gap-[6.94vw] max-lg:gap-8 items-start px-[3.33vw] max-lg:px-5">
         {/* Portrait */}
         <motion.div
-          className="relative w-[38vw] max-lg:w-full h-[45.28vw] max-lg:h-[300px] rounded-[1.39vw] max-lg:rounded-[12px] overflow-hidden shrink-0"
+          className="relative w-[38vw] max-lg:w-full self-stretch max-lg:self-auto max-lg:h-[300px] rounded-[1.39vw] max-lg:rounded-[12px] overflow-hidden shrink-0"
           {...fadeUp}
           transition={{ delay: 0.2, duration: 0.7 }}
         >
@@ -165,20 +182,40 @@ export default function AboutPage() {
             transition={{ delay: 0.4, duration: 0.7 }}
           >
             <p>
-              I&rsquo;ve designed products for millions of users across fintech,
-              defense, healthcare and telecom; industries where one misstep
-              breaks trust or costs money.
+              I design products for the hard spaces, fintech, defense,
+              healthcare, telecom, but also for millions of everyday users who
+              just want something that works and feels right.
             </p>
             <p>
-              I started as an interior architect before transitioning to product
-              design, bringing spatial thinking and craft sensibility into
-              digital experiences. Across 9 years, I&rsquo;ve built interfaces
-              that leverage massive datasets, led cross-functional teams, and
-              solved problems where empathy meets complexity.
+              I started as an interior architect. The medium changed, the
+              mindset didn&rsquo;t. That&rsquo;s what lets me think in systems,
+              lead with clarity, and craft products that feel inevitable.
             </p>
+            <p className="font-semibold mt-[0.5vw] max-lg:mt-1">
+              What shapes how I work:
+            </p>
+            <ul className="flex flex-col gap-[1.11vw] max-lg:gap-4 list-disc pl-[1.2em]">
+              <li>
+                Trilingual and multicultural, I&rsquo;ve worked across Tunisia,
+                France, and the US with cross-functional teams. That range shapes
+                how I listen and navigate rooms where not everyone sees the same
+                problem.
+              </li>
+              <li>
+                My interior architecture background gives me a systems
+                perspective. I see the whole before the parts, holding strategic
+                ambiguity while staying grounded in craft.
+              </li>
+              <li>
+                Right now I&rsquo;m deep in AI. I built a multi-agent pipeline
+                that automates intake and design discovery, and designed an
+                AI-assisted incident-response system for transit control rooms.
+              </li>
+            </ul>
             <p>
-              Now I&rsquo;m focused on AI, where the craft is still being
-              defined and strategic thinking matters more than ever.
+              Outside work, you&rsquo;ll find me applying the same eye to
+              fashion and interiors. Different mediums, same obsession with
+              getting it right.
             </p>
           </motion.div>
 
@@ -321,8 +358,63 @@ export default function AboutPage() {
         </div>
       </div>
 
+      {/* ── Get in Touch ── */}
+      <div id="contact" className="mt-[6.94vw] max-lg:mt-16 px-[3.33vw] max-lg:px-5 pb-[3.33vw] max-lg:pb-8">
+        <div className="border-t border-divider pt-[3.33vw] max-lg:pt-8">
+          <div className="flex max-lg:flex-col gap-[6vw] max-lg:gap-8 items-start">
+            <motion.div
+              className="w-[40%] max-lg:w-full flex flex-col gap-[1.11vw] max-lg:gap-3"
+              {...fadeUp}
+              transition={{ duration: 0.7 }}
+            >
+              <h2 className="font-sans font-normal text-[3.89vw] max-lg:text-[28px] leading-[1.15] text-text-primary">
+                Let&rsquo;s turn ambitious ideas into products.
+              </h2>
+              <div className="flex items-center gap-[0.56vw] max-lg:gap-2 mt-[0.56vw] max-lg:mt-1">
+                <div className="w-[0.83vw] max-lg:w-[10px] h-[0.83vw] max-lg:h-[10px] rounded-full bg-[#28ca41]" />
+                <span className="font-sans text-[0.97vw] max-lg:text-[13px] tracking-[2.2px] text-text-primary">
+                  Available for new opportunities
+                </span>
+              </div>
+            </motion.div>
+
+            <div className="flex-1 max-lg:w-full flex flex-col gap-[3.33vw] max-lg:gap-6">
+              {contactSections.map((section, i) => (
+                <motion.div
+                  key={section.label}
+                  className="flex flex-col gap-[0.56vw]"
+                  {...fadeUp}
+                  transition={{ delay: 0.1 + i * 0.12, duration: 0.5 }}
+                >
+                  <span className="font-sans text-[0.97vw] max-lg:text-[12px] leading-[16.5px] tracking-[2.2px] text-text-primary">
+                    {section.label}
+                  </span>
+                  {section.href ? (
+                    <a
+                      href={section.href}
+                      target={section.href.startsWith("http") ? "_blank" : undefined}
+                      rel={section.href.startsWith("http") ? "noopener noreferrer" : undefined}
+                      className="font-sans text-[1.67vw] max-lg:text-[18px] tracking-[2.2px] text-text-primary hover:underline underline-offset-4 transition-all"
+                    >
+                      {section.value}
+                    </a>
+                  ) : (
+                    <span className="font-sans text-[1.67vw] max-lg:text-[18px] tracking-[2.2px] text-text-primary">
+                      {section.value}
+                    </span>
+                  )}
+                  {i < contactSections.length - 1 && (
+                    <div className="h-px bg-divider w-full mt-[1.67vw]" />
+                  )}
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* Footer */}
-      <div className="flex items-center justify-between px-[3.33vw] max-lg:px-5 py-[2vh] mt-[3.33vw] max-lg:mt-8">
+      <div className="flex items-center justify-between px-[3.33vw] max-lg:px-5 py-[2vh]">
         <span className="font-sans text-[0.76vw] max-lg:text-[11px] text-text-secondary whitespace-nowrap">
           © 2026 Nihel Mouelhi. All rights reserved.
         </span>

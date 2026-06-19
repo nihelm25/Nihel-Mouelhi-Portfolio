@@ -120,7 +120,7 @@ export default function WorkplaceSolutionsPage() {
               PEOPLE
             </p>
             <p className="font-sans text-[0.97vw] max-lg:text-[14px] font-normal text-[#555] leading-[1.45]">
-              Led 2 of 4 journey lines (View &amp; Manage, Model &amp; Transact) within a team of 5 designers, coordinating with product, legal, compliance, and engineering across time zones.
+              Led end-to-end design across 2 of 4 journey lines (View &amp; Manage, Model &amp; Transact) within a team of 5 designers, partnering directly with product, engineering, compliance, and legal across time zones to align on constraints before pixels.
             </p>
           </div>
           <div className="bg-[#f2efe8] rounded-[0.28vw] max-lg:rounded-[4px] px-[1.67vw] max-lg:px-5 py-[1.94vw] max-lg:py-5 flex flex-col gap-[0.83vw] max-lg:gap-3">
@@ -260,10 +260,10 @@ export default function WorkplaceSolutionsPage() {
 
         <div className="flex max-lg:flex-wrap gap-[2.22vw] max-lg:gap-6 mt-[2.78vw]">
           {[
-            { value: "200K+", label: "Active users on the platform today, grown steadily since the initial migration from legacy." },
-            { value: "100+", label: "Public and private companies live on the new platform, roughly 50/50 US and global." },
-            { value: "$19B", label: "Total value of equity awards and contributions managed on the platform today." },
-            { value: "50+", label: "Geographies covered, each with its own regulatory floor and plan rules." },
+            { value: "44 → 70", label: "NPS on the Model & Transact journey I led. View & Manage went from 31 to 67. Both measured across the full journey lines." },
+            { value: "200K+", label: "Active participants on the platform today, migrated from legacy with zero churn." },
+            { value: "$19B", label: "Total value of equity awards and contributions managed on the platform." },
+            { value: "50+", label: "Jurisdictions supported, each with its own regulatory floor and plan rules." },
           ].map((stat) => (
             <div key={stat.value} className="flex-1 max-lg:basis-[calc(50%-12px)] flex flex-col gap-[0.56vw] max-lg:gap-2">
               <p className="font-sans text-[3.89vw] max-lg:text-[32px] font-light text-[#555] tracking-[-0.078vw]">
@@ -310,7 +310,7 @@ export default function WorkplaceSolutionsPage() {
             Regulation, tax rules, and plan logic aren&rsquo;t obstacles to design around, they&rsquo;re the material. The most impactful decisions were about defaults, ordering, and when to pause a participant before they committed.
           </p>
           <p>
-            Leading two journey lines across a team of 5 designers taught me that stakeholder alignment is the design work. The screen is the last thing I design now, after the system underneath it has been figured out.
+            Leading two journey lines meant my week was split between design reviews and rooms with compliance officers, tax counsel, and engineering leads. That taught me that stakeholder alignment is the design work. The screen is the last thing I design now, after the system underneath it has been figured out.
           </p>
         </div>
       </motion.div>

@@ -45,7 +45,7 @@ export default function SafePage() {
         >
           <ShimmerImage
             src="/images/safe-hero-desktop-mobile.png"
-            alt="SAFE Surveillance Platform — Desktop and Mobile"
+            alt="SAFE Surveillance Platform -Desktop and Mobile"
             width={5376}
             height={2519}
             className="shimmer w-full h-auto object-cover object-top pointer-events-none"
@@ -391,7 +391,7 @@ export default function SafePage() {
       {/* Solution detail: Analyst surface (After) */}
       <motion.div className="px-[3.33vw] max-lg:px-5 mt-[4.44vw] max-lg:mt-10" {...fadeUp}>
         <p className="font-sans text-[0.76vw] max-lg:text-[11px] font-semibold text-[#9c4221] tracking-[0.092vw]">
-          AFTER &mdash; CONTROL ROOM
+          AFTER - CONTROL ROOM
         </p>
         <p className="font-sans text-[1.25vw] max-lg:text-[16px] font-semibold text-[#555] leading-[1.3] mt-[0.83vw]">
           The analyst&rsquo;s working surface
@@ -404,7 +404,7 @@ export default function SafePage() {
           <div className="relative overflow-hidden rounded-[0.56vw] max-lg:rounded-[4px]" style={{ boxShadow: "0px 2px 8px 0px rgba(0,0,0,0.08)" }}>
             <ShimmerImage
               src="/images/safe-browser.png"
-              alt="SAFE analyst working surface — control room desktop view"
+              alt="SAFE analyst working surface -control room desktop view"
               width={5376}
               height={3280}
               className="shimmer w-full h-auto object-cover object-top pointer-events-none"
@@ -422,7 +422,7 @@ export default function SafePage() {
       {/* Solution detail: Field agent mobile (After) */}
       <motion.div className="px-[3.33vw] max-lg:px-5 mt-[4.44vw] max-lg:mt-10" {...fadeUp}>
         <p className="font-sans text-[0.76vw] max-lg:text-[11px] font-semibold text-[#9c4221] tracking-[0.092vw]">
-          AFTER &mdash; FIELD
+          AFTER - FIELD
         </p>
         <p className="font-sans text-[1.25vw] max-lg:text-[16px] font-semibold text-[#555] leading-[1.3] mt-[0.83vw]">
           Closing the loop to the agent who reported
@@ -435,7 +435,7 @@ export default function SafePage() {
           <div className="w-[22%] max-lg:w-[42%]">
             <ShimmerImage
               src="/images/safe-phone-intel.png"
-              alt="SAFE field agent mobile — Intel view with suspect identification"
+              alt="SAFE field agent mobile -Intel view with suspect identification"
               width={1440}
               height={3344}
               className="shimmer w-full h-auto object-contain pointer-events-none"
@@ -445,7 +445,7 @@ export default function SafePage() {
           <div className="w-[22%] max-lg:w-[42%]">
             <ShimmerImage
               src="/images/safe-phone-conversation.png"
-              alt="SAFE field agent mobile — Conversation view with chat messages"
+              alt="SAFE field agent mobile -Conversation view with chat messages"
               width={1440}
               height={3344}
               className="shimmer w-full h-auto object-contain pointer-events-none"

@@ -27,32 +27,28 @@ export default function ESGPage() {
     <section className="relative w-full min-h-screen bg-cream overflow-x-hidden">
       <Header activeItem="WORK" />
 
-      {/* Header spacer */}
       <div className="h-[19.4vw] max-lg:h-[100px]" />
 
-      {/* ═══════════════════════════════════════════════════
-          HERO
-         ═══════════════════════════════════════════════════ */}
+      {/* ── HERO ── */}
       <div className="px-[3.33vw] max-lg:px-5">
-        {/* Label */}
         <motion.p
           className="font-sans text-[0.76vw] max-lg:text-[11px] font-semibold text-[#888] tracking-[0.092vw]"
           {...fadeUp}
         >
-          CASE STUDY, 03 &middot; 2025 &middot; PRODUCT DESIGNER &middot; B2E
-          &middot; B2C
+          03 / 04 &middot; OPENINVEST &times; J.P. MORGAN &middot; SYSTEMS
+          DESIGN &middot; B2E &middot; B2C
         </motion.p>
 
-        {/* Title */}
         <motion.h1
-          className="font-sans text-[5vw] max-lg:text-[32px] font-light text-[#555] tracking-[-0.15vw] mt-[1.39vw]"
+          className="font-sans text-[5vw] max-lg:text-[32px] font-light text-[#555] tracking-[-0.15vw] mt-[0.56vw] max-lg:mt-1"
           {...fadeUp}
           transition={{ delay: 0.1, duration: 0.6 }}
         >
           Specification Workbench
         </motion.h1>
+      </div>
 
-        {/* Hero browser frame */}
+      <div className="px-[3.33vw] max-lg:px-5">
         <motion.div
           className="mt-[2.78vw] max-lg:mt-6"
           {...fadeUp}
@@ -60,7 +56,7 @@ export default function ESGPage() {
         >
           <ShimmerImage
             src="/images/esg-heroshot.png"
-            alt="Specification Workbench — Methodology Builder"
+            alt="Specification Workbench -Methodology Builder"
             width={5376}
             height={3648}
             className="shimmer w-full h-auto object-contain pointer-events-none"
@@ -69,96 +65,66 @@ export default function ESGPage() {
           />
         </motion.div>
 
-        {/* Hero bottom row: meta + intro */}
         <motion.div
-          className="flex max-lg:flex-col gap-[4.44vw] max-lg:gap-6 mt-[2.78vw]"
+          className="flex max-lg:grid max-lg:grid-cols-2 max-lg:gap-4 items-start mt-[2.22vw] max-lg:mt-5"
           {...fadeUp}
           transition={{ delay: 0.3, duration: 0.6 }}
         >
-          {/* Left: meta column */}
-          <div className="w-[25.63vw] max-lg:w-full shrink-0 flex flex-col gap-[1.94vw] max-lg:gap-4">
-            {[
-              { label: "COMPANY", value: "OpenInvest at J.P. Morgan Chase" },
-              { label: "ROLE", value: "Product designer (team of 8)" },
-              {
-                label: "STATUS",
-                value:
-                  "Shipped as high-fidelity vision; deprioritized in roadmap shift before build.",
-              },
-              {
-                label: "DISCIPLINE",
-                value: "Systems design · IA · UX architecture",
-              },
-            ].map((item) => (
-              <div key={item.label} className="flex flex-col gap-[0.35vw] max-lg:gap-1">
-                <p className="font-sans text-[0.76vw] max-lg:text-[11px] font-semibold text-[#888] tracking-[0.092vw]">
-                  {item.label}
-                </p>
-                <p className="font-sans text-[0.97vw] max-lg:text-[14px] font-normal text-[#555]">
-                  {item.value}
-                </p>
-              </div>
-            ))}
-          </div>
-
-          {/* Right: intro paragraph */}
-          <div className="flex-1">
-            <p className="font-sans text-[1.53vw] max-lg:text-[16px] font-normal text-[#555] leading-[1.45] tracking-[-0.023vw]">
-              A unified workspace for building, testing, and publishing the
-              financial methodologies that power downstream client and advisor
-              products.{" "}
-              <span className="font-semibold">
-                Two opaque internal tools, consolidated into one transparent
-                system.
-              </span>
-            </p>
-          </div>
+          {[
+            { label: "ROLE", value: "Product Designer" },
+            { label: "STATUS", value: "HiFi vision shipped" },
+            { label: "TEAM", value: "2 designers" },
+            { label: "SCOPE", value: "Systems design · IA" },
+            { label: "YEAR", value: "2025" },
+          ].map((item, i, arr) => (
+            <div
+              key={item.label}
+              className={`flex-1 max-lg:flex-none ${i < arr.length - 1 ? "border-r max-lg:border-r-0 border-[#d9d9d9] pr-[1.39vw] max-lg:pr-0 mr-[1.39vw] max-lg:mr-0" : ""}`}
+            >
+              <p className="font-sans text-[0.69vw] max-lg:text-[10px] font-semibold text-[#888] tracking-[0.092vw]">
+                {item.label}
+              </p>
+              <p className="font-sans text-[0.97vw] max-lg:text-[13px] font-normal text-[#555] mt-[0.28vw] max-lg:mt-0.5">
+                {item.value}
+              </p>
+            </div>
+          ))}
         </motion.div>
       </div>
 
-      {/* ═══════════════════════════════════════════════════
-          01 / WHAT EXISTED
-         ═══════════════════════════════════════════════════ */}
-      <motion.div className="px-[3.33vw] max-lg:px-5 mt-[4.44vw] max-lg:mt-10" {...fadeUp}>
+      {/* ── PROBLEM ── */}
+      <motion.div
+        className="px-[3.33vw] max-lg:px-5 mt-[4.44vw] max-lg:mt-10"
+        {...fadeUp}
+      >
         <p className="font-sans text-[0.76vw] max-lg:text-[11px] font-semibold text-[#888] tracking-[0.092vw]">
-          01 / WHAT EXISTED
+          PROBLEM
         </p>
         <h2 className="font-sans text-[3.06vw] max-lg:text-[24px] font-light text-[#555] tracking-[-0.061vw] leading-[1.1] mt-[1.11vw]">
-          Two tools.{" "}
-          <span className="font-semibold text-[#9c4221]">Both opaque.</span>
+          Three tools.{" "}
+          <span className="font-semibold text-[#9c4221]">All opaque.</span>
         </h2>
-        <p className="font-sans text-[1.39vw] max-lg:text-[15px] font-normal text-[#555] leading-[1.5] tracking-[-0.013vw] mt-[1.67vw]">
-          Before this project, the research team built methodologies in two
-          separate tools: one for creation, one for testing. Both worked. Both
-          were built by researchers, for researchers, in a form only their
-          authors could navigate.
-        </p>
-        <p className="font-sans text-[0.97vw] max-lg:text-[15px] font-normal text-[#555] leading-[1.5] tracking-[-0.013vw] mt-[1.11vw]">
-          The cost wasn&rsquo;t just inconvenience. Methodologies are how
-          OpenInvest expresses its values in code: the logic that scores
-          companies against causes like gender equity, climate, or LGBTQIA+
-          representation. They feed downstream into the client-facing products
-          and advisor tools that JPMC&rsquo;s customers actually use.
-        </p>
-        <p className="font-sans text-[0.97vw] max-lg:text-[15px] font-normal text-[#555] leading-[1.5] tracking-[-0.013vw] mt-[1.11vw]">
-          Every methodology that lived inside an opaque tool was a dependency on
-          the person who built it: to update it, audit it, explain it, or evolve
-          it.
+        <p className="font-sans text-[1.25vw] max-lg:text-[15px] font-normal text-[#555] leading-[1.5] tracking-[-0.013vw] mt-[1.67vw]">
+          The research team built methodologies, the logic that scores
+          companies against causes like gender equity or climate, in
+          three separate tools, each built by researchers for their own workflow.
+          All worked. All were opaque: legible only to the people who built
+          them. Every methodology that lived inside an opaque tool was a
+          dependency on the person who built it.
         </p>
 
-        {/* Opaque tools diagram */}
         <div className="mt-[2.22vw]">
           <div className="bg-[#f5f0e8] rounded-[0.83vw] max-lg:rounded-[8px] overflow-hidden">
             <ShimmerImage
               src="/images/esg-opaque-tools-diagram.png"
-              alt="Two opaque tools diagram — inputs, sealed methodology hub, and downstream outputs"
+              alt="Three opaque tools diagram -inputs, sealed methodology hub, and downstream outputs"
               width={5376}
-              height={2112}
+              height={1920}
               className="shimmer w-full h-auto object-contain pointer-events-none"
               sizes="93vw"
             />
           </div>
-          <p className="font-sans text-[0.76vw] max-lg:text-[11px] font-normal text-[#878787] leading-[1.6] tracking-[0.104vw] mt-[1.11vw]">
+          <p className="font-sans text-[0.76vw] max-lg:text-[11px] font-normal text-[#878787] leading-[1.6] tracking-[0.104vw] mt-[1.39vw] max-lg:mt-3">
             WHAT RESEARCHERS ACTUALLY SAW: many inputs, many outputs, and a
             sealed hub in the middle. Methodologies were authored, versioned, and
             consumed across the system, but the logic inside the hub stayed
@@ -166,31 +132,9 @@ export default function ESGPage() {
           </p>
         </div>
 
-        {/* Pull quote */}
-        <div className="border-l-[0.21vw] max-lg:border-l-[2px] border-[#bbb] pl-[2.22vw] max-lg:pl-5 py-[1.67vw] max-lg:py-4 mt-[2.22vw]">
-          <p className="font-sans text-[2.22vw] max-lg:text-[16px] font-normal text-[#555] leading-[1.35]">
-            &ldquo;The same opacity that made the tools fast for their authors
-            made the entire methodology layer fragile for everyone else.&rdquo;
-          </p>
-        </div>
-      </motion.div>
-
-      {/* ═══════════════════════════════════════════════════
-          02 / THE REFRAME
-         ═══════════════════════════════════════════════════ */}
-      <motion.div className="px-[3.33vw] max-lg:px-5 mt-[4.44vw] max-lg:mt-10" {...fadeUp}>
-        <p className="font-sans text-[0.76vw] max-lg:text-[11px] font-semibold text-[#888] tracking-[0.092vw]">
-          02 / THE REFRAME
-        </p>
-        <h2 className="font-sans text-[3.06vw] max-lg:text-[24px] font-light text-[#555] tracking-[-0.061vw] leading-[1.1] mt-[1.11vw]">
-          <span className="font-semibold text-[#9c4221]">From</span> internal
-          tool{" "}
-          <span className="font-semibold text-[#9c4221]">to</span> sales asset.
-        </h2>
-
-        {/* Two-column: brief excerpt + body */}
-        <div className="flex max-lg:flex-col gap-[4.44vw] max-lg:gap-6 mt-[2.22vw]">
-          {/* Left: brief excerpt card */}
+        {/* Brief reframe + explanation */}
+        <div className="flex max-lg:flex-col gap-[4.44vw] max-lg:gap-6 mt-[2.78vw] max-lg:mt-6">
+          {/* Left: brief card */}
           <div className="shrink-0 w-[44.24vw] max-lg:w-full">
             <div
               className="bg-white border border-[#bbb] rounded-[0.28vw] max-lg:rounded-[4px] px-[3.33vw] max-lg:px-5 py-[2.78vw] max-lg:py-5 flex flex-col gap-[1.67vw] max-lg:gap-4"
@@ -233,14 +177,14 @@ export default function ESGPage() {
             </p>
           </div>
 
-          {/* Right: body column */}
+          {/* Right: explanation */}
           <div className="flex-1 flex flex-col gap-[1.11vw]">
             <p className="font-sans text-[0.97vw] max-lg:text-[15px] font-normal text-[#555] leading-[1.5]">
-              The original ask was to merge the two tools into one and make them
-              usable. An internal-efficiency project. As I went deeper into the
-              work, a second use case in the brief, &ldquo;support advisors and
-              sales teams to understand and analyze the impact of methodologies
-              against a portfolio,&rdquo; kept getting larger.
+              The original ask was to merge the three tools into one and make
+              them usable. An internal-efficiency project. As I went deeper into
+              the work, a second use case in the brief, &ldquo;support advisors
+              and sales teams to understand and analyze the impact of
+              methodologies against a portfolio,&rdquo; kept getting larger.
             </p>
             <p className="font-sans text-[0.97vw] max-lg:text-[15px] font-normal text-[#555] leading-[1.5]">
               It had been listed as a footnote under monitoring and audit. I
@@ -261,63 +205,57 @@ export default function ESGPage() {
         </div>
       </motion.div>
 
-      {/* ═══════════════════════════════════════════════════
-          03 / DOMAIN
-         ═══════════════════════════════════════════════════ */}
-      <motion.div className="px-[3.33vw] max-lg:px-5 mt-[4.44vw] max-lg:mt-10" {...fadeUp}>
+      {/* ── CHALLENGES ── */}
+      <motion.div
+        className="px-[3.33vw] max-lg:px-5 mt-[4.44vw] max-lg:mt-10"
+        {...fadeUp}
+      >
         <p className="font-sans text-[0.76vw] max-lg:text-[11px] font-semibold text-[#888] tracking-[0.092vw]">
-          03 / DOMAIN
+          CHALLENGES
         </p>
-        <h2 className="font-sans text-[3.06vw] max-lg:text-[24px] font-semibold text-[#9c4221] tracking-[-0.061vw] leading-[1.1] mt-[1.11vw]">
-          The hardest part wasn&rsquo;t designing.
+        <h2 className="font-sans text-[3.06vw] max-lg:text-[24px] font-light text-[#555] tracking-[-0.061vw] leading-[1.1] mt-[1.11vw]">
+          The tool wasn&rsquo;t{" "}
+          <span className="font-semibold text-[#9c4221]">the hard part.</span>
         </h2>
-        <p className="font-sans text-[1.67vw] max-lg:text-[16px] font-normal text-[#555] leading-[1.5] mt-[1.67vw]">
-          It was learning what a methodology actually is.
-        </p>
 
-        {/* Two-column: text + computational graph */}
-        <div className="flex max-lg:flex-col gap-[4.44vw] max-lg:gap-6 mt-[1.67vw]">
-          <div className="flex-1 flex flex-col gap-[1.11vw]">
-            <p className="font-sans text-[0.97vw] max-lg:text-[15px] font-normal text-[#555] leading-[1.5]">
-              I spent the early weeks of the project not designing. I
-              interviewed the research team, read their internal documentation,
-              watched demos of the existing tools. I asked questions I
-              didn&rsquo;t yet know were the right ones.
+        <div className="grid grid-cols-3 max-lg:grid-cols-1 gap-[1.67vw] max-lg:gap-4 mt-[2.22vw]">
+          <div className="bg-[#f2efe8] rounded-[0.28vw] max-lg:rounded-[4px] px-[1.67vw] max-lg:px-5 py-[1.94vw] max-lg:py-5 flex flex-col gap-[0.83vw] max-lg:gap-3">
+            <p className="font-sans text-[0.76vw] max-lg:text-[11px] font-semibold text-[#888] tracking-[0.092vw]">
+              DOMAIN
             </p>
-            <p className="font-sans text-[0.97vw] max-lg:text-[15px] font-normal text-[#555] leading-[1.5]">
-              I learned the math underneath the work: how raw attributes from
-              market data feed into derived attributes, how derived attributes
-              compose into methodologies, how methodologies score companies
-              against causes, and how those scores eventually surface to a
-              client looking at a portfolio.
-            </p>
-            <p className="font-sans text-[0.97vw] max-lg:text-[15px] font-normal text-[#555] leading-[1.5]">
-              The questions that mattered most were the recursive ones.
+            <p className="font-sans text-[0.97vw] max-lg:text-[14px] font-normal text-[#555] leading-[1.45]">
+              Spent weeks learning what a methodology actually is before
+              touching Figma. How raw attributes feed into derived attributes,
+              how those compose into methodologies, how scores surface to
+              clients. The math underneath the work.
             </p>
           </div>
-
-          {/* Computational graph */}
-          <div className="shrink-0 w-[29.17vw] max-lg:w-full">
-            <div className="rounded-[0.56vw] max-lg:rounded-[6px] overflow-hidden">
-              <ShimmerImage
-                src="/images/esg-computational-graph.png"
-                alt="Computational graph — how raw market data flows through three stages to become derived attributes and methodologies"
-                width={1680}
-                height={1052}
-                className="shimmer w-full h-auto object-contain pointer-events-none"
-                sizes="29vw"
-              />
-            </div>
-            <p className="font-sans text-[0.76vw] max-lg:text-[11px] font-normal text-[#878787] leading-[1.6] tracking-[0.104vw] mt-[1.11vw]">
-              COMPUTATIONAL GRAPH: how raw market data becomes derived
-              attributes, derived attributes become methodologies, methodologies
-              become scores. The math underneath the work.
+          <div className="bg-[#f2efe8] rounded-[0.28vw] max-lg:rounded-[4px] px-[1.67vw] max-lg:px-5 py-[1.94vw] max-lg:py-5 flex flex-col gap-[0.83vw] max-lg:gap-3">
+            <p className="font-sans text-[0.76vw] max-lg:text-[11px] font-semibold text-[#888] tracking-[0.092vw]">
+              ECOSYSTEM
+            </p>
+            <p className="font-sans text-[0.97vw] max-lg:text-[14px] font-normal text-[#555] leading-[1.45]">
+              Specification Workbench wasn&rsquo;t standalone. Data flowed in
+              from multiple databases. Methodologies flowed out to client-facing
+              products and advisor tools. Every design decision had to account
+              for upstream sources and downstream consumers.
+            </p>
+          </div>
+          <div className="bg-[#f2efe8] rounded-[0.28vw] max-lg:rounded-[4px] px-[1.67vw] max-lg:px-5 py-[1.94vw] max-lg:py-5 flex flex-col gap-[0.83vw] max-lg:gap-3">
+            <p className="font-sans text-[0.76vw] max-lg:text-[11px] font-semibold text-[#888] tracking-[0.092vw]">
+              AUDIENCES
+            </p>
+            <p className="font-sans text-[0.97vw] max-lg:text-[14px] font-normal text-[#555] leading-[1.45]">
+              One tool had to serve researchers building methodologies,
+              validators approving them, monitors tracking data quality, and
+              eventually advisors and clients reading them. Same workspace,
+              different permissions, different mental models.
             </p>
           </div>
         </div>
 
-        {/* Recursive questions block */}
-        <div className="mt-[2.22vw]">
+        {/* Recursive questions */}
+        <div className="mt-[2.78vw] max-lg:mt-6">
           {[
             {
               label: "Q.01",
@@ -375,7 +313,6 @@ export default function ESGPage() {
           ))}
         </div>
 
-        {/* Outro body */}
         <div className="flex flex-col gap-[1.11vw] mt-[2.22vw]">
           <p className="font-sans text-[0.97vw] max-lg:text-[15px] font-normal text-[#555] leading-[1.5]">
             These weren&rsquo;t UX questions. They were system questions, and
@@ -396,7 +333,7 @@ export default function ESGPage() {
           <div className="rounded-[0.83vw] max-lg:rounded-[8px] overflow-hidden">
             <ShimmerImage
               src="/images/esg-journey-map.jpg"
-              alt="User journey map — user steps, actions, goals, feelings, pain points, and opportunities across five lifecycle stages"
+              alt="User journey map -user steps, actions, goals, feelings, pain points, and opportunities across five lifecycle stages"
               width={5376}
               height={2927}
               className="w-full h-auto object-contain pointer-events-none"
@@ -406,34 +343,12 @@ export default function ESGPage() {
           <p className="font-sans text-[0.76vw] max-lg:text-[11px] font-normal text-[#878787] leading-[1.6] tracking-[0.104vw] mt-[1.11vw]">
             CRITICAL USER JOURNEY MAP: the synthesis of the recursive questions.
             User actions, goals, feelings, pain points, and opportunities mapped
-            across five lifecycle stages &mdash; from awareness through loyalty.
-            What came out of asking the questions above.
+            across five lifecycle stages, from awareness through loyalty.
           </p>
         </div>
-      </motion.div>
-
-      {/* ═══════════════════════════════════════════════════
-          04 / SYSTEM
-         ═══════════════════════════════════════════════════ */}
-      <motion.div className="px-[3.33vw] max-lg:px-5 mt-[4.44vw] max-lg:mt-10" {...fadeUp}>
-        <p className="font-sans text-[0.76vw] max-lg:text-[11px] font-semibold text-[#888] tracking-[0.092vw]">
-          04 / SYSTEM
-        </p>
-        <h2 className="font-sans text-[3.06vw] max-lg:text-[24px] font-light text-[#555] tracking-[-0.061vw] leading-[1.1] mt-[1.11vw]">
-          A{" "}
-          <span className="font-semibold text-[#9c4221]">node</span> in a{" "}
-          <span className="font-semibold text-[#9c4221]">larger system</span>.
-        </h2>
-        <p className="font-sans text-[0.97vw] max-lg:text-[15px] font-normal text-[#555] leading-[1.5] mt-[1.67vw]">
-          Specification Workbench wasn&rsquo;t a standalone tool. Data flowed in
-          from multiple databases. Methodologies flowed out to client-facing
-          products and advisor tools. Every methodology built in Workbench was a
-          contract with downstream consumers about how it would behave, what it
-          would expose, and how it would be interpreted.
-        </p>
 
         {/* Ecosystem diagram */}
-        <div className="bg-[#f5f0e8] rounded-[1.11vw] max-lg:rounded-[8px] p-[3.33vw] max-lg:p-5 flex max-lg:flex-col items-center justify-center gap-[2.22vw] max-lg:gap-4 mt-[2.22vw]">
+        <div className="bg-[#f5f0e8] rounded-[1.11vw] max-lg:rounded-[8px] p-[3.33vw] max-lg:p-5 flex max-lg:flex-col items-center justify-center gap-[2.22vw] max-lg:gap-4 mt-[2.78vw] max-lg:mt-6">
           {/* UPSTREAM */}
           <div className="shrink-0 w-[19.44vw] max-lg:w-full flex flex-col gap-[1.11vw] max-lg:gap-3">
             <p className="font-sans text-[0.76vw] max-lg:text-[11px] font-normal text-[#888] tracking-[0.104vw]">
@@ -441,7 +356,10 @@ export default function ESGPage() {
             </p>
             {[
               { title: "Market Data", sub: "equileap · rep risk · refinitiv" },
-              { title: "Reference Data", sub: "issuer · jid · classifications" },
+              {
+                title: "Reference Data",
+                sub: "issuer · jid · classifications",
+              },
               { title: "Client Data", sub: "portfolios · benchmarks" },
             ].map((item) => (
               <div
@@ -458,8 +376,9 @@ export default function ESGPage() {
             ))}
           </div>
 
-          {/* Arrow */}
-          <span className="font-sans text-[1.67vw] max-lg:text-[20px] text-[#888] max-lg:rotate-90">&rarr;</span>
+          <span className="font-sans text-[1.67vw] max-lg:text-[20px] text-[#888] max-lg:rotate-90">
+            &rarr;
+          </span>
 
           {/* CENTER: Workbench */}
           <div className="shrink-0 w-[19.44vw] max-lg:w-full h-[13.89vw] max-lg:h-auto max-lg:py-8 bg-[#1a1a1f] rounded-[0.83vw] max-lg:rounded-[8px] flex flex-col items-center justify-center gap-[0.56vw]">
@@ -471,8 +390,9 @@ export default function ESGPage() {
             </p>
           </div>
 
-          {/* Arrow */}
-          <span className="font-sans text-[1.67vw] max-lg:text-[20px] text-[#888] max-lg:rotate-90">&rarr;</span>
+          <span className="font-sans text-[1.67vw] max-lg:text-[20px] text-[#888] max-lg:rotate-90">
+            &rarr;
+          </span>
 
           {/* DOWNSTREAM */}
           <div className="shrink-0 w-[19.44vw] max-lg:w-full flex flex-col gap-[1.11vw] max-lg:gap-3">
@@ -480,7 +400,10 @@ export default function ESGPage() {
               DOWNSTREAM: CONSUMERS
             </p>
             {[
-              { title: "Advisor Tools", sub: "portfolio analysis · proposals" },
+              {
+                title: "Advisor Tools",
+                sub: "portfolio analysis · proposals",
+              },
               { title: "Client Apps", sub: "cause filtering · scoring" },
               { title: "Audit Layer", sub: "controls · compliance" },
             ].map((item) => (
@@ -505,83 +428,99 @@ export default function ESGPage() {
           user paths (Research team, C-VAR / reporting). The ecosystem the
           workbench sits inside.
         </p>
+      </motion.div>
 
-        {/* Outro body */}
-        <div className="flex flex-col gap-[1.11vw] mt-[2.22vw]">
-          <p className="font-sans text-[0.97vw] max-lg:text-[15px] font-normal text-[#555] leading-[1.5]">
-            Designing for that ecosystem meant understanding it. I mapped where
-            each piece of data came from, which database owned it, how
-            methodologies would be integrated into the final products, and what
-            dependencies existed across the chain. The user never saw any of
-            this.{" "}
-            <span className="font-semibold">
-              But every design decision was shaped by it.
-            </span>
-          </p>
-          <p className="font-sans text-[0.97vw] max-lg:text-[15px] font-normal text-[#555] leading-[1.5]">
-            This is one expression of a principle I design by:{" "}
-            <span className="font-semibold">
-              design for the edge case, then hide it
-            </span>
-            . The complexity of the upstream pipeline and the downstream
-            dependencies stayed invisible to the researcher building a
-            methodology. It was carried by the design.
+      {/* ── SOLUTIONS ── */}
+      <motion.div
+        className="px-[3.33vw] max-lg:px-5 mt-[4.44vw] max-lg:mt-10"
+        {...fadeUp}
+      >
+        <p className="font-sans text-[0.76vw] max-lg:text-[11px] font-semibold text-[#888] tracking-[0.092vw]">
+          SOLUTIONS
+        </p>
+        <h2 className="font-sans text-[3.06vw] max-lg:text-[24px] font-light text-[#555] tracking-[-0.061vw] leading-[1.1] mt-[1.11vw]">
+          From three opaque tools to{" "}
+          <span className="font-semibold text-[#9c4221]">
+            one transparent system.
+          </span>
+        </h2>
+      </motion.div>
+
+      {/* Solution: Before -the three original tools */}
+      <motion.div
+        className="px-[3.33vw] max-lg:px-5 mt-[2.78vw] max-lg:mt-8"
+        {...fadeUp}
+      >
+        <p className="font-sans text-[0.76vw] max-lg:text-[11px] font-semibold text-[#9c4221] tracking-[0.092vw]">
+          BEFORE
+        </p>
+        <p className="font-sans text-[1.25vw] max-lg:text-[16px] font-semibold text-[#555] leading-[1.3] mt-[0.83vw]">
+          The three original tools
+        </p>
+        <div className="flex max-lg:flex-col gap-[1.11vw] max-lg:gap-3 mt-[2.22vw]">
+          {[1, 2, 3].map((n) => (
+            <div
+              key={n}
+              className="flex-1 bg-[#f5f0e8] rounded-[0.56vw] max-lg:rounded-[6px] flex items-center justify-center"
+              style={{ aspectRatio: "16 / 10" }}
+            >
+              <p className="font-sans text-[0.97vw] max-lg:text-[14px] font-normal text-[#bbb] tracking-[0.069vw]">
+                TOOL {n} · IMAGE PLACEHOLDER
+              </p>
+            </div>
+          ))}
+        </div>
+      </motion.div>
+
+      {/* Solution: Low fidelity */}
+      <motion.div
+        className="px-[3.33vw] max-lg:px-5 mt-[2.78vw] max-lg:mt-8"
+        {...fadeUp}
+      >
+        <p className="font-sans text-[0.76vw] max-lg:text-[11px] font-semibold text-[#9c4221] tracking-[0.092vw]">
+          LOW FIDELITY
+        </p>
+        <p className="font-sans text-[1.25vw] max-lg:text-[16px] font-semibold text-[#555] leading-[1.3] mt-[0.83vw]">
+          Early explorations
+        </p>
+        <div
+          className="mt-[2.22vw] bg-[#f5f0e8] rounded-[0.83vw] max-lg:rounded-[8px] flex items-center justify-center"
+          style={{ aspectRatio: "16 / 9" }}
+        >
+          <p className="font-sans text-[0.97vw] max-lg:text-[14px] font-normal text-[#bbb] tracking-[0.069vw]">
+            LOW-FIDELITY EXPLORATIONS · IMAGE PLACEHOLDER
           </p>
         </div>
       </motion.div>
 
-      {/* ═══════════════════════════════════════════════════
-          05 / DESIGN
-         ═══════════════════════════════════════════════════ */}
-      <motion.div className="px-[3.33vw] max-lg:px-5 mt-[4.44vw] max-lg:mt-10" {...fadeUp}>
-        <p className="font-sans text-[0.76vw] max-lg:text-[11px] font-semibold text-[#888] tracking-[0.092vw]">
-          05 / DESIGN
+      {/* Solution: One workspace */}
+      <motion.div
+        className="px-[3.33vw] max-lg:px-5 mt-[2.78vw] max-lg:mt-8"
+        {...fadeUp}
+      >
+        <p className="font-sans text-[0.76vw] max-lg:text-[11px] font-semibold text-[#9c4221] tracking-[0.092vw]">
+          ONE WORKSPACE
         </p>
-        <h2 className="font-sans text-[3.06vw] max-lg:text-[24px] font-light text-[#555] tracking-[-0.061vw] leading-[1.1] mt-[1.11vw]">
-          The{" "}
-          <span className="font-semibold text-[#9c4221]">translation</span>.
-        </h2>
-        <p className="font-sans text-[1.67vw] max-lg:text-[16px] font-normal text-[#555] leading-[1.5] mt-[1.67vw]">
-          Once the domain and the ecosystem were legible, the design started to
-          take shape.
+        <p className="font-sans text-[1.25vw] max-lg:text-[16px] font-semibold text-[#555] leading-[1.3] mt-[0.83vw]">
+          Three tools merged into one
         </p>
-      </motion.div>
-
-      {/* ── 5.1 / One workspace, not two ── */}
-      <motion.div className="px-[3.33vw] max-lg:px-5 mt-[2.78vw] max-lg:mt-8" {...fadeUp}>
-        <p className="font-sans text-[0.83vw] max-lg:text-[12px] font-normal text-[#555] tracking-[0.139vw]">
-          5.1
-        </p>
-        <h3 className="font-sans text-[2.22vw] max-lg:text-[20px] font-normal text-[#555] mt-[0.56vw]">
-          <span className="font-semibold text-[#9c4221]">One workspace</span>,
-          not two.
-        </h3>
-        {/* Two-column: body text + analyze panel */}
         <div className="flex max-lg:flex-col gap-[4.44vw] max-lg:gap-6 mt-[1.67vw]">
           <div className="flex-1 flex flex-col gap-[1.11vw]">
-            <p className="font-sans text-[0.97vw] max-lg:text-[15px] font-normal text-[#555] leading-[1.5]">
-              The merger of the two original tools wasn&rsquo;t architectural.
-              It was experiential. Building a methodology and testing it against
-              real portfolios happen in the same view.
+            <p className="font-sans text-[1.25vw] max-lg:text-[15px] font-normal text-[#555] leading-[1.5] tracking-[-0.013vw]">
+              Building a methodology and testing it against real portfolios
+              happen in the same view. The Analyze panel sits to the right of
+              the builder, with portfolio comparison, statistical overlays, and
+              security-level breakdowns visible without leaving the canvas.
             </p>
-            <p className="font-sans text-[0.97vw] max-lg:text-[15px] font-normal text-[#555] leading-[1.5]">
-              The Analyze panel sits to the right of the builder, with portfolio
-              comparison, statistical overlays, and security-level breakdowns
-              visible without leaving the canvas.{" "}
-              <span className="font-semibold">
-                Researchers can no longer build a methodology without seeing how
-                it tests.
-              </span>
-            </p>
-            <p className="font-sans text-[0.97vw] max-lg:text-[15px] font-normal text-[#555] leading-[1.5]">
-              The merger isn&rsquo;t named in the UI. It&rsquo;s the shape of
-              the UI.
+            <p className="font-sans text-[1.25vw] max-lg:text-[15px] font-semibold text-[#555] leading-[1.5] tracking-[-0.013vw]">
+              Researchers can no longer build a methodology without seeing how
+              it tests.
             </p>
           </div>
           <div className="shrink-0 w-[21.94vw] max-lg:w-full">
             <ShimmerImage
               src="/images/esg-analyze-panel.png"
-              alt="Analyze panel — portfolio comparison, chart overlays, and security-level breakdowns"
+              alt="Analyze panel -portfolio comparison, chart overlays, and security-level breakdowns"
               width={1302}
               height={2388}
               className="shimmer w-full h-auto object-contain pointer-events-none"
@@ -591,37 +530,29 @@ export default function ESGPage() {
         </div>
       </motion.div>
 
-      {/* ── 5.2 / A visual builder ── */}
-      <motion.div className="px-[3.33vw] max-lg:px-5 mt-[2.78vw] max-lg:mt-8" {...fadeUp}>
-        <p className="font-sans text-[0.83vw] max-lg:text-[12px] font-normal text-[#555] tracking-[0.139vw]">
-          5.2
+      {/* Solution: Visual builder */}
+      <motion.div
+        className="px-[3.33vw] max-lg:px-5 mt-[2.78vw] max-lg:mt-8"
+        {...fadeUp}
+      >
+        <p className="font-sans text-[0.76vw] max-lg:text-[11px] font-semibold text-[#9c4221] tracking-[0.092vw]">
+          THE BUILDER
         </p>
-        <h3 className="font-sans text-[2.22vw] max-lg:text-[20px] font-normal text-[#555] mt-[0.56vw]">
-          A{" "}
-          <span className="font-semibold text-[#9c4221]">visual builder</span>{" "}
-          for non-visual logic.
-        </h3>
-        <p className="font-sans text-[0.97vw] max-lg:text-[15px] font-normal text-[#555] leading-[1.5] mt-[1.67vw]">
-          The core of the tool is a node-based composition tree. A methodology
-          sits at the top. Derived attributes branch from it. Raw attributes
-          from market data feed into the derived attributes.
+        <p className="font-sans text-[1.25vw] max-lg:text-[16px] font-semibold text-[#555] leading-[1.3] mt-[0.83vw]">
+          A visual builder for non-visual logic
         </p>
-        <p className="font-sans text-[0.97vw] max-lg:text-[15px] font-normal text-[#555] leading-[1.5] mt-[1.11vw]">
-          The structure expresses how researchers actually think about
-          methodologies: not as forms or filters, but as compositions. A derived
-          attribute like &ldquo;Women Leaders&rdquo; is built from raw inputs
-          (&ldquo;Eq Pct Women Exec&rdquo; + &ldquo;Eq Female
-          Empowerment&rdquo;); a methodology like &ldquo;MDA Women
-          Leaders&rdquo; is built from one or more derived attributes; both can
-          be reused, recomposed, and inspected. The example shown is
-          illustrative, not the actual production calculation.
+        <p className="font-sans text-[1.25vw] max-lg:text-[15px] font-normal text-[#555] leading-[1.5] tracking-[-0.013vw] mt-[0.56vw]">
+          A node-based composition tree. A methodology sits at the top. Derived
+          attributes branch from it. Raw attributes from market data feed into
+          the derived attributes. The structure expresses how researchers
+          actually think about methodologies: not as forms or filters, but as
+          compositions.
         </p>
 
-        {/* Builder canvas screenshot */}
         <div className="mt-[2.22vw] rounded-[0.83vw] max-lg:rounded-[8px] overflow-hidden">
           <ShimmerImage
             src="/images/esg-builder-canvas.png"
-            alt="Specification Workbench — full builder canvas with node-based composition tree"
+            alt="Specification Workbench -full builder canvas with node-based composition tree"
             width={5376}
             height={3584}
             className="shimmer w-full h-auto object-contain pointer-events-none"
@@ -630,42 +561,39 @@ export default function ESGPage() {
         </div>
       </motion.div>
 
-      {/* ── 5.3 / Three views ── */}
-      <motion.div className="px-[3.33vw] max-lg:px-5 mt-[2.78vw] max-lg:mt-8" {...fadeUp}>
-        <p className="font-sans text-[0.83vw] max-lg:text-[12px] font-normal text-[#555] tracking-[0.139vw]">
-          5.3
+      {/* Solution: Three views */}
+      <motion.div
+        className="px-[3.33vw] max-lg:px-5 mt-[2.78vw] max-lg:mt-8"
+        {...fadeUp}
+      >
+        <p className="font-sans text-[0.76vw] max-lg:text-[11px] font-semibold text-[#9c4221] tracking-[0.092vw]">
+          THREE VIEWS
         </p>
-        <h3 className="font-sans text-[2.22vw] max-lg:text-[20px] font-normal text-[#555] mt-[0.56vw]">
-          <span className="font-semibold text-[#9c4221]">Three views</span> of
-          one composition.
-        </h3>
-        <p className="font-sans text-[0.97vw] max-lg:text-[15px] font-normal text-[#555] leading-[1.5] mt-[1.67vw]">
-          The same methodology can be read in three ways: a tree (the default,
-          for building and reasoning), a table (for previewing the data each
-          attribute contributes), and a horizontal book view (for reading the
-          methodology as a structure rather than a workflow).
+        <p className="font-sans text-[1.25vw] max-lg:text-[16px] font-semibold text-[#555] leading-[1.3] mt-[0.83vw]">
+          Same data, three mental models
         </p>
-        <p className="font-sans text-[0.97vw] max-lg:text-[15px] font-normal text-[#555] leading-[1.5] mt-[1.11vw]">
-          Same data, three mental models, because researchers, advisors, and
-          auditors don&rsquo;t all read a methodology the same way.
+        <p className="font-sans text-[1.25vw] max-lg:text-[15px] font-normal text-[#555] leading-[1.5] tracking-[-0.013vw] mt-[0.56vw]">
+          The same methodology can be read as a tree (for building), a table
+          (for previewing data), and a horizontal book view (for reading as
+          structure). Researchers, advisors, and auditors don&rsquo;t all read a
+          methodology the same way.
         </p>
 
-        {/* Three views row */}
         <div className="flex max-lg:flex-col gap-[1.67vw] max-lg:gap-6 mt-[2.22vw]">
           {[
             {
               img: "/images/esg-view-tree.png",
-              alt: "Tree view — full composition structure of MDA Women Leaders methodology with three derived attributes",
+              alt: "Tree view -full composition structure of MDA Women Leaders methodology with three derived attributes",
               desc: "Default. For building and reasoning about composition.",
             },
             {
               img: "/images/esg-view-table.png",
-              alt: "Table view — issuers scored against methodology attributes",
+              alt: "Table view -issuers scored against methodology attributes",
               desc: "For previewing the actual data each attribute contributes.",
             },
             {
               img: "/images/esg-view-book.png",
-              alt: "Book view — methodology as a horizontal flow from raw attributes to derived attributes",
+              alt: "Book view -methodology as a horizontal flow from raw attributes to derived attributes",
               desc: "For reading the methodology as a structure, not a workflow.",
             },
           ].map((view) => (
@@ -686,42 +614,26 @@ export default function ESGPage() {
             </div>
           ))}
         </div>
-
-        {/* Closing note */}
-        <p className="font-sans text-[0.97vw] max-lg:text-[15px] font-semibold text-[#555] leading-[1.5] mt-[2.22vw]">
-          Design for the edge case, then hide it. Most users live in the
-          default tree. The other views are there for the moments when
-          they&rsquo;re needed.
-        </p>
       </motion.div>
 
-      {/* ── 5.4 / Formula transparency ── */}
-      <motion.div className="px-[3.33vw] max-lg:px-5 mt-[2.78vw] max-lg:mt-8" {...fadeUp}>
-        <p className="font-sans text-[0.83vw] max-lg:text-[12px] font-normal text-[#555] tracking-[0.139vw]">
-          5.4
+      {/* Solution: Formula transparency */}
+      <motion.div
+        className="px-[3.33vw] max-lg:px-5 mt-[2.78vw] max-lg:mt-8"
+        {...fadeUp}
+      >
+        <p className="font-sans text-[0.76vw] max-lg:text-[11px] font-semibold text-[#9c4221] tracking-[0.092vw]">
+          TRANSPARENCY
         </p>
-        <h3 className="font-sans text-[2.22vw] max-lg:text-[20px] font-normal text-[#555] mt-[0.56vw]">
-          <span className="font-semibold text-[#9c4221]">
-            Formula transparency
-          </span>
-          , on demand.
-        </h3>
-        <p className="font-sans text-[0.97vw] max-lg:text-[15px] font-normal text-[#555] leading-[1.5] mt-[1.67vw]">
-          A toggle, Display Operations in this view, surfaces the actual
-          formulas on each derived attribute, inline in the tree. Off, the
-          methodology reads cleanly enough to put in front of a client. On, it
-          exposes the math for a researcher who needs to verify or debug.
+        <p className="font-sans text-[1.25vw] max-lg:text-[16px] font-semibold text-[#555] leading-[1.3] mt-[0.83vw]">
+          Formula visibility, on demand
         </p>
-        <p className="font-sans text-[0.97vw] max-lg:text-[15px] font-normal text-[#555] leading-[1.5] mt-[1.11vw]">
-          <span className="font-semibold">
-            Transparency is a feature, but so is calm.
-          </span>{" "}
-          Letting the user choose between them was the design decision.
+        <p className="font-sans text-[1.25vw] max-lg:text-[15px] font-normal text-[#555] leading-[1.5] tracking-[-0.013vw] mt-[0.56vw]">
+          A toggle surfaces the actual formulas on each derived attribute,
+          inline in the tree. Off, the methodology reads cleanly enough for a
+          client. On, it exposes the math for a researcher who needs to verify.
         </p>
 
-        {/* Toggle comparison */}
         <div className="flex max-lg:flex-col gap-[2.22vw] max-lg:gap-6 mt-[2.22vw]">
-          {/* Toggle OFF */}
           <div className="flex-1 flex flex-col gap-[1.11vw] max-lg:gap-3">
             <div className="flex items-center gap-[0.56vw] max-lg:gap-2">
               <span className="font-sans text-[0.76vw] max-lg:text-[11px] font-normal text-[#888] tracking-[0.104vw]">
@@ -736,7 +648,7 @@ export default function ESGPage() {
             </div>
             <ShimmerImage
               src="/images/esg-toggle-off.png"
-              alt="Toggle OFF — clean tree view without formulas, suitable for client presentations"
+              alt="Toggle OFF -clean tree view without formulas, suitable for client presentations"
               width={1944}
               height={832}
               className="shimmer w-full h-auto object-contain pointer-events-none"
@@ -744,7 +656,6 @@ export default function ESGPage() {
             />
           </div>
 
-          {/* Toggle ON */}
           <div className="flex-1 flex flex-col gap-[1.11vw] max-lg:gap-3">
             <div className="flex items-center gap-[0.56vw] max-lg:gap-2">
               <span className="font-sans text-[0.76vw] max-lg:text-[11px] font-normal text-[#888] tracking-[0.104vw]">
@@ -759,7 +670,7 @@ export default function ESGPage() {
             </div>
             <ShimmerImage
               src="/images/esg-toggle-on.png"
-              alt="Toggle ON — tree view with formulas visible for researcher verification"
+              alt="Toggle ON -tree view with formulas visible for researcher verification"
               width={1940}
               height={968}
               className="shimmer w-full h-auto object-contain pointer-events-none"
@@ -769,28 +680,21 @@ export default function ESGPage() {
         </div>
       </motion.div>
 
-      {/* ═══════════════════════════════════════════════════
-          06 / ACCESS
-         ═══════════════════════════════════════════════════ */}
-      <motion.div className="px-[3.33vw] max-lg:px-5 mt-[4.44vw] max-lg:mt-10" {...fadeUp}>
-        <p className="font-sans text-[0.76vw] max-lg:text-[11px] font-semibold text-[#888] tracking-[0.092vw]">
-          06 / ACCESS
+      {/* Solution: Access */}
+      <motion.div
+        className="px-[3.33vw] max-lg:px-5 mt-[2.78vw] max-lg:mt-8"
+        {...fadeUp}
+      >
+        <p className="font-sans text-[0.76vw] max-lg:text-[11px] font-semibold text-[#9c4221] tracking-[0.092vw]">
+          ACCESS
         </p>
-        <h2 className="font-sans text-[3.06vw] max-lg:text-[24px] font-light text-[#555] tracking-[-0.061vw] leading-[1.1] mt-[1.11vw]">
-          <span className="font-semibold text-[#9c4221]">One tool</span> for
-          everyone.
-        </h2>
-        <p className="font-sans text-[0.97vw] max-lg:text-[15px] font-normal text-[#555] leading-[1.5] mt-[1.67vw]">
-          The system was designed as one tool for everyone, with permissioning
-          handled silently in the backend. Researchers see and edit. Advisors and
-          auditors see only what they need to see.
+        <p className="font-sans text-[1.25vw] max-lg:text-[16px] font-semibold text-[#555] leading-[1.3] mt-[0.83vw]">
+          One tool for everyone
         </p>
-        <p className="font-sans text-[0.97vw] max-lg:text-[15px] font-normal text-[#555] leading-[1.5] mt-[1.11vw]">
-          There is no mode switch, no role toggle, no separate interface. The
-          same product accommodates whoever is looking at it. I designed the
-          researcher experience in full; the access model was a system decision
-          made with engineering, scoped to inform the architecture rather than
-          produce additional screens.
+        <p className="font-sans text-[1.25vw] max-lg:text-[15px] font-normal text-[#555] leading-[1.5] tracking-[-0.013vw] mt-[0.56vw]">
+          Permissioning handled silently in the backend. Researchers see and
+          edit. Advisors and auditors see only what they need. No mode switch, no
+          role toggle, no separate interface.
         </p>
 
         <p className="font-sans text-[0.76vw] max-lg:text-[11px] font-normal text-[#888] tracking-[0.104vw] mt-[2.22vw]">
@@ -798,56 +702,52 @@ export default function ESGPage() {
           can see.
         </p>
 
-        {/* Permissions matrix */}
         <div className="mt-[1.11vw] max-lg:overflow-x-auto max-lg:pb-4 max-lg:-mx-5 max-lg:px-5">
           <div className="max-lg:min-w-[600px]">
-          {/* Header */}
-          <div className="flex items-center border-b-[0.1vw] max-lg:border-b border-[#555] pb-[0.83vw] max-lg:pb-3 pt-[1.11vw]">
-            <div className="shrink-0 w-[19.44vw] max-lg:w-[140px]">
-              <p className="font-sans text-[0.69vw] max-lg:text-[10px] font-normal text-[#888] tracking-[0.104vw]">
-                ROLE
-              </p>
-            </div>
-            {permHeaders.map((h) => (
-              <div key={h} className="flex-1 text-center">
-                <p className="font-sans text-[0.69vw] max-lg:text-[10px] font-normal text-[#888] tracking-[0.104vw]">
-                  {h}
-                </p>
-              </div>
-            ))}
-          </div>
-
-          {/* Rows */}
-          {roles.map((role, i) => (
-            <div
-              key={role.name}
-              className={`flex items-center py-[1.39vw] max-lg:py-3 ${i < roles.length - 1 ? "border-b border-[#bbb]" : ""}`}
-            >
+            <div className="flex items-center border-b-[0.1vw] max-lg:border-b border-[#555] pb-[0.83vw] max-lg:pb-3 pt-[1.11vw]">
               <div className="shrink-0 w-[19.44vw] max-lg:w-[140px]">
-                <p className="font-sans text-[1.04vw] max-lg:text-[14px] font-semibold text-[#555]">
-                  {role.name}
-                </p>
-                <p className="font-sans text-[0.83vw] max-lg:text-[12px] font-normal text-[#888]">
-                  {role.people}
+                <p className="font-sans text-[0.69vw] max-lg:text-[10px] font-normal text-[#888] tracking-[0.104vw]">
+                  ROLE
                 </p>
               </div>
-              {role.access.map((hasAccess, j) => (
-                <div key={j} className="flex-1 flex justify-center">
-                  <div
-                    className={`w-[1.39vw] max-lg:w-[16px] h-[1.39vw] max-lg:h-[16px] rounded-full border-[0.14vw] max-lg:border-[2px] ${
-                      hasAccess
-                        ? "bg-[#9c4221] border-[#9c4221]"
-                        : "bg-transparent border-[#ccc]"
-                    }`}
-                  />
+              {permHeaders.map((h) => (
+                <div key={h} className="flex-1 text-center">
+                  <p className="font-sans text-[0.69vw] max-lg:text-[10px] font-normal text-[#888] tracking-[0.104vw]">
+                    {h}
+                  </p>
                 </div>
               ))}
             </div>
-          ))}
+
+            {roles.map((role, i) => (
+              <div
+                key={role.name}
+                className={`flex items-center py-[1.39vw] max-lg:py-3 ${i < roles.length - 1 ? "border-b border-[#bbb]" : ""}`}
+              >
+                <div className="shrink-0 w-[19.44vw] max-lg:w-[140px]">
+                  <p className="font-sans text-[1.04vw] max-lg:text-[14px] font-semibold text-[#555]">
+                    {role.name}
+                  </p>
+                  <p className="font-sans text-[0.83vw] max-lg:text-[12px] font-normal text-[#888]">
+                    {role.people}
+                  </p>
+                </div>
+                {role.access.map((hasAccess, j) => (
+                  <div key={j} className="flex-1 flex justify-center">
+                    <div
+                      className={`w-[1.39vw] max-lg:w-[16px] h-[1.39vw] max-lg:h-[16px] rounded-full border-[0.14vw] max-lg:border-[2px] ${
+                        hasAccess
+                          ? "bg-[#9c4221] border-[#9c4221]"
+                          : "bg-transparent border-[#ccc]"
+                      }`}
+                    />
+                  </div>
+                ))}
+              </div>
+            ))}
           </div>
         </div>
 
-        {/* Legend */}
         <div className="flex items-center gap-[1.67vw] max-lg:gap-4 mt-[1.11vw]">
           <div className="flex items-center gap-[0.56vw] max-lg:gap-2">
             <div className="w-[1.39vw] max-lg:w-[16px] h-[1.39vw] max-lg:h-[16px] rounded-full bg-[#9c4221]" />
@@ -864,79 +764,99 @@ export default function ESGPage() {
         </div>
       </motion.div>
 
-      {/* ═══════════════════════════════════════════════════
-          07 / OUTCOME
-         ═══════════════════════════════════════════════════ */}
-      <motion.div className="px-[3.33vw] max-lg:px-5 mt-[4.44vw] max-lg:mt-10" {...fadeUp}>
+      {/* ── OUTCOMES ── */}
+      <motion.div
+        className="px-[3.33vw] max-lg:px-5 mt-[4.44vw] max-lg:mt-10"
+        {...fadeUp}
+      >
         <p className="font-sans text-[0.76vw] max-lg:text-[11px] font-semibold text-[#888] tracking-[0.092vw]">
-          07 / OUTCOME
+          OUTCOMES
         </p>
-        <h2 className="font-sans text-[3.06vw] max-lg:text-[24px] font-semibold text-[#9c4221] tracking-[-0.061vw] leading-[1.1] mt-[1.11vw]">
-          What happened. What&rsquo;s next.
+        <h2 className="font-sans text-[3.06vw] max-lg:text-[24px] font-light text-[#555] tracking-[-0.061vw] leading-[1.1] mt-[1.11vw]">
+          Vision shipped.{" "}
+          <span className="font-semibold text-[#9c4221]">
+            Roadmap shifted.
+          </span>
         </h2>
-        <p className="font-sans text-[0.97vw] max-lg:text-[15px] font-normal text-[#555] leading-[1.5] mt-[1.67vw]">
-          The project was deprioritized in a roadmap shift before build. I moved
-          to another team. The artifact of value is the thinking, the system,
-          and the high-fidelity vision, not a shipped product.
-        </p>
-        <p className="font-sans text-[0.97vw] max-lg:text-[15px] font-normal text-[#555] leading-[1.5] mt-[1.11vw]">
-          If the project came back, the work that would follow is clear:
+        <p className="font-sans text-[1.25vw] max-lg:text-[15px] font-normal text-[#555] leading-[1.5] tracking-[-0.013vw] mt-[1.67vw]">
+          The project was deprioritized in a roadmap shift before build. The
+          artifact of value is the thinking, the system, and the high-fidelity
+          vision, not a shipped product.
         </p>
 
-        {/* Next steps row */}
-        <div className="flex max-lg:flex-col gap-[1.67vw] max-lg:gap-6 mt-[2.22vw]">
-          {[
-            {
-              label: "NEXT · 01",
-              title: "Recursive edge cases",
-              body: "Methodology composition and internal metric duplication were architected for, but not visualized. Their own design pass deserves a phase.",
-            },
-            {
-              label: "NEXT · 02",
-              title: "Advisor & client surfaces",
-              body: "Scoped but not designed. The natural next phase, and the place where the transparency-as-sales-asset thesis would actually be tested.",
-            },
-            {
-              label: "NEXT · 03",
-              title: "The rest of the platform",
-              body: "Indicator Analysis, Data Catalog, Cause Analysis, Pinning: outlined in the IA, not yet detailed at the screen level.",
-            },
-          ].map((step) => (
-            <div
-              key={step.label}
-              className="flex-1 border-t border-[#bbb] pt-[1.67vw] max-lg:pt-4 flex flex-col gap-[1.11vw] max-lg:gap-3"
-            >
-              <p className="font-sans text-[0.76vw] max-lg:text-[11px] font-normal text-[#888] tracking-[0.104vw]">
-                {step.label}
-              </p>
-              <p className="font-sans text-[1.39vw] max-lg:text-[18px] font-semibold text-[#9c4221] leading-[1.4]">
-                {step.title}
-              </p>
-              <p className="font-sans text-[0.97vw] max-lg:text-[15px] font-normal text-[#555] leading-[1.5]">
-                {step.body}
-              </p>
-            </div>
-          ))}
+        <div className="grid grid-cols-2 max-lg:grid-cols-1 gap-[1.67vw] max-lg:gap-4 mt-[2.22vw]">
+          <div className="bg-[#f2efe8] rounded-[0.28vw] max-lg:rounded-[4px] px-[1.67vw] max-lg:px-5 py-[1.94vw] max-lg:py-5 flex flex-col gap-[0.83vw] max-lg:gap-3">
+            <p className="font-sans text-[0.76vw] max-lg:text-[11px] font-semibold text-[#888] tracking-[0.092vw]">
+              FOR THE TEAM
+            </p>
+            <p className="font-sans text-[0.97vw] max-lg:text-[14px] font-normal text-[#555] leading-[1.45]">
+              A unified workspace that replaces three siloed tools.
+              Methodologies become legible, transferable, and auditable. No more
+              single-person dependencies.
+            </p>
+          </div>
+          <div className="bg-[#f2efe8] rounded-[0.28vw] max-lg:rounded-[4px] px-[1.67vw] max-lg:px-5 py-[1.94vw] max-lg:py-5 flex flex-col gap-[0.83vw] max-lg:gap-3">
+            <p className="font-sans text-[0.76vw] max-lg:text-[11px] font-semibold text-[#888] tracking-[0.092vw]">
+              FOR THE PLATFORM
+            </p>
+            <p className="font-sans text-[0.97vw] max-lg:text-[14px] font-normal text-[#555] leading-[1.45]">
+              The same transparency that helps a researcher reason about a
+              methodology helps a salesperson explain it on a pitch. Internal
+              tool and client-facing asset, in one system.
+            </p>
+          </div>
         </div>
+      </motion.div>
 
-        {/* Designer's note */}
-        <div className="mt-[2.78vw] py-[3.33vw]">
-          <p className="font-sans text-[2.22vw] max-lg:text-[16px] font-normal text-[#555] leading-[1.35]">
-            &ldquo;The lesson I take from this project isn&rsquo;t about what
-            didn&rsquo;t ship. It&rsquo;s about what the work demanded: domain
-            depth before design, systems literacy as a design skill, and the
-            patience to make a complex thing legible without flattening
-            it.&rdquo;
+      {/* ── LEARNINGS ── */}
+      <motion.div
+        className="px-[3.33vw] max-lg:px-5 mt-[4.44vw] max-lg:mt-10"
+        {...fadeUp}
+      >
+        <p className="font-sans text-[0.76vw] max-lg:text-[11px] font-semibold text-[#888] tracking-[0.092vw]">
+          LEARNINGS
+        </p>
+        <h2 className="font-sans text-[3.06vw] max-lg:text-[24px] font-light text-[#555] tracking-[-0.061vw] leading-[1.1] mt-[1.11vw]">
+          What systems design{" "}
+          <span className="font-semibold text-[#9c4221]">taught me.</span>
+        </h2>
+        <div className="flex flex-col gap-[1.11vw] max-lg:gap-4 mt-[1.67vw] font-sans text-[1.25vw] max-lg:text-[15px] font-normal text-[#555] leading-[1.5] tracking-[-0.013vw]">
+          <p>
+            <span className="font-semibold">
+              Domain depth is a design skill.
+            </span>{" "}
+            I spent weeks interviewing the research team, reading documentation,
+            and asking questions I didn&rsquo;t yet know were the right ones.
+            Every design decision that followed was shaped by that early
+            investment. You cannot design a system you haven&rsquo;t learned to
+            read.
           </p>
-          <p className="font-sans text-[0.76vw] max-lg:text-[11px] font-normal text-[#888] tracking-[0.104vw] mt-[1.67vw]">
-            - NIHEL MOUELHI
+          <p>
+            <span className="font-semibold">
+              Design for the edge case, then hide it.
+            </span>{" "}
+            The upstream pipeline and downstream dependencies stayed invisible
+            to the researcher building a methodology. Most users live in the
+            default tree view. The other views, the formula toggle, the access
+            model, all there for the moments they&rsquo;re needed, hidden
+            until then.
+          </p>
+          <p>
+            <span className="font-semibold">
+              What I&rsquo;d do differently:
+            </span>{" "}
+            Researchers were the direct users. Advisors and clients
+            weren&rsquo;t, but the reframe bet that they could
+            potentially leverage the same tool. I designed for that bet using
+            internal logic instead of talking to them directly. I would have
+            validated earlier. Even one session watching an advisor explain a
+            methodology to a client would have surfaced transparency gaps I had
+            to infer on my own.
           </p>
         </div>
       </motion.div>
 
-      {/* ═══════════════════════════════════════════════════
-          Closing navigation
-         ═══════════════════════════════════════════════════ */}
+      {/* ── Closing navigation ── */}
       <div className="h-[5vw] max-lg:h-[60px]" />
 
       <div className="fixed bottom-0 left-0 right-0 z-40 bg-cream/90 backdrop-blur-sm border-t border-[#d9d9d9]">
@@ -956,9 +876,7 @@ export default function ESGPage() {
         </div>
       </div>
 
-      {/* ═══════════════════════════════════════════════════
-          Footer
-         ═══════════════════════════════════════════════════ */}
+      {/* Footer */}
       <div className="flex items-center justify-between px-[3.33vw] max-lg:px-5 py-[2vh] mt-[3.33vw] max-lg:mt-8">
         <span className="font-sans text-[0.76vw] max-lg:text-[11px] text-text-secondary whitespace-nowrap">
           &copy; 2026 Nihel Mouelhi. All rights reserved.

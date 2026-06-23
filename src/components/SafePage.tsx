@@ -412,6 +412,11 @@ export default function SafePage() {
             />
           </div>
         </div>
+
+        {/* Caption */}
+        <p className="font-sans text-[0.76vw] max-lg:text-[11px] font-normal text-[#878787] leading-[1.6] tracking-[0.104vw] mt-[1.39vw] max-lg:mt-3">
+          ANALYST WORKING SURFACE: incoming chat from a field agent on the left, AI-ranked match candidates with confidence and traceable evidence in the center, full escalation chain visible on the right. The control room lead&rsquo;s role is never hidden. Every operator can see the chain of authority, in real time.
+        </p>
       </motion.div>
 
       {/* Solution detail: Field agent mobile (After) */}
@@ -448,6 +453,11 @@ export default function SafePage() {
             />
           </div>
         </div>
+
+        {/* Caption */}
+        <p className="font-sans text-[0.76vw] max-lg:text-[11px] font-normal text-[#878787] leading-[1.6] tracking-[0.104vw] mt-[1.39vw] max-lg:mt-3">
+          Chat-based incident reporting on the right (the field agent), confirmed-suspect handoff on the left (the answer back). The same conversation, both sides. Two minutes from report to identification.
+        </p>
       </motion.div>
 
       {/* ── OUTCOME ── */}

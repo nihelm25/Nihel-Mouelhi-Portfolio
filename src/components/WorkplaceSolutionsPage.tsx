@@ -66,7 +66,7 @@ export default function WorkplaceSolutionsPage() {
           {[
             { label: "ROLE", value: "Product Designer" },
             { label: "STATUS", value: "Shipped · Live" },
-            { label: "TEAM", value: "5 designers" },
+            { label: "TEAM", value: "3 designers" },
             { label: "SCOPE", value: "Led 2 of 4 journey lines" },
             { label: "YEAR", value: "2025–2026" },
           ].map((item, i, arr) => (
@@ -94,6 +94,32 @@ export default function WorkplaceSolutionsPage() {
         <p className="font-sans text-[1.25vw] max-lg:text-[15px] font-normal text-[#555] leading-[1.5] tracking-[-0.013vw] mt-[1.67vw]">
           J.P. Morgan&rsquo;s equity compensation platform needed a full redesign. The existing system served 1M+ participants across 50+ countries, but it had been built screen by screen over years, patching rather than solving. Participants use it to make high-stakes, often irrevocable financial decisions: exercising stock options, selling shares within compliance windows, enrolling in purchase plans. A confusing interface didn&rsquo;t just create friction, it cost people money.
         </p>
+
+        <p className="font-sans text-[0.76vw] max-lg:text-[11px] font-semibold text-[#9c4221] tracking-[0.092vw] mt-[2.22vw] max-lg:mt-6">
+          BEFORE
+        </p>
+        <div className="flex gap-[1.11vw] max-lg:flex-col max-lg:gap-3 mt-[1.11vw] max-lg:mt-3">
+          <div className="flex-1 rounded-[0.56vw] max-lg:rounded-[6px] overflow-hidden" style={{ boxShadow: "0px 2px 8px 0px rgba(0,0,0,0.08)", aspectRatio: "3360 / 1610" }}>
+            <ShimmerImage
+              src="/images/before-state-1.png"
+              alt="Legacy platform: portfolio overview"
+              width={3360}
+              height={2482}
+              className="shimmer w-full h-full object-cover object-top pointer-events-none"
+              sizes="46vw"
+            />
+          </div>
+          <div className="flex-1 rounded-[0.56vw] max-lg:rounded-[6px] overflow-hidden" style={{ boxShadow: "0px 2px 8px 0px rgba(0,0,0,0.08)" }}>
+            <ShimmerImage
+              src="/images/before-state-2.png"
+              alt="Legacy platform: tabular data view"
+              width={3360}
+              height={1610}
+              className="shimmer w-full h-auto pointer-events-none"
+              sizes="46vw"
+            />
+          </div>
+        </div>
       </motion.div>
 
       {/* ── CHALLENGES ── */}
@@ -194,10 +220,13 @@ export default function WorkplaceSolutionsPage() {
       {/* Solution detail: ESPP */}
       <motion.div className="px-[3.33vw] max-lg:px-5 mt-[4.44vw] max-lg:mt-10" {...fadeUp}>
         <p className="font-sans text-[0.76vw] max-lg:text-[11px] font-semibold text-[#9c4221] tracking-[0.092vw]">
-          ESPP ENROLLMENT
+          VIEW &amp; MANAGE IN PRACTICE
         </p>
-        <p className="font-sans text-[1.25vw] max-lg:text-[15px] font-normal text-[#555] leading-[1.5] tracking-[-0.013vw] mt-[0.83vw]">
-          Most participants enroll once and don&rsquo;t return until something needs adjusting. The view and management actions sit on one screen: current period status, contribution amount, and mid-period actions (change, suspend, withdraw). Regulated terms are explained in context, not buried in a help center.
+        <p className="font-sans text-[1.25vw] max-lg:text-[16px] font-semibold text-[#555] leading-[1.3] mt-[0.83vw]">
+          ESPP enrollment
+        </p>
+        <p className="font-sans text-[1.25vw] max-lg:text-[15px] font-normal text-[#555] leading-[1.5] tracking-[-0.013vw] mt-[0.56vw]">
+          Most participants enroll once and don&rsquo;t return until something needs adjusting. I consolidated view and management actions onto one screen: current period status, contribution amount, and mid-period actions (change, suspend, withdraw). My key decision was to explain regulated terms in context rather than hiding them in a help center, so participants could act with confidence without leaving the flow.
         </p>
         <div className="flex justify-center mt-[2.22vw]">
           <div className="w-[70vw] max-lg:w-full">
@@ -216,33 +245,81 @@ export default function WorkplaceSolutionsPage() {
         </div>
       </motion.div>
 
+      {/* Solution detail: Sell Shares */}
+      <motion.div className="px-[3.33vw] max-lg:px-5 mt-[4.44vw] max-lg:mt-10" {...fadeUp}>
+        <p className="font-sans text-[0.76vw] max-lg:text-[11px] font-semibold text-[#9c4221] tracking-[0.092vw]">
+          MODEL &amp; TRANSACT IN PRACTICE
+        </p>
+        <p className="font-sans text-[1.25vw] max-lg:text-[16px] font-semibold text-[#555] leading-[1.3] mt-[0.83vw]">
+          Sell shares
+        </p>
+        <p className="font-sans text-[1.25vw] max-lg:text-[15px] font-normal text-[#555] leading-[1.5] tracking-[-0.013vw] mt-[0.56vw]">
+          Participants model their sale first, choosing share lots, seeing estimated proceeds and tax impact, then confirm with the same numbers they modeled. I pushed to keep the form minimal: the confirmation mirrors exactly what the participant modeled, no re-entry, no surprise fields.
+        </p>
+        <div className="flex gap-[1.11vw] max-lg:flex-col max-lg:gap-3 mt-[2.22vw] max-lg:mt-6">
+          <div className="flex-1 rounded-[0.56vw] max-lg:rounded-[6px] overflow-hidden" style={{ boxShadow: "0px 2px 8px 0px rgba(0,0,0,0.08)" }}>
+            <ShimmerImage
+              src="/images/sell-shares-2.png"
+              alt="Sell shares: selection and modeling"
+              width={4320}
+              height={2928}
+              className="shimmer w-full h-auto pointer-events-none"
+              sizes="46vw"
+            />
+          </div>
+          <div className="flex-1 rounded-[0.56vw] max-lg:rounded-[6px] overflow-hidden" style={{ boxShadow: "0px 2px 8px 0px rgba(0,0,0,0.08)" }}>
+            <ShimmerImage
+              src="/images/sell-shares-1.png"
+              alt="Sell shares: confirmation"
+              width={2880}
+              height={2504}
+              className="shimmer w-full h-auto pointer-events-none"
+              sizes="46vw"
+            />
+          </div>
+        </div>
+      </motion.div>
+
       {/* Solution detail: Preclearance */}
       <motion.div className="px-[3.33vw] max-lg:px-5 mt-[4.44vw] max-lg:mt-10" {...fadeUp}>
         <p className="font-sans text-[0.76vw] max-lg:text-[11px] font-semibold text-[#9c4221] tracking-[0.092vw]">
-          PRECLEARANCE
+          MODEL &amp; TRANSACT IN PRACTICE
         </p>
-        <p className="font-sans text-[1.25vw] max-lg:text-[15px] font-normal text-[#555] leading-[1.5] tracking-[-0.013vw] mt-[0.83vw]">
-          Public-company employees with material nonpublic information must preclear before selling. A rare, high-stakes flow where nobody wants to misread anything. The form is simple; the SEC acknowledgment is present but doesn&rsquo;t dominate.
+        <p className="font-sans text-[1.25vw] max-lg:text-[16px] font-semibold text-[#555] leading-[1.3] mt-[0.83vw]">
+          Preclearance
         </p>
-        <div className="flex max-lg:flex-col gap-[1.67vw] max-lg:gap-4 mt-[2.22vw]">
-          <div className="flex-1">
+        <p className="font-sans text-[1.25vw] max-lg:text-[15px] font-normal text-[#555] leading-[1.5] tracking-[-0.013vw] mt-[0.56vw]">
+          Public-company employees with material nonpublic information must preclear before selling. A rare, high-stakes flow where nobody wants to misread anything. The SEC acknowledgment is present but doesn&rsquo;t dominate.
+        </p>
+        <div className="flex gap-[1.11vw] max-lg:flex-col max-lg:gap-3 mt-[2.22vw] max-lg:mt-6">
+          <div className="flex-1 rounded-[0.56vw] max-lg:rounded-[6px] overflow-hidden" style={{ boxShadow: "0px 2px 8px 0px rgba(0,0,0,0.08)" }}>
             <ShimmerImage
-              src="/images/sell-shares-screenshot.png"
-              alt="Sell shares flow"
-              width={2736}
-              height={1908}
-              className="shimmer w-full h-auto object-cover object-top pointer-events-none"
-              sizes="45vw"
+              src="/images/preclearance-1.png"
+              alt="Preclearance: request submission"
+              width={2880}
+              height={2588}
+              className="shimmer w-full h-auto pointer-events-none"
+              sizes="30vw"
             />
           </div>
-          <div className="flex-1">
+          <div className="flex-1 rounded-[0.56vw] max-lg:rounded-[6px] overflow-hidden" style={{ boxShadow: "0px 2px 8px 0px rgba(0,0,0,0.08)" }}>
             <ShimmerImage
-              src="/images/preclearance-screenshot.png"
-              alt="Preclearance request"
-              width={2736}
-              height={1908}
-              className="shimmer w-full h-auto object-cover object-top pointer-events-none"
-              sizes="45vw"
+              src="/images/preclearance-2.png"
+              alt="Preclearance: review and confirm"
+              width={2880}
+              height={2588}
+              className="shimmer w-full h-auto pointer-events-none"
+              sizes="30vw"
+            />
+          </div>
+          <div className="flex-1 rounded-[0.56vw] max-lg:rounded-[6px] overflow-hidden" style={{ boxShadow: "0px 2px 8px 0px rgba(0,0,0,0.08)" }}>
+            <ShimmerImage
+              src="/images/preclearance-3.png"
+              alt="Preclearance: approval status"
+              width={2880}
+              height={2588}
+              className="shimmer w-full h-auto pointer-events-none"
+              sizes="30vw"
             />
           </div>
         </div>
@@ -251,7 +328,7 @@ export default function WorkplaceSolutionsPage() {
       {/* ── OUTCOME ── */}
       <motion.div className="px-[3.33vw] max-lg:px-5 mt-[4.44vw] max-lg:mt-10" {...fadeUp}>
         <p className="font-sans text-[0.76vw] max-lg:text-[11px] font-semibold text-[#888] tracking-[0.092vw]">
-          OUTCOME
+          OUTCOMES
         </p>
         <h2 className="font-sans text-[3.06vw] max-lg:text-[24px] font-light text-[#555] tracking-[-0.061vw] leading-[1.1] mt-[1.11vw]">
           A full platform replacement,{" "}
@@ -276,13 +353,17 @@ export default function WorkplaceSolutionsPage() {
           ))}
         </div>
 
+        <p className="font-sans text-[1.25vw] max-lg:text-[15px] font-normal text-[#555] leading-[1.5] tracking-[-0.013vw] mt-[2.22vw]">
+          The NPS lift traces directly to the pipeline reframe. Collapsing two separate journey lines into VIEW → MODEL → TRANSACT meant participants stopped getting lost between screens. They could see what they had, test what they wanted to do, and confirm it, all in sequence, with no context loss between steps.
+        </p>
+
         <div className="grid grid-cols-2 max-lg:grid-cols-1 gap-[1.67vw] max-lg:gap-4 mt-[2.22vw]">
           <div className="bg-[#f2efe8] rounded-[0.28vw] max-lg:rounded-[4px] px-[1.67vw] max-lg:px-5 py-[1.94vw] max-lg:py-5 flex flex-col gap-[0.83vw] max-lg:gap-3">
             <p className="font-sans text-[0.76vw] max-lg:text-[11px] font-semibold text-[#888] tracking-[0.092vw]">
               FOR USERS
             </p>
             <p className="font-sans text-[0.97vw] max-lg:text-[14px] font-normal text-[#555] leading-[1.45]">
-              A unified experience that makes equity legible. Participants can view holdings, model scenarios, and transact with confidence. Compliance is built in as guardrails, not gates.
+              A unified experience that makes equity awards legible. Participants can view holdings, model scenarios, and transact with confidence. Compliance is built in as guardrails, not gates.
             </p>
           </div>
           <div className="bg-[#f2efe8] rounded-[0.28vw] max-lg:rounded-[4px] px-[1.67vw] max-lg:px-5 py-[1.94vw] max-lg:py-5 flex flex-col gap-[0.83vw] max-lg:gap-3">
@@ -307,10 +388,13 @@ export default function WorkplaceSolutionsPage() {
         </h2>
         <div className="flex flex-col gap-[1.11vw] max-lg:gap-4 mt-[1.67vw] font-sans text-[1.25vw] max-lg:text-[15px] font-normal text-[#555] leading-[1.5] tracking-[-0.013vw]">
           <p>
-            Regulation, tax rules, and plan logic aren&rsquo;t obstacles to design around, they&rsquo;re the material. The most impactful decisions were about defaults, ordering, and when to pause a participant before they committed.
+            <span className="font-semibold">The constraints were the design.</span> Early on I tried to simplify away the complexity, hiding tax disclaimers, collapsing plan types, minimizing legal language. Compliance pushed back, and they were right. Participants making irrevocable financial decisions need to see the full picture. The real skill was making dense, regulated content legible without removing it.
           </p>
           <p>
-            Leading two journey lines meant my week was split between design reviews and rooms with compliance officers, tax counsel, and engineering leads. That taught me that stakeholder alignment is the design work. The screen is the last thing I design now, after the system underneath it has been figured out.
+            <span className="font-semibold">Alignment takes longer than design.</span> My week was split between design reviews and rooms with compliance officers, tax counsel, and engineering leads. I learned to bring rough flows to those rooms early, not polished mocks. Half of my best design decisions came from a compliance officer saying &ldquo;that can&rsquo;t work in Germany&rdquo; before I&rsquo;d spent a week on it.
+          </p>
+          <p>
+            <span className="font-semibold">What I&rsquo;d do differently:</span> I would have kept a decision log from day one. With compliance, legal, engineering, and product all in the room, decisions got made fast but not always recorded. Weeks later, someone would relitigate a settled question because nobody could point to where it was decided. A lightweight decision log would have saved hours of re-alignment.
           </p>
         </div>
       </motion.div>

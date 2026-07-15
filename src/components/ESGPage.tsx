@@ -35,8 +35,7 @@ export default function ESGPage() {
           className="font-sans text-[0.76vw] max-lg:text-[11px] font-semibold text-[#888] tracking-[0.092vw]"
           {...fadeUp}
         >
-          03 / 04 &middot; OPENINVEST &times; J.P. MORGAN &middot; SYSTEMS
-          DESIGN &middot; B2E &middot; B2C
+          03 / 04 &middot; THALES &middot; NEW PRODUCT
         </motion.p>
 
         <motion.h1

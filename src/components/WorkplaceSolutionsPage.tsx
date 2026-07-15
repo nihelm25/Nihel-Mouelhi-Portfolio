@@ -64,9 +64,8 @@ export default function WorkplaceSolutionsPage() {
           transition={{ delay: 0.3, duration: 0.6 }}
         >
           {[
-            { label: "ROLE", value: "Product Designer" },
+            { label: "ROLE", value: "Product Designer · Researcher" },
             { label: "STATUS", value: "Shipped · Live" },
-            { label: "TEAM", value: "3 designers" },
             { label: "SCOPE", value: "Led 2 of 4 journey lines" },
             { label: "YEAR", value: "2025–2026" },
           ].map((item, i, arr) => (

@@ -115,7 +115,7 @@ const projects: Omit<CaseCardProps, "index">[] = [
   {
     heading: "Replacing a legacy equity platform for a global participant base",
     company: "JP Morgan Chase & Co",
-    tags: ["B2C", "FINTECH", "EQUITY"],
+    tags: ["B2C", "BANKING"],
     metrics: [
       { value: "$19B", label: "Assets under administration" },
       { value: "200K", label: "Participants migrated on the platform" },

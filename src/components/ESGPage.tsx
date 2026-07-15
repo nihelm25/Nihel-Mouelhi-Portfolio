@@ -35,7 +35,8 @@ export default function ESGPage() {
           className="font-sans text-[0.76vw] max-lg:text-[11px] font-semibold text-[#888] tracking-[0.092vw]"
           {...fadeUp}
         >
-          03 / 04 &middot; THALES &middot; NEW PRODUCT
+          03 / 04 &middot; JP MORGAN CHASE &amp; CO &middot; NEW PRODUCT
+          &middot; WEB &middot; B2E &middot; B2C
         </motion.p>
 
         <motion.h1
@@ -70,9 +71,8 @@ export default function ESGPage() {
           transition={{ delay: 0.3, duration: 0.6 }}
         >
           {[
-            { label: "ROLE", value: "Product Designer" },
+            { label: "ROLE", value: "Product Designer · Researcher" },
             { label: "STATUS", value: "HiFi vision shipped" },
-            { label: "TEAM", value: "2 designers" },
             { label: "SCOPE", value: "Systems design · IA" },
             { label: "YEAR", value: "2025" },
           ].map((item, i, arr) => (
@@ -457,17 +457,33 @@ export default function ESGPage() {
           The three original tools
         </p>
         <div className="flex max-lg:flex-col gap-[1.11vw] max-lg:gap-3 mt-[2.22vw]">
-          {[1, 2, 3].map((n) => (
-            <div
-              key={n}
-              className="flex-1 bg-[#f5f0e8] rounded-[0.56vw] max-lg:rounded-[6px] flex items-center justify-center"
-              style={{ aspectRatio: "16 / 10" }}
-            >
-              <p className="font-sans text-[0.97vw] max-lg:text-[14px] font-normal text-[#bbb] tracking-[0.069vw]">
-                TOOL {n} · IMAGE PLACEHOLDER
-              </p>
-            </div>
-          ))}
+          <div className="flex-1 rounded-[0.56vw] max-lg:rounded-[6px] overflow-hidden relative bg-white" style={{ aspectRatio: "9 / 5" }}>
+            <ShimmerImage
+              src="/images/esg-before-tool-1.png"
+              alt="Original tool 1 - Methodologies table view with specification names, codes, categories, and statuses"
+              fill
+              className="shimmer object-contain object-top pointer-events-none"
+              sizes="30vw"
+            />
+          </div>
+          <div className="flex-1 rounded-[0.56vw] max-lg:rounded-[6px] overflow-hidden relative bg-[#ececf3]" style={{ aspectRatio: "9 / 5" }}>
+            <ShimmerImage
+              src="/images/esg-before-tool-2.png"
+              alt="Original tool 2 - Equity Exploration Tool with ranges, exclusions, data coverage, and threshold controls"
+              fill
+              className="shimmer object-contain pointer-events-none"
+              sizes="30vw"
+            />
+          </div>
+          <div className="flex-1 rounded-[0.56vw] max-lg:rounded-[6px] overflow-hidden relative bg-[#f4f4f4]" style={{ aspectRatio: "9 / 5" }}>
+            <ShimmerImage
+              src="/images/esg-before-tool-3.png"
+              alt="Original tool 3 - Methodology Oversight Tool with approval workflows and status tracking"
+              fill
+              className="shimmer object-contain pointer-events-none"
+              sizes="30vw"
+            />
+          </div>
         </div>
       </motion.div>
 

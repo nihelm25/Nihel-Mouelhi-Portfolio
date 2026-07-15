@@ -62,7 +62,6 @@ export default function SafePage() {
           {[
             { label: "ROLE", value: "Product Designer" },
             { label: "STATUS", value: "Shipped to pilot" },
-            { label: "TEAM", value: "2 designers" },
             { label: "SCOPE", value: "End-to-end new product" },
             { label: "YEAR", value: "2018" },
           ].map((item, i, arr) => (

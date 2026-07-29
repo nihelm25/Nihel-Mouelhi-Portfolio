@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import Logo from "./Logo";
 
@@ -13,9 +13,9 @@ export default function PasswordGate({
   children: React.ReactNode;
 }) {
   const [unlocked, setUnlocked] = useState(false);
-  const [input, setInput] = useState("");
   const [error, setError] = useState(false);
   const [checking, setChecking] = useState(true);
+  const inputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -27,7 +27,8 @@ export default function PasswordGate({
 
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    if (input.trim().toLowerCase() === CORRECT_HASH) {
+    const value = inputRef.current?.value ?? "";
+    if (value.trim().toLowerCase() === CORRECT_HASH) {
       sessionStorage.setItem(STORAGE_KEY, "true");
       setUnlocked(true);
       setError(false);
@@ -60,14 +61,11 @@ export default function PasswordGate({
 
         <form onSubmit={handleSubmit} className="flex flex-col gap-[0.83vw] max-lg:gap-3 w-full">
           <input
+            ref={inputRef}
             type="password"
-            value={input}
-            onChange={(e) => {
-              setInput(e.target.value);
-              setError(false);
-            }}
             placeholder="Enter password"
             autoFocus
+            onChange={() => setError(false)}
             className="w-full px-[1.11vw] max-lg:px-4 py-[0.83vw] max-lg:py-3 rounded-[0.56vw] max-lg:rounded-[8px] border border-[#d9d9d9] bg-white font-sans text-[1.04vw] max-lg:text-[16px] text-text-primary placeholder:text-[#bbb] outline-none focus:border-[#888] transition-colors"
           />
           {error && (

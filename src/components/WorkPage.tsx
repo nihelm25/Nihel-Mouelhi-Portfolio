@@ -140,11 +140,11 @@ const projects: Omit<CaseCardProps, "index">[] = [
   },
   {
     heading:
-      "Unifying two opaque internal tools into one workspace for ESG methodologies",
+      "Unifying three opaque internal tools into one workspace for ESG methodologies",
     company: "JP Morgan Chase & Co",
     tags: ["B2E", "B2C", "FINTECH"],
     metrics: [
-      { value: "2→1", label: "Legacy tools consolidated" },
+      { value: "3→1", label: "Legacy tools consolidated" },
       { value: "200+", label: "Methodologies managed in\none workspace" },
     ],
     visualBg: "#1a4a73",

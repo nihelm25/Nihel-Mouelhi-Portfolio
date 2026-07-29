@@ -508,7 +508,7 @@ export default function ESGPage() {
         </div>
       </motion.div>
 
-      {/* Solution: One workspace */}
+      {/* Solution: The builder + one workspace */}
       <motion.div
         className="px-[3.33vw] max-lg:px-5 mt-[2.78vw] max-lg:mt-8"
         {...fadeUp}
@@ -517,53 +517,18 @@ export default function ESGPage() {
           ONE WORKSPACE
         </p>
         <p className="font-sans text-[1.25vw] max-lg:text-[16px] font-semibold text-[#555] leading-[1.3] mt-[0.83vw]">
-          Three tools merged into one
-        </p>
-        <div className="flex max-lg:flex-col gap-[4.44vw] max-lg:gap-6 mt-[1.67vw]">
-          <div className="flex-1 flex flex-col gap-[1.11vw]">
-            <p className="font-sans text-[1.25vw] max-lg:text-[15px] font-normal text-[#555] leading-[1.5] tracking-[-0.013vw]">
-              Building a methodology and testing it against real portfolios
-              happen in the same view. The Analyze panel sits to the right of
-              the builder, with portfolio comparison, statistical overlays, and
-              security-level breakdowns visible without leaving the canvas.
-            </p>
-            <p className="font-sans text-[1.25vw] max-lg:text-[15px] font-semibold text-[#555] leading-[1.5] tracking-[-0.013vw]">
-              Researchers can no longer build a methodology without seeing how
-              it tests.
-            </p>
-          </div>
-          <div className="shrink-0 w-[21.94vw] max-lg:w-full">
-            <ShimmerImage
-              src="/images/esg-analyze-panel.png"
-              alt="Analyze panel -portfolio comparison, chart overlays, and security-level breakdowns"
-              width={1302}
-              height={2388}
-              className="shimmer w-full h-auto object-contain pointer-events-none"
-              sizes="22vw"
-            />
-          </div>
-        </div>
-      </motion.div>
-
-      {/* Solution: Visual builder */}
-      <motion.div
-        className="px-[3.33vw] max-lg:px-5 mt-[2.78vw] max-lg:mt-8"
-        {...fadeUp}
-      >
-        <p className="font-sans text-[0.76vw] max-lg:text-[11px] font-semibold text-[#9c4221] tracking-[0.092vw]">
-          THE BUILDER
-        </p>
-        <p className="font-sans text-[1.25vw] max-lg:text-[16px] font-semibold text-[#555] leading-[1.3] mt-[0.83vw]">
-          A visual builder for non-visual logic
+          Three tools merged into one visual builder
         </p>
         <p className="font-sans text-[1.25vw] max-lg:text-[15px] font-normal text-[#555] leading-[1.5] tracking-[-0.013vw] mt-[0.56vw]">
-          A node-based composition tree. A methodology sits at the top. Derived
-          attributes branch from it. Raw attributes from market data feed into
-          the derived attributes. The structure expresses how researchers
-          actually think about methodologies: not as forms or filters, but as
-          compositions.
+          Building a methodology and testing it against real portfolios
+          happen in the same view.
         </p>
-
+        <p className="font-sans text-[1.25vw] max-lg:text-[15px] font-normal text-[#555] leading-[1.5] tracking-[-0.013vw] mt-[0.56vw]">
+          Raw attributes from market data feed into derived attributes, which
+          compose into a methodology at the top of the tree. The structure makes
+          the full logic visible: not as forms or filters, but as a composition
+          hierarchy researchers can read at a glance.
+        </p>
         <div className="mt-[2.22vw] rounded-[0.83vw] max-lg:rounded-[8px] overflow-hidden">
           <ShimmerImage
             src="/images/esg-builder-canvas.png"
@@ -573,6 +538,30 @@ export default function ESGPage() {
             className="shimmer w-full h-auto object-contain pointer-events-none"
             sizes="93vw"
           />
+        </div>
+
+        <div className="flex max-lg:flex-col gap-[4.44vw] max-lg:gap-6 mt-[2.22vw]">
+          <div className="flex-1 flex flex-col gap-[1.11vw] justify-start">
+            <p className="font-sans text-[1.25vw] max-lg:text-[15px] font-normal text-[#555] leading-[1.5] tracking-[-0.013vw]">
+              The Analyze panel sits to the right of the builder, with portfolio
+              comparison, statistical overlays, and security-level breakdowns
+              visible without leaving the canvas.
+            </p>
+            <p className="font-sans text-[1.25vw] max-lg:text-[15px] font-semibold text-[#555] leading-[1.5] tracking-[-0.013vw]">
+              Researchers can no longer build a methodology without seeing how
+              it tests.
+            </p>
+          </div>
+          <div className="shrink-0 w-[16vw] max-lg:w-full">
+            <ShimmerImage
+              src="/images/esg-analyze-panel.png"
+              alt="Analyze panel -portfolio comparison, chart overlays, and security-level breakdowns"
+              width={1302}
+              height={2388}
+              className="shimmer w-full h-auto object-contain pointer-events-none"
+              sizes="22vw"
+            />
+          </div>
         </div>
       </motion.div>
 

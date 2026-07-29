@@ -44,7 +44,7 @@ const fieldNotes = [
   },
   {
     image: "/images/field-figjam.jpg",
-    title: "What I'm building",
+    title: "What I built",
     description:
       "A multi-agent pipeline that automates design intake and discovery, end-to-end.",
   },
@@ -93,11 +93,6 @@ const testimonials = [
     name: "Kam Virakam",
     role: "Product Manager, BPCE",
   },
-  {
-    text: "Nihel played a major role in adopting UX Design Thinking at BPCE. User feedback has been overwhelmingly positive! Her empathy, creativity, and responsiveness are invaluable assets for any product owner.",
-    name: "Kam Virakam",
-    role: "Product Manager, BPCE",
-  },
 ];
 
 const fadeUp = {
@@ -109,7 +104,7 @@ const fadeUp = {
 function TestimonialCard({ t, i }: { t: (typeof testimonials)[number]; i: number }) {
   return (
     <motion.div
-      className="bg-[#f5f0e6] border border-[#ede7db] rounded-[1.11vw] max-lg:rounded-[8px] p-[1.67vw] max-lg:p-5 flex flex-col gap-[1.11vw] max-lg:gap-4 overflow-hidden w-[31.88vw] max-lg:w-full"
+      className="bg-[#f5f0e6] border border-[#ede7db] rounded-[1.11vw] max-lg:rounded-[8px] p-[1.67vw] max-lg:p-5 flex flex-col gap-[1.11vw] max-lg:gap-4 overflow-hidden flex-1 max-lg:w-full"
       {...fadeUp}
       transition={{ delay: 0.1 + i * 0.12, duration: 0.6 }}
     >
@@ -182,40 +177,30 @@ export default function AboutPage() {
             transition={{ delay: 0.4, duration: 0.7 }}
           >
             <p>
-              I design products for the hard spaces, fintech, defense,
-              healthcare, telecom, but also for millions of everyday users who
-              just want something that works and feels right.
+              I design for the hard spaces, like fintech, defense, healthcare, and telecom, but also for the millions of everyday people who just want something that works and feels right.
             </p>
             <p>
-              I started as an interior architect. The medium changed, the
-              mindset didn&rsquo;t. That&rsquo;s what lets me think in systems,
-              lead with clarity, and craft products that feel inevitable.
+              I started as an interior architect. The medium changed, but the mindset didn&rsquo;t. That&rsquo;s what lets me see the whole before the parts, set a clear direction, and lead to ship products that feel inevitable.
             </p>
             <p className="font-semibold mt-[0.5vw] max-lg:mt-1">
-              What shapes how I work:
+              How I work:
             </p>
             <ul className="flex flex-col gap-[1.11vw] max-lg:gap-4 list-disc pl-[1.2em]">
               <li>
-                Trilingual and multicultural, I&rsquo;ve worked across Tunisia,
-                France, and the US with cross-functional teams. That range shapes
-                how I listen and navigate rooms where not everyone sees the same
-                problem.
+                I lead through direction, not just craft. I owned the design vision and direction for Workplace Solutions and Specification Workbench. I mentor designers and manage stakeholders across PMs, engineers, and business partners, aligning everyone around a single reading of the problem. That&rsquo;s the part of the job where not everyone starts out seeing the same thing.
               </li>
               <li>
-                My interior architecture background gives me a systems
-                perspective. I see the whole before the parts, holding strategic
-                ambiguity while staying grounded in craft.
+                I bring a systems perspective from architecture. I see the whole before the parts. I turned three fragmented tools people avoided into one Workbench they actually use.
               </li>
               <li>
-                Right now I&rsquo;m deep in AI. I built a multi-agent pipeline
-                that automates intake and design discovery, and designed an
-                AI-assisted incident-response system for transit control rooms.
+                I built what&rsquo;s next. I designed a multi-agent pipeline that automates intake and design discovery, a vision I presented to our head of design that reshaped how our team works. I also designed an AI-assisted incident-response system, now deployed in SNCF control rooms and the first step in a rollout across the wider Paris metro network.
               </li>
             </ul>
             <p>
-              Outside work, you&rsquo;ll find me applying the same eye to
-              fashion and interiors. Different mediums, same obsession with
-              getting it right.
+              Trilingual and multicultural, I&rsquo;ve led work across Tunisia, France, and the US. That range shapes how I listen and how I move a room toward a decision.
+            </p>
+            <p>
+              Outside work, you&rsquo;ll find me applying the same eye to fashion and interiors. Different mediums, same obsession with getting it right.
             </p>
           </motion.div>
 
@@ -225,7 +210,7 @@ export default function AboutPage() {
             transition={{ delay: 0.5, duration: 0.7 }}
           >
             <span className="font-sans text-text-primary whitespace-nowrap shrink-0">
-              SELECTED COMPANIES
+              COMPANIES I WORKED WITH
             </span>
             <div className="relative overflow-hidden flex-1">
               <motion.div
@@ -342,19 +327,10 @@ export default function AboutPage() {
           </h2>
         </motion.div>
 
-        <div className="relative">
-          {/* Row 1 */}
-          <div className="flex max-lg:flex-col gap-[1.67vw] max-lg:gap-4 mb-[1.67vw] max-lg:mb-4">
-            {testimonials.slice(0, 2).map((t, i) => (
-              <TestimonialCard key={i} t={t} i={i} />
-            ))}
-          </div>
-          {/* Row 2 — offset for staggered feel */}
-          <div className="flex max-lg:flex-col gap-[1.67vw] max-lg:gap-4 pl-[14vw] max-lg:pl-0">
-            {testimonials.slice(2).map((t, i) => (
-              <TestimonialCard key={i + 2} t={t} i={i + 2} />
-            ))}
-          </div>
+        <div className="flex max-lg:flex-col gap-[1.67vw] max-lg:gap-4 items-stretch">
+          {testimonials.map((t, i) => (
+            <TestimonialCard key={i} t={t} i={i} />
+          ))}
         </div>
       </div>
 

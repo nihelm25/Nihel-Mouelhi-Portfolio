@@ -42,23 +42,23 @@ export default function PasswordGate({
   return (
     <section className="w-screen h-screen bg-cream flex items-center justify-center">
       <motion.div
-        className="flex flex-col items-center gap-8 px-5 w-full max-w-[380px]"
+        className="flex flex-col items-center gap-[2.22vw] max-lg:gap-8 px-5 w-full max-w-[32vw] max-lg:max-w-[420px]"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
-        <Logo className="w-[48px] h-[48px]" />
+        <Logo className="w-[4.17vw] max-lg:w-[56px] h-[4.17vw] max-lg:h-[56px]" />
 
-        <div className="flex flex-col items-center gap-2 text-center">
-          <h1 className="font-sans text-[20px] font-semibold text-text-primary">
+        <div className="flex flex-col items-center gap-[0.56vw] max-lg:gap-2 text-center">
+          <h1 className="font-sans text-[1.67vw] max-lg:text-[22px] font-semibold text-text-primary">
             Protected case study
           </h1>
-          <p className="font-sans text-[14px] text-text-secondary leading-[1.5]">
+          <p className="font-sans text-[1.11vw] max-lg:text-[16px] text-text-secondary leading-[1.5]">
             This project is under NDA. Enter the password to continue.
           </p>
         </div>
 
-        <form onSubmit={handleSubmit} className="flex flex-col gap-3 w-full">
+        <form onSubmit={handleSubmit} className="flex flex-col gap-[0.83vw] max-lg:gap-3 w-full">
           <input
             type="password"
             value={input}
@@ -68,16 +68,16 @@ export default function PasswordGate({
             }}
             placeholder="Enter password"
             autoFocus
-            className="w-full px-4 py-3 rounded-[8px] border border-[#d9d9d9] bg-white font-sans text-[15px] text-text-primary placeholder:text-[#bbb] outline-none focus:border-[#888] transition-colors"
+            className="w-full px-[1.11vw] max-lg:px-4 py-[0.83vw] max-lg:py-3 rounded-[0.56vw] max-lg:rounded-[8px] border border-[#d9d9d9] bg-white font-sans text-[1.04vw] max-lg:text-[16px] text-text-primary placeholder:text-[#bbb] outline-none focus:border-[#888] transition-colors"
           />
           {error && (
-            <p className="font-sans text-[13px] text-[#c0392b]">
+            <p className="font-sans text-[0.9vw] max-lg:text-[14px] text-[#c0392b]">
               Incorrect password. Please try again.
             </p>
           )}
           <button
             type="submit"
-            className="w-full py-3 rounded-[8px] bg-text-primary text-cream font-sans text-[15px] font-medium transition-opacity hover:opacity-80"
+            className="w-full py-[0.83vw] max-lg:py-3 rounded-[0.56vw] max-lg:rounded-[8px] bg-text-primary text-cream font-sans text-[1.04vw] max-lg:text-[16px] font-medium transition-opacity hover:opacity-80"
           >
             View case study
           </button>
@@ -85,7 +85,7 @@ export default function PasswordGate({
 
         <a
           href="/work"
-          className="font-sans text-[13px] text-text-secondary hover:text-text-primary transition-colors"
+          className="font-sans text-[0.97vw] max-lg:text-[14px] text-text-secondary hover:text-text-primary transition-colors"
         >
           &larr; Back to work
         </a>

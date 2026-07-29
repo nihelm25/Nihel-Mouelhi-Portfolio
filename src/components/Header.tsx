@@ -24,7 +24,7 @@ export default function Header({ activeItem }: { activeItem?: string } = {}) {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3, duration: 0.6 }}
           >
-            <Logo className="w-[64px] h-[64px] max-lg:w-[44px] max-lg:h-[44px]" />
+            <Logo className="w-[64px] h-[64px] max-lg:w-[44px] max-lg:h-[44px] -ml-[16px] max-lg:-ml-[11px]" />
           </motion.a>
 
           <nav className="flex gap-8 items-center max-lg:hidden">

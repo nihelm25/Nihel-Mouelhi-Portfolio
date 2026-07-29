@@ -387,10 +387,10 @@ export default function WorkplaceSolutionsPage() {
         </h2>
         <div className="flex flex-col gap-[1.11vw] max-lg:gap-4 mt-[1.67vw] font-sans text-[1.25vw] max-lg:text-[15px] font-normal text-[#555] leading-[1.5] tracking-[-0.013vw]">
           <p>
-            <span className="font-semibold">The constraints were the design.</span> Early on I tried to simplify away the complexity, hiding tax disclaimers, collapsing plan types, minimizing legal language. Compliance pushed back, and they were right. Participants making irrevocable financial decisions need to see the full picture. The real skill was making dense, regulated content legible without removing it.
+            <span className="font-semibold">The constraints were the design.</span> Early on I tried to simplify away the complexity, hiding tax disclaimers, collapsing plan types, minimizing legal language. But participants making irrevocable financial decisions need to see the full picture. The real skill was making dense, regulated content legible without removing it.
           </p>
           <p>
-            <span className="font-semibold">Alignment takes longer than design.</span> My week was split between design reviews and rooms with compliance officers, tax counsel, and engineering leads. I learned to bring rough flows to those rooms early, not polished mocks. Half of my best design decisions came from a compliance officer saying &ldquo;that can&rsquo;t work in Germany&rdquo; before I&rsquo;d spent a week on it.
+            <span className="font-semibold">Alignment takes longer than design. </span>My week was split between design reviews and rooms with compliance officers, tax counsel, product partners, and engineering leads. I learned to bring rough flows to those rooms early, not polished mocks. Half of my best design decisions came from a compliance officer saying &ldquo;that can&rsquo;t work in Germany&rdquo; before I&rsquo;d spent a week on it.
           </p>
           <p>
             <span className="font-semibold">What I&rsquo;d do differently:</span> I would have kept a decision log from day one. With compliance, legal, engineering, and product all in the room, decisions got made fast but not always recorded. Weeks later, someone would relitigate a settled question because nobody could point to where it was decided. A lightweight decision log would have saved hours of re-alignment.

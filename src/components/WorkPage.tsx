@@ -110,6 +110,17 @@ function DeepPurpleVisual() {
   );
 }
 
+/* ── Card 5 Visual: Design Pipeline Capstone ── */
+function DesignPipelineVisual() {
+  return (
+    <div className="absolute inset-0 flex items-center justify-center">
+      <span className="font-sans text-[0.9vw] max-lg:text-[11px] font-light tracking-[0.12em] text-white/40 uppercase">
+        Visual coming soon
+      </span>
+    </div>
+  );
+}
+
 /* ── Project data ── */
 const projects: Omit<CaseCardProps, "index">[] = [
   {
@@ -124,6 +135,19 @@ const projects: Omit<CaseCardProps, "index">[] = [
     visualContent: <JPMorganVisual />,
     href: "/work/workplace-solutions",
     locked: true,
+  },
+  {
+    heading:
+      "An AI pipeline that removes 45 minutes of ticket interpretation from every design morning",
+    company: "Stanford Capstone",
+    tags: ["AI", "B2E", "DESIGN OPS"],
+    metrics: [
+      { value: "−97%", label: "Intake time: 45 min\ndown to 90 seconds" },
+      { value: "60s", label: "Label to structured brief,\nend to end" },
+    ],
+    visualBg: "#8c1c1c",
+    visualContent: <DesignPipelineVisual />,
+    href: "/work/design-pipeline",
   },
   {
     heading:

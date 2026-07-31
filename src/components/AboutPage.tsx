@@ -158,7 +158,7 @@ export default function AboutPage() {
       <Header activeItem="ABOUT" />
 
       {/* Header spacer */}
-      <div className="h-[8.33vw] max-lg:h-[100px]" />
+      <div className="h-[19.4vw] max-lg:h-[100px]" />
 
       {/* ── About hero ── */}
       <div className="grid grid-cols-2 max-lg:grid-cols-1 gap-x-[1.67vw] max-lg:gap-8 items-start px-[3.33vw] max-lg:px-5">
@@ -184,7 +184,7 @@ export default function AboutPage() {
             {...fadeUp}
             transition={{ delay: 0.3, duration: 0.7 }}
           >
-            <h1 className="font-sans font-normal text-[5vw] max-lg:text-[32px] leading-[1.1] text-text-primary">
+            <h1 className="font-sans font-normal text-[3.89vw] max-lg:text-[28px] leading-[1.15] text-text-primary">
               I lead through direction, not only craft.
             </h1>
           </motion.div>

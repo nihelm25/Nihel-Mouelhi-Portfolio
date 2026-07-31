@@ -34,46 +34,64 @@ const fieldNotes = [
     image: "/images/field-architect.jpg",
     title: "Where it started",
     description:
-      "ENSAD (school of architecture) 2015. Spatial thinking still shapes how I design interfaces.",
+      "ENSAD, school of architecture, 2015. I learned to design space before I designed screens. Spatial thinking still shapes how I work.",
   },
   {
     image: "/images/field-wall-audit.jpg",
     title: "How I think",
     description:
-      "The wall shows what experiences and ecosystems hide: where systems break, overlap, or contradict.",
+      "Everything goes on the wall first. Physical mapping exposes what flows and ecosystem diagrams hide: where systems break, overlap, or contradict each other.",
   },
   {
     image: "/images/field-figjam.jpg",
     title: "What I built",
     description:
-      "A multi-agent pipeline that automates design intake and discovery, end-to-end.",
+      "A multi-agent pipeline that automates design intake and discovery, end to end. Built during Stanford’s Leading with AI program, now in pilot on my team.",
+  },
+];
+
+const howIWork = [
+  {
+    title: "I set direction and align the room.",
+    description:
+      "I own the design vision for Workplace Solutions and Specification Workbench, working across product squads with PMs, engineers, and business partners. Most of the job is getting a room to agree on what the problem actually is before anyone opens Figma.",
+  },
+  {
+    title: "I raise the bar for the team.",
+    description:
+      "Mentored 5 designers through J.P. Morgan’s mentoring program. Built our critique practice, created the hiring exercise for designers, and defined the definition of done and handoff workflow across design, product, and engineering.",
+  },
+  {
+    title: "I build systems that scale.",
+    description:
+      "Built the design system for our reporting products. Designed Workbench to consolidate three fragmented tools into one unified experience. Designed an AI-assisted incident-response system deployed to SNCF control rooms, the first stop in a rollout targeting the wider Paris metro network.",
   },
 ];
 
 const principles = [
   {
     number: "01",
-    title: "Design for the 2nd visit, not the 1st",
+    title: "Design for the second visit, not the first",
     description:
-      "First impressions fade. I optimize for the person who's already decided to come back; streamlining their path, reducing friction, and making expertise accessible.",
+      "First impressions fade. I optimize for the person who has already decided to come back: streamlining their path, reducing friction, making expertise accessible.",
   },
   {
     number: "02",
     title: "Speed is a feature. Polish is a feature. Pick your battles.",
     description:
-      "I invest craft where it compounds: core flows, brand moments, high-frequency interactions. Everywhere else, I ship fast and learn.",
+      "I invest craft where it compounds: core flows, brand moments, high-frequency interactions. Everywhere else, I move fast and learn.",
   },
   {
     number: "03",
-    title: "The best design system is the one the team actually uses",
+    title: "Systems earn adoption, they don’t get mandated",
     description:
-      "I build systems with clear guardrails, obvious defaults, and room to break rules when it matters. A component library gathering dust is just expensive documentation.",
+      "Clear guardrails, obvious defaults, and a contribution path, so the library keeps growing without me maintaining it. A component library gathering dust is just expensive documentation.",
   },
   {
     number: "04",
     title: "Design for the edge case, then hide it",
     description:
-      "Empty states, errors, edge conditions; I design these with as much care as the happy path, then tuck them away. This is where craft shows.",
+      "Empty states, errors, edge conditions. I give these as much attention as the happy path, then tuck them away. Edge cases are where quality actually gets decided.",
   },
 ];
 
@@ -140,13 +158,13 @@ export default function AboutPage() {
       <Header activeItem="ABOUT" />
 
       {/* Header spacer */}
-      <div className="h-[19.4vw] max-lg:h-[100px]" />
+      <div className="h-[8.33vw] max-lg:h-[100px]" />
 
       {/* ── About hero ── */}
       <div className="grid grid-cols-2 max-lg:grid-cols-1 gap-x-[1.67vw] max-lg:gap-8 items-start px-[3.33vw] max-lg:px-5">
         {/* Portrait */}
         <motion.div
-          className="relative max-lg:w-full self-stretch max-lg:self-auto max-lg:h-[300px] rounded-[1.39vw] max-lg:rounded-[12px] overflow-hidden"
+          className="relative max-lg:w-full aspect-[4/5] max-lg:aspect-[4/3] rounded-[1.39vw] max-lg:rounded-[12px] overflow-hidden"
           {...fadeUp}
           transition={{ delay: 0.2, duration: 0.7 }}
         >
@@ -154,8 +172,8 @@ export default function AboutPage() {
             src="/images/about-portrait.jpg"
             alt="Nihel Mouelhi"
             fill
-            className="object-cover"
-            sizes="(max-width: 1023px) 100vw, 38vw"
+            className="object-cover object-top"
+            sizes="(max-width: 1023px) 100vw, 45vw"
             priority
           />
         </motion.div>
@@ -166,8 +184,8 @@ export default function AboutPage() {
             {...fadeUp}
             transition={{ delay: 0.3, duration: 0.7 }}
           >
-            <h1 className="font-sans font-normal text-[3.89vw] max-lg:text-[28px] leading-[1.15] text-text-primary">
-              Interior architect turned product designer, building for millions.
+            <h1 className="font-sans font-normal text-[5vw] max-lg:text-[32px] leading-[1.1] text-text-primary">
+              I lead through direction, not only craft.
             </h1>
           </motion.div>
 
@@ -177,31 +195,14 @@ export default function AboutPage() {
             transition={{ delay: 0.4, duration: 0.7 }}
           >
             <p>
-              I design for the hard spaces, like fintech, defense, healthcare, and telecom, but also for the millions of everyday people who just want something that works and feels right.
+              I design for the hard spaces: fintech, defense, healthcare, telecom. Systems with real consequences, used by people who just want something that works and feels right.
             </p>
-            <p>
-              I started as an interior architect. The medium changed, but the mindset didn&rsquo;t. That&rsquo;s what lets me see the whole before the parts, set a clear direction, and lead to ship products that feel inevitable.
-            </p>
-            <p className="font-semibold mt-[0.5vw] max-lg:mt-1">
-              How I work:
-            </p>
-            <ul className="flex flex-col gap-[1.11vw] max-lg:gap-4 list-disc pl-[1.2em]">
-              <li>
-                I lead through direction, not just craft. I owned the design vision and direction for Workplace Solutions and Specification Workbench. I mentor designers and manage stakeholders across PMs, engineers, and business partners, aligning everyone around a single reading of the problem. That&rsquo;s the part of the job where not everyone starts out seeing the same thing.
-              </li>
-              <li>
-                I bring a systems perspective from architecture. I see the whole before the parts. I turned three fragmented tools people avoided into one Workbench they actually use.
-              </li>
-              <li>
-                I built what&rsquo;s next. I designed a multi-agent pipeline that automates intake and design discovery, a vision I presented to our head of design that reshaped how our team works. I also designed an AI-assisted incident-response system, now deployed in SNCF control rooms and the first step in a rollout across the wider Paris metro network.
-              </li>
+            <ul className="flex flex-col gap-[0.56vw] max-lg:gap-2 list-disc pl-[1.2em]">
+              <li>At J.P. Morgan Chase I own the design direction for an equity platform serving 200K+ participants across 50+ jurisdictions and $19B in assets</li>
+              <li>Before product, I was an interior architect. The medium changed, the mindset didn&rsquo;t: see the whole before the parts, set a clear direction, and ship products that feel inevitable</li>
+              <li>Trilingual and multicultural. Led work across Tunisia, France, and the US. That range shapes how I listen and how I move a room toward a decision</li>
+              <li>Outside work, the same eye goes to fashion and interiors. Same obsession with getting it right</li>
             </ul>
-            <p>
-              Trilingual and multicultural, I&rsquo;ve led work across Tunisia, France, and the US. That range shapes how I listen and how I move a room toward a decision.
-            </p>
-            <p>
-              Outside work, you&rsquo;ll find me applying the same eye to fashion and interiors. Different mediums, same obsession with getting it right.
-            </p>
           </motion.div>
 
           <motion.div
@@ -232,8 +233,42 @@ export default function AboutPage() {
         </div>
       </div>
 
+      {/* ── How I Work ── */}
+      <div className="mt-[4.44vw] max-lg:mt-10 px-[3.33vw] max-lg:px-5">
+        <motion.div
+          className="flex flex-col gap-[0.56vw] mb-[3.33vw] max-lg:mb-8"
+          {...fadeUp}
+          transition={{ duration: 0.7 }}
+        >
+          <p className="font-sans text-[1.11vw] max-lg:text-[13px] text-text-primary">
+            HOW I WORK
+          </p>
+          <h2 className="font-sans font-normal text-[3.33vw] max-lg:text-[26px] leading-[1.15] text-text-primary">
+            Direction, craft, and team growth.
+          </h2>
+        </motion.div>
+
+        <div className="flex flex-col">
+          {howIWork.map((item, i) => (
+            <motion.div
+              key={item.title}
+              className="py-[2.22vw] max-lg:py-6 border-t border-[#d9d9d9] grid grid-cols-[1fr_1.5fr] max-lg:grid-cols-1 gap-x-[2.22vw] gap-y-[0.56vw] max-lg:gap-2 items-baseline"
+              {...fadeUp}
+              transition={{ delay: 0.1 + i * 0.1, duration: 0.6 }}
+            >
+              <h3 className="font-sans font-semibold text-[1.39vw] max-lg:text-[17px] leading-[1.3] text-text-primary">
+                {item.title}
+              </h3>
+              <p className="font-sans text-[1.11vw] max-lg:text-[15px] leading-[1.5] text-text-primary">
+                {item.description}
+              </p>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+
       {/* ── Field Notes ── */}
-      <div className="mt-[3.33vw] max-lg:mt-8 flex flex-col gap-[2.22vw] max-lg:gap-6">
+      <div className="mt-[4.44vw] max-lg:mt-10 flex flex-col gap-[2.22vw] max-lg:gap-6">
         <motion.div
           className="flex flex-col gap-[0.56vw] px-[3.33vw] max-lg:px-5"
           {...fadeUp}
@@ -242,69 +277,94 @@ export default function AboutPage() {
           <p className="font-sans text-[1.11vw] max-lg:text-[13px] text-text-primary">
             FIELD NOTES
           </p>
-          <h2 className="font-sans font-normal text-[3.89vw] max-lg:text-[28px] leading-[1.15] text-text-primary">
+          <h2 className="font-sans font-normal text-[3.33vw] max-lg:text-[26px] leading-[1.15] text-text-primary">
             Where it started, how I think, what&rsquo;s next.
           </h2>
         </motion.div>
 
-        <div className="flex max-lg:flex-col gap-[2.99vw] max-lg:gap-6 px-[3.33vw] max-lg:px-5">
-          {fieldNotes.map((note, i) => (
-            <motion.div
-              key={note.title}
-              className="flex flex-col gap-[1.67vw] max-lg:gap-4 flex-1"
-              {...fadeUp}
-              transition={{ delay: 0.1 + i * 0.12, duration: 0.6 }}
-            >
-              <div className="relative w-full h-[20.83vw] max-lg:h-[200px] rounded-[1.39vw] max-lg:rounded-[8px] overflow-hidden border border-[#d9d9d9]">
-                <ShimmerImage
-                  src={note.image}
-                  alt={note.title}
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 1023px) 100vw, 30vw"
-                />
-              </div>
-              <div className="flex flex-col gap-[1.11vw] max-lg:gap-2">
-                <h3 className="font-sans font-semibold text-[1.67vw] max-lg:text-[18px] leading-[1.2] text-text-primary">
-                  {note.title}
-                </h3>
-                <p className="font-sans text-[1.11vw] max-lg:text-[15px] leading-[1.5] text-text-primary">
-                  {note.description}
-                </p>
-              </div>
-            </motion.div>
-          ))}
+        <div className="grid grid-cols-[1.2fr_1fr] max-lg:grid-cols-1 gap-[1.67vw] max-lg:gap-6 px-[3.33vw] max-lg:px-5">
+          {/* Featured card */}
+          <motion.div
+            className="flex flex-col gap-[1.67vw] max-lg:gap-4"
+            {...fadeUp}
+            transition={{ delay: 0.1, duration: 0.6 }}
+          >
+            <div className="relative w-full aspect-[4/3] max-lg:h-[200px] max-lg:aspect-auto rounded-[1.39vw] max-lg:rounded-[8px] overflow-hidden border border-[#d9d9d9]">
+              <ShimmerImage
+                src={fieldNotes[0].image}
+                alt={fieldNotes[0].title}
+                fill
+                className="object-cover"
+                sizes="(max-width: 1023px) 100vw, 55vw"
+              />
+            </div>
+            <div className="flex flex-col gap-[1.11vw] max-lg:gap-2">
+              <h3 className="font-sans font-semibold text-[1.67vw] max-lg:text-[18px] leading-[1.2] text-text-primary">
+                {fieldNotes[0].title}
+              </h3>
+              <p className="font-sans text-[1.11vw] max-lg:text-[15px] leading-[1.5] text-text-primary">
+                {fieldNotes[0].description}
+              </p>
+            </div>
+          </motion.div>
+
+          {/* Stacked smaller cards */}
+          <div className="flex flex-col gap-[1.67vw] max-lg:gap-6">
+            {fieldNotes.slice(1).map((note, i) => (
+              <motion.div
+                key={note.title}
+                className="flex flex-col gap-[1.11vw] max-lg:gap-4 flex-1"
+                {...fadeUp}
+                transition={{ delay: 0.2 + i * 0.12, duration: 0.6 }}
+              >
+                <div className="relative w-full aspect-[16/9] max-lg:h-[200px] max-lg:aspect-auto rounded-[1.39vw] max-lg:rounded-[8px] overflow-hidden border border-[#d9d9d9]">
+                  <ShimmerImage
+                    src={note.image}
+                    alt={note.title}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 1023px) 100vw, 40vw"
+                  />
+                </div>
+                <div className="flex flex-col gap-[0.56vw] max-lg:gap-2">
+                  <h3 className="font-sans font-semibold text-[1.39vw] max-lg:text-[18px] leading-[1.2] text-text-primary">
+                    {note.title}
+                  </h3>
+                  <p className="font-sans text-[1.11vw] max-lg:text-[15px] leading-[1.5] text-text-primary">
+                    {note.description}
+                  </p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </div>
 
       {/* ── Design Principles ── */}
-      <div className="mt-[3.33vw] max-lg:mt-8 px-[3.33vw] max-lg:px-5">
+      <div className="mt-[4.44vw] max-lg:mt-10 px-[3.33vw] max-lg:px-5">
         <motion.div
-          className="flex flex-col gap-[0.56vw] mb-[2.22vw] max-lg:mb-6"
+          className="mb-[3.33vw] max-lg:mb-8"
           {...fadeUp}
           transition={{ duration: 0.7 }}
         >
-          <p className="font-sans text-[1.11vw] max-lg:text-[13px] text-text-primary">
-            MY DESIGN PRINCIPLES
-          </p>
-          <h2 className="font-sans font-normal text-[3.89vw] max-lg:text-[28px] leading-[1.15] text-text-primary">
+          <h2 className="font-sans font-normal text-[3.33vw] max-lg:text-[26px] leading-[1.15] text-text-primary">
             Four rules I design by.
           </h2>
         </motion.div>
 
-        <div className="grid grid-cols-2 max-lg:grid-cols-1 gap-x-[1.67vw] gap-y-[2.22vw] max-lg:gap-y-6">
+        <div className="grid grid-cols-2 max-lg:grid-cols-1 gap-x-[3.33vw] gap-y-[3.33vw] max-lg:gap-y-8">
           {principles.map((p, i) => (
             <motion.div
               key={p.number}
-              className="flex flex-col gap-[1.11vw]"
+              className="flex flex-col gap-[0.83vw] max-lg:gap-3"
               {...fadeUp}
               transition={{ delay: 0.1 + i * 0.1, duration: 0.6 }}
             >
-              <p className="font-sans text-[1.11vw] max-lg:text-[13px] text-[#bbb]">{p.number}</p>
-              <h3 className="font-sans font-semibold text-[1.67vw] max-lg:text-[18px] leading-[1.3] text-text-primary">
+              <p className="font-sans text-[2.22vw] max-lg:text-[24px] font-light text-accent leading-none">{p.number}</p>
+              <h3 className="font-sans font-semibold text-[1.39vw] max-lg:text-[17px] leading-[1.3] text-text-primary">
                 {p.title}
               </h3>
-              <p className="font-sans text-[1.11vw] max-lg:text-[15px] leading-[1.5] text-text-primary">
+              <p className="font-sans text-[1.11vw] max-lg:text-[15px] leading-[1.5] text-text-secondary">
                 {p.description}
               </p>
             </motion.div>
@@ -313,7 +373,7 @@ export default function AboutPage() {
       </div>
 
       {/* ── Testimonials ── */}
-      <div className="mt-[3.33vw] max-lg:mt-8 px-[3.33vw] max-lg:px-5">
+      <div className="mt-[4.44vw] max-lg:mt-10 px-[3.33vw] max-lg:px-5">
         <motion.div
           className="flex flex-col gap-[0.56vw] mb-[2.22vw] max-lg:mb-6"
           {...fadeUp}
@@ -322,20 +382,23 @@ export default function AboutPage() {
           <p className="font-sans text-[1.11vw] max-lg:text-[13px] text-text-primary">
             IN THEIR WORDS
           </p>
-          <h2 className="font-sans font-normal text-[3.89vw] max-lg:text-[28px] leading-[1.15] text-text-primary">
+          <h2 className="font-sans font-normal text-[3.33vw] max-lg:text-[26px] leading-[1.15] text-text-primary">
             A few perspectives on working together
           </h2>
         </motion.div>
 
-        <div className="flex max-lg:flex-col gap-[1.67vw] max-lg:gap-4 items-stretch">
-          {testimonials.map((t, i) => (
-            <TestimonialCard key={i} t={t} i={i} />
-          ))}
+        <div className="flex flex-col gap-[1.67vw] max-lg:gap-4">
+          <TestimonialCard t={testimonials[0]} i={0} />
+          <div className="flex max-lg:flex-col gap-[1.67vw] max-lg:gap-4 items-stretch">
+            {testimonials.slice(1).map((t, i) => (
+              <TestimonialCard key={i + 1} t={t} i={i + 1} />
+            ))}
+          </div>
         </div>
       </div>
 
       {/* ── Get in Touch ── */}
-      <div id="contact" className="mt-[6.94vw] max-lg:mt-16 px-[3.33vw] max-lg:px-5 pb-[3.33vw] max-lg:pb-8">
+      <div id="contact" className="mt-[4.44vw] max-lg:mt-10 px-[3.33vw] max-lg:px-5 pb-[3.33vw] max-lg:pb-8">
         <div className="border-t border-divider pt-[3.33vw] max-lg:pt-8">
           <div className="grid grid-cols-2 max-lg:grid-cols-1 gap-x-[1.67vw] max-lg:gap-8 items-start">
             <motion.div
@@ -343,7 +406,7 @@ export default function AboutPage() {
               {...fadeUp}
               transition={{ duration: 0.7 }}
             >
-              <h2 className="font-sans font-normal text-[3.89vw] max-lg:text-[28px] leading-[1.15] text-text-primary">
+              <h2 className="font-sans font-normal text-[3.33vw] max-lg:text-[26px] leading-[1.15] text-text-primary">
                 Let&rsquo;s turn ambitious<br />ideas into products.
               </h2>
               <div className="flex items-center gap-[0.56vw] max-lg:gap-2 mt-[0.56vw] max-lg:mt-1">

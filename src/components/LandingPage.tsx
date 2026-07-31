@@ -187,6 +187,37 @@ function SublineSwap() {
   );
 }
 
+function CursorGlow() {
+  const glowRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const el = glowRef.current;
+    if (!el) return;
+    const onMove = (e: MouseEvent) => {
+      el.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+    };
+    window.addEventListener("mousemove", onMove);
+    return () => window.removeEventListener("mousemove", onMove);
+  }, []);
+
+  return (
+    <div
+      ref={glowRef}
+      className="fixed pointer-events-none z-0"
+      style={{
+        width: "50vw",
+        height: "50vw",
+        top: "-25vw",
+        left: "-25vw",
+        borderRadius: "50%",
+        background: "radial-gradient(circle, rgba(156,66,33,0.12) 0%, rgba(212,149,107,0.07) 40%, transparent 70%)",
+        willChange: "transform",
+        transition: "transform 0.3s ease-out",
+      }}
+    />
+  );
+}
+
 export default function LandingPage() {
   const [nameHovered, setNameHovered] = useState(false);
   const [zeroHovered, setZeroHovered] = useState(false);
@@ -199,6 +230,7 @@ export default function LandingPage() {
 
   return (
     <section className="relative w-full min-h-full bg-cream flex flex-col">
+      <CursorGlow />
       <ConfettiOverlay active={confetti} />
       <Header />
 

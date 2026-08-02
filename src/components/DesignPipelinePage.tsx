@@ -13,6 +13,12 @@ const fadeUp = {
 
 const accent = "#8c1c1c";
 
+const scrumResults = [
+  { ticket: "SCRUM-1", result: "Passed with assumption", detail: "Clearer acceptance flow was interpretable but ambiguous—assumption explicitly marked." },
+  { ticket: "SCRUM-2", result: "Passed clean", detail: "Full brief, four blocking edge cases flagged." },
+  { ticket: "SCRUM-3", result: "Refused outright", detail: "Three missing fields named: user role, surface, platform scope." },
+];
+
 export default function DesignPipelinePage() {
   return (
     <section className="relative w-full min-h-screen bg-cream overflow-x-hidden">
@@ -53,9 +59,9 @@ export default function DesignPipelinePage() {
             }}
           >
             <ShimmerImage
-              src="/images/pipeline-jira-sidebar.png"
+              src="/images/pipeline-hero.png"
               alt="Design Pipeline sidebar in Jira — brief ready with product ask and user context"
-              width={2860}
+              width={2695}
               height={1328}
               className="shimmer w-full h-auto object-cover pointer-events-none"
               sizes="93vw"
@@ -97,10 +103,10 @@ export default function DesignPipelinePage() {
           <span className="font-semibold" style={{ color: accent }}>45 minutes.</span>
         </h2>
         <p className="font-sans text-[1.25vw] max-lg:text-[15px] font-normal text-[#555] leading-[1.5] tracking-[-0.013vw] mt-[1.67vw]">
-          A ticket arrives in Jira, written by a business stakeholder. Before any design work can begin: read the ticket three times, figure out whether it targets the client platform or the admin portal, hunt down the edge cases nobody wrote down, separate the happy path from the failure states, sort must-have from nice-to-have, and list what still needs PM clarification.
+          A ticket arrives in Jira, written by a business stakeholder. Before any design work can begin: read the ticket three times, figure out what the actual problem is and why we are solving it, hunt down the edge cases nobody wrote down, and list what still needs PM clarification.
         </p>
         <p className="font-sans text-[1.25vw] max-lg:text-[15px] font-normal text-[#555] leading-[1.5] tracking-[-0.013vw] mt-[1.11vw]">
-          I inventoried those six steps deliberately, because the question I actually needed to answer was not &ldquo;where could AI help&rdquo; but &ldquo;which of these is judgment, and which is scaffolding.&rdquo; Five of six steps are reading and restating. Only one requires domain reasoning&mdash;and that one most reliably fails. Edge cases that should surface here instead surface three weeks later in engineering review, when the design work is already spent.
+          The question I needed to answer was not &ldquo;where could AI help&rdquo; but &ldquo;which of these steps is judgment, and which is scaffolding.&rdquo; Most of the work is reading and restating. Only one step requires domain reasoning&mdash;and that one most reliably fails. Edge cases that should surface here instead surface weeks later in design or engineering review, when the design work is already spent.
         </p>
 
         <div className="bg-[#f2efe8] rounded-[0.28vw] max-lg:rounded-[4px] px-[1.67vw] max-lg:px-5 py-[1.94vw] max-lg:py-5 mt-[2.22vw] max-lg:mt-6">
@@ -123,7 +129,7 @@ export default function DesignPipelinePage() {
           <span className="font-semibold" style={{ color: accent }}>the job?</span>
         </h2>
         <p className="font-sans text-[1.25vw] max-lg:text-[15px] font-normal text-[#555] leading-[1.5] tracking-[-0.013vw] mt-[1.67vw]">
-          Before building anything, I interviewed three lead designers on complex financial products with PM-written intake.
+          Before building anything, I interviewed five lead designers on complex financial products with PM-written intake.
         </p>
 
         <div className="flex flex-col gap-[1.11vw] max-lg:gap-4 mt-[2.22vw]">
@@ -260,7 +266,7 @@ export default function DesignPipelinePage() {
           <span className="font-semibold" style={{ color: accent }}>invisible.</span>
         </h2>
         <p className="font-sans text-[1.25vw] max-lg:text-[15px] font-normal text-[#555] leading-[1.5] tracking-[-0.013vw] mt-[1.67vw]">
-          The interface design decision was to have almost no interface. The PM adds a label. The designer opens an email. Nobody prompts anything. About 60 seconds end to end.
+          The design decision was to keep everything integrated in the designer&rsquo;s environment. The PM adds a label in Jira, which triggers the Design Pipeline. If the ticket meets requirements, a structured brief is generated and delivered right where the designer already works. About 60 seconds end to end.
         </p>
         <p className="font-sans text-[0.76vw] max-lg:text-[11px] font-semibold text-[#888] tracking-[0.092vw] mt-[1.67vw]">
           BUILT WITH
@@ -398,11 +404,7 @@ export default function DesignPipelinePage() {
         </p>
 
         <div className="grid grid-cols-3 max-lg:grid-cols-1 gap-[1.11vw] max-lg:gap-4 mt-[2.22vw]">
-          {[
-            { ticket: "SCRUM-2", result: "Passed clean", detail: "Full brief, four blocking edge cases flagged." },
-            { ticket: "SCRUM-1", result: "Passed with assumption", detail: "“Clearer acceptance flow” was interpretable but ambiguous — assumption explicitly marked." },
-            { ticket: "SCRUM-3", result: "Refused outright", detail: "Three missing fields named: user role, surface, platform scope." },
-          ].map((item) => (
+          {scrumResults.map((item) => (
             <div key={item.ticket} className="bg-[#f2efe8] rounded-[0.28vw] max-lg:rounded-[4px] px-[1.67vw] max-lg:px-5 py-[1.94vw] max-lg:py-5 flex flex-col gap-[0.83vw] max-lg:gap-3">
               <p className="font-sans text-[0.76vw] max-lg:text-[11px] font-semibold text-[#888] tracking-[0.092vw]">
                 {item.ticket}
@@ -481,17 +483,30 @@ export default function DesignPipelinePage() {
         </p>
       </motion.div>
 
-      {/* Figma explorations overview — full width */}
+      {/* Figma explorations — grid */}
       <motion.div className="px-[3.33vw] max-lg:px-5 mt-[2.22vw] max-lg:mt-6" {...fadeUp}>
-        <div className="relative overflow-hidden rounded-[0.56vw] max-lg:rounded-[6px]" style={{ backgroundColor: "#f5f3ee", boxShadow: "0px 2px 8px 0px rgba(0,0,0,0.08)" }}>
-          <ShimmerImage
-            src="/images/pipeline-explorations-overview.png"
-            alt="Three mid-fidelity explorations generated by the Exploration Agent in Figma"
-            width={1520}
-            height={200}
-            className="shimmer w-full h-auto object-cover pointer-events-none"
-            sizes="93vw"
-          />
+        <div className="grid grid-cols-2 max-lg:grid-cols-1 gap-[1.11vw] max-lg:gap-4">
+          {[
+            { src: "/images/pipeline-exploration-1.png", label: "Exploration 1 — Guided milestone timeline" },
+            { src: "/images/pipeline-exploration-2.png", label: "Exploration 2 — Receipt + persistent status bar" },
+            { src: "/images/pipeline-exploration-3.png", label: "Exploration 3 — Celebration hero + progressive disclosure", span: true },
+          ].map((exp) => (
+            <div key={exp.src} className={`flex flex-col gap-[0.56vw] max-lg:gap-2${"span" in exp && exp.span ? " col-span-2 max-lg:col-span-1 max-w-[50%] max-lg:max-w-full mx-auto" : ""}`}>
+              <div className="relative overflow-hidden rounded-[0.56vw] max-lg:rounded-[6px]">
+                <ShimmerImage
+                  src={exp.src}
+                  alt={exp.label}
+                  width={539}
+                  height={178}
+                  className="shimmer w-full h-auto object-cover pointer-events-none"
+                  sizes="(max-width: 1024px) 93vw, 45vw"
+                />
+              </div>
+              <p className="font-sans text-[0.69vw] max-lg:text-[10px] font-normal text-[#888] leading-[1.3]">
+                {exp.label}
+              </p>
+            </div>
+          ))}
         </div>
       </motion.div>
 
@@ -520,31 +535,6 @@ export default function DesignPipelinePage() {
         </div>
       </motion.div>
 
-      {/* Happy path hi-fi + component library */}
-      <motion.div className="px-[3.33vw] max-lg:px-5 mt-[1.11vw] max-lg:mt-3" {...fadeUp}>
-        <div className="grid grid-cols-2 max-lg:grid-cols-1 gap-[1.11vw] max-lg:gap-3">
-          <div className="relative overflow-hidden rounded-[0.56vw] max-lg:rounded-[6px]" style={{ boxShadow: "0px 2px 8px 0px rgba(0,0,0,0.08)" }}>
-            <ShimmerImage
-              src="/images/pipeline-hifi-happy.png"
-              alt="Happy path — Confirmation screen with milestone timeline"
-              width={1024}
-              height={1400}
-              className="shimmer w-full h-auto object-cover pointer-events-none"
-              sizes="(max-width: 1024px) 93vw, 45vw"
-            />
-          </div>
-          <div className="relative overflow-hidden rounded-[0.56vw] max-lg:rounded-[6px]" style={{ boxShadow: "0px 2px 8px 0px rgba(0,0,0,0.08)" }}>
-            <ShimmerImage
-              src="/images/pipeline-component-library.png"
-              alt="Component library — colors, type ramp, buttons, and timeline milestones built for this screen"
-              width={1024}
-              height={1400}
-              className="shimmer w-full h-auto object-cover pointer-events-none"
-              sizes="(max-width: 1024px) 93vw, 45vw"
-            />
-          </div>
-        </div>
-      </motion.div>
 
       {/* Solution detail: Five-stage pipeline */}
       <motion.div className="px-[3.33vw] max-lg:px-5 mt-[4.44vw] max-lg:mt-10" {...fadeUp}>
@@ -560,8 +550,8 @@ export default function DesignPipelinePage() {
 
         <div className="flex max-lg:flex-col items-stretch gap-[0.56vw] max-lg:gap-3 mt-[2.22vw]">
           {[
-            { stage: "1", title: "Ticket interpretation", status: "Shipped", where: "Jira → email" },
-            { stage: "2", title: "Edge case detection", status: "Shipped", where: "Jira → email" },
+            { stage: "1", title: "Ticket interpretation", status: "Shipped", where: "Jira" },
+            { stage: "2", title: "Edge case detection", status: "Shipped", where: "Jira" },
             { stage: "3", title: "Design exploration", status: "Working, manual trigger", where: "Figma, three mid-fi directions" },
             { stage: "4", title: "Hi-fi refinement", status: "Working, manual trigger", where: "Figma, full tokens and states" },
             { stage: "5", title: "Design critique", status: "Designed, not built", where: "Figma, layered annotations" },
@@ -601,7 +591,7 @@ export default function DesignPipelinePage() {
             { value: "−97%", label: "Intake time reduced from 45 minutes of reading and interpreting to 90 seconds reading a structured brief." },
             { value: "60s", label: "End-to-end pipeline time. One label triggers the full chain and delivers a brief plus edge case report." },
             { value: "4", label: "Blocking edge cases surfaced on the first well-specified ticket, with recommendations. None had been considered." },
-            { value: "0", label: "Prompts required. The PM adds a label. The designer opens an email. Nobody invokes anything." },
+            { value: "0", label: "Prompts required. The PM adds a label. The designer opens Jira. The design brief is ready to act on." },
           ].map((stat) => (
             <div key={stat.value} className="flex-1 max-lg:basis-[calc(50%-12px)] flex flex-col gap-[0.56vw] max-lg:gap-2">
               <p className="font-sans text-[3.89vw] max-lg:text-[32px] font-light text-[#555] tracking-[-0.078vw]">

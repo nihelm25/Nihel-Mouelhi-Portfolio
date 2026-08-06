@@ -171,7 +171,7 @@ const projects: Omit<CaseCardProps, "index">[] = [
     heading:
       "An AI pipeline that cuts ticket intake from 45 minutes to 90 seconds",
     company: "Stanford Capstone",
-    tags: ["AI", "B2E", "DESIGN OPS"],
+    tags: ["AI", "B2E", "DESIGN WORKFLOW"],
     metrics: [
       { value: "−97%", label: "Intake time: 45 min\ndown to 90 seconds" },
       { value: "60s", label: "Label to structured brief,\nend to end" },

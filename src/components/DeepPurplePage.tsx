@@ -25,7 +25,7 @@ export default function DeepPurplePage() {
           className="font-sans text-[0.76vw] max-lg:text-[11px] font-semibold text-[#888] tracking-[0.092vw]"
           {...fadeUp}
         >
-          04 / 04 &middot; BPCE GROUP &middot; NEW PRODUCT &middot; RWD
+          05 / 05 &middot; BPCE GROUP &middot; NEW PRODUCT &middot; RWD
           &middot; B2C &middot; B2E
         </motion.p>
 
@@ -64,7 +64,7 @@ export default function DeepPurplePage() {
             { label: "ROLE", value: "Product Designer · Researcher" },
             { label: "STATUS", value: "Shipped to 15M customers" },
             { label: "SCOPE", value: "Consumer banking · Dual-persona UX · Credit products" },
-            { label: "YEAR", value: "2020-2021" },
+            { label: "YEAR", value: "2020–2021" },
           ].map((item, i, arr) => (
             <div
               key={item.label}

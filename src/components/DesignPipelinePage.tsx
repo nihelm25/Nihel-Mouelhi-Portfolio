@@ -14,7 +14,7 @@ const fadeUp = {
 const accent = "#8c1c1c";
 
 const scrumResults = [
-  { ticket: "SCRUM-1", result: "Passed with assumption", detail: "Clearer acceptance flow was interpretable but ambiguous—assumption explicitly marked." },
+  { ticket: "SCRUM-1", result: "Passed with assumption", detail: "Clearer acceptance flow was interpretable but ambiguous; assumption explicitly marked." },
   { ticket: "SCRUM-2", result: "Passed clean", detail: "Full brief, four blocking edge cases flagged." },
   { ticket: "SCRUM-3", result: "Refused outright", detail: "Three missing fields named: user role, surface, platform scope." },
 ];
@@ -32,7 +32,7 @@ export default function DesignPipelinePage() {
           className="font-sans text-[0.76vw] max-lg:text-[11px] font-semibold text-[#888] tracking-[0.092vw]"
           {...fadeUp}
         >
-          02 / 05 &middot; STANFORD CAPSTONE &middot; AI &middot; DESIGN OPS &middot; B2E
+          04 / 05 &middot; STANFORD CAPSTONE &middot; AI &middot; DESIGN OPS &middot; B2E
         </motion.p>
 
         <motion.h1
@@ -60,7 +60,7 @@ export default function DesignPipelinePage() {
           >
             <ShimmerImage
               src="/images/pipeline-hero.png"
-              alt="Design Pipeline sidebar in Jira — brief ready with product ask and user context"
+              alt="Design Pipeline sidebar in Jira – brief ready with product ask and user context"
               width={2695}
               height={1328}
               className="shimmer w-full h-auto object-cover pointer-events-none"
@@ -106,7 +106,7 @@ export default function DesignPipelinePage() {
           A ticket arrives in Jira, written by a business stakeholder. Before any design work can begin: read the ticket three times, figure out what the actual problem is and why we are solving it, hunt down the edge cases nobody wrote down, and list what still needs PM clarification.
         </p>
         <p className="font-sans text-[1.25vw] max-lg:text-[15px] font-normal text-[#555] leading-[1.5] tracking-[-0.013vw] mt-[1.11vw]">
-          The question I needed to answer was not &ldquo;where could AI help&rdquo; but &ldquo;which of these steps is judgment, and which is scaffolding.&rdquo; Most of the work is reading and restating. Only one step requires domain reasoning&mdash;and that one most reliably fails. Edge cases that should surface here instead surface weeks later in design or engineering review, when the design work is already spent.
+          The question I needed to answer was not &ldquo;where could AI help&rdquo; but &ldquo;which of these steps is judgment, and which is scaffolding.&rdquo; Most of the work is reading and restating. Only one step requires domain reasoning, and that one most reliably fails. Edge cases that should surface here instead surface weeks later in design or engineering review, when the design work is already spent.
         </p>
 
         <div className="bg-[#f2efe8] rounded-[0.28vw] max-lg:rounded-[4px] px-[1.67vw] max-lg:px-5 py-[1.94vw] max-lg:py-5 mt-[2.22vw] max-lg:mt-6">
@@ -143,7 +143,7 @@ export default function DesignPipelinePage() {
               num: "2",
               title: "Edge cases are discovered, not anticipated.",
               body: "Participants surfaced them in low-fi review, in engineering handoff, sometimes in QA. Almost never at intake.",
-              quote: "“Feedback comes from engineering about things I didn’t know. I wish I had known it beforehand so I didn’t waste my time.” — Daria",
+              quote: "“Feedback comes from engineering about things I didn’t know. I wish I had known it beforehand so I didn’t waste my time.” – Daria",
             },
             {
               num: "3",
@@ -154,7 +154,7 @@ export default function DesignPipelinePage() {
               num: "4",
               title: "Current AI tools sit outside the design environment.",
               body: "Output engineering can’t use, tools with no discoverable strengths, and interaction models that break direct manipulation.",
-              quote: "“When I want to make a quick change in Figma, I can’t go directly to the frame and change it. On Copilot I need to ask.” — James",
+              quote: "“When I want to make a quick change in Figma, I can’t go directly to the frame and change it. On Copilot I need to ask.” – James",
             },
             {
               num: "5",
@@ -233,7 +233,7 @@ export default function DesignPipelinePage() {
           {[
             {
               label: "THE CHATBOT TRAP",
-              body: "The fastest path was a well-written prompt that a designer pastes a ticket into. It demos well. It also puts the burden of remembering to use it, phrasing it correctly, and knowing what it’s good at back on the designer—which is precisely what the research said was already broken.",
+              body: "The fastest path was a well-written prompt that a designer pastes a ticket into. It demos well. It also puts the burden of remembering to use it, phrasing it correctly, and knowing what it’s good at back on the designer, which is precisely what the research said was already broken.",
             },
             {
               label: "FIVE AGENTS, ZERO QUALITY",
@@ -328,7 +328,7 @@ export default function DesignPipelinePage() {
               ["Happy path", "Accept → confirmation → dashboard"],
               ["Must have", "Grant summary, legal acceptance, confirmation state"],
               ["Out of scope", "Vesting schedule edits, tax forms"],
-              ["Confidence", "High — ticket well-specified"],
+              ["Confidence", "High – ticket well-specified"],
             ].map(([field, value]) => (
               <div key={field} className="flex gap-[0.56vw]">
                 <p className="font-sans text-[0.83vw] max-lg:text-[12px] font-semibold text-[#888] w-[8vw] max-lg:w-[100px] shrink-0">{field}</p>
@@ -355,38 +355,53 @@ export default function DesignPipelinePage() {
         </div>
       </motion.div>
 
-      {/* Edge cases, settings, and agent selection — 3-col grid */}
+      {/* Edge cases, settings, and agent selection – 3-col grid */}
       <motion.div className="px-[3.33vw] max-lg:px-5 mt-[2.22vw] max-lg:mt-6" {...fadeUp}>
         <div className="grid grid-cols-3 max-lg:grid-cols-1 gap-[1.11vw] max-lg:gap-3">
-          <div className="relative overflow-hidden rounded-[0.56vw] max-lg:rounded-[6px]" style={{ boxShadow: "0px 2px 8px 0px rgba(0,0,0,0.08)" }}>
-            <ShimmerImage
-              src="/images/pipeline-edge-cases.png"
-              alt="Edge cases detected — blocking issues surfaced automatically with design decisions"
-              width={830}
-              height={900}
-              className="shimmer w-full h-auto object-cover pointer-events-none"
-              sizes="(max-width: 1024px) 93vw, 30vw"
-            />
+          <div className="flex flex-col gap-[0.56vw] max-lg:gap-2">
+            <div className="relative overflow-hidden rounded-[0.56vw] max-lg:rounded-[6px]" style={{ boxShadow: "0px 2px 8px 0px rgba(0,0,0,0.08)" }}>
+              <ShimmerImage
+                src="/images/pipeline-edge-cases.png"
+                alt="Edge cases detected – blocking issues surfaced automatically with design decisions"
+                width={830}
+                height={900}
+                className="shimmer w-full h-auto object-cover pointer-events-none"
+                sizes="(max-width: 1024px) 93vw, 30vw"
+              />
+            </div>
+            <p className="font-sans text-[0.76vw] max-lg:text-[11px] font-normal text-[#878787] leading-[1.6]">
+              Edge cases surfaced automatically – each with a design decision or a flag for PM clarification
+            </p>
           </div>
-          <div className="relative overflow-hidden rounded-[0.56vw] max-lg:rounded-[6px]" style={{ boxShadow: "0px 2px 8px 0px rgba(0,0,0,0.08)" }}>
-            <ShimmerImage
-              src="/images/pipeline-settings.png"
-              alt="Pipeline settings — brief length, tone, auto edge-case detection, competitive research toggles"
-              width={880}
-              height={1060}
-              className="shimmer w-full h-auto object-cover pointer-events-none"
-              sizes="(max-width: 1024px) 93vw, 30vw"
-            />
+          <div className="flex flex-col gap-[0.56vw] max-lg:gap-2">
+            <div className="relative overflow-hidden rounded-[0.56vw] max-lg:rounded-[6px]" style={{ boxShadow: "0px 2px 8px 0px rgba(0,0,0,0.08)" }}>
+              <ShimmerImage
+                src="/images/pipeline-settings.png"
+                alt="Pipeline settings – brief length, tone, auto edge-case detection, competitive research toggles"
+                width={880}
+                height={1060}
+                className="shimmer w-full h-auto object-cover pointer-events-none"
+                sizes="(max-width: 1024px) 93vw, 30vw"
+              />
+            </div>
+            <p className="font-sans text-[0.76vw] max-lg:text-[11px] font-normal text-[#878787] leading-[1.6]">
+              Pipeline settings – brief length, tone, and optional modules like competitive research and pain points
+            </p>
           </div>
-          <div className="relative overflow-hidden rounded-[0.56vw] max-lg:rounded-[6px]" style={{ boxShadow: "0px 2px 8px 0px rgba(0,0,0,0.08)" }}>
-            <ShimmerImage
-              src="/images/pipeline-agent-selection.png"
-              alt="Exploration agent will use — Copilot, Figma Make, and Claude Code as generation tools"
-              width={860}
-              height={480}
-              className="shimmer w-full h-auto object-cover pointer-events-none"
-              sizes="(max-width: 1024px) 93vw, 30vw"
-            />
+          <div className="flex flex-col gap-[0.56vw] max-lg:gap-2">
+            <div className="relative overflow-hidden rounded-[0.56vw] max-lg:rounded-[6px]" style={{ boxShadow: "0px 2px 8px 0px rgba(0,0,0,0.08)" }}>
+              <ShimmerImage
+                src="/images/pipeline-agent-selection.png"
+                alt="Exploration agent will use – Copilot, Figma Make, and Claude Code as generation tools"
+                width={860}
+                height={480}
+                className="shimmer w-full h-auto object-cover pointer-events-none"
+                sizes="(max-width: 1024px) 93vw, 30vw"
+              />
+            </div>
+            <p className="font-sans text-[0.76vw] max-lg:text-[11px] font-normal text-[#878787] leading-[1.6]">
+              Agent picker – Copilot, Figma Make, or Claude Code for the exploration stage
+            </p>
           </div>
         </div>
       </motion.div>
@@ -458,15 +473,20 @@ export default function DesignPipelinePage() {
 
       {/* Lo-fi wireframe: one sketch showing early ideation */}
       <motion.div className="px-[3.33vw] max-lg:px-5 mt-[2.22vw] max-lg:mt-6" {...fadeUp}>
-        <div className="relative overflow-hidden rounded-[0.56vw] max-lg:rounded-[6px] max-w-[60%] max-lg:max-w-full mx-auto" style={{ boxShadow: "0px 2px 8px 0px rgba(0,0,0,0.08)" }}>
-          <ShimmerImage
-            src="/images/pipeline-wireframe-gallery.jpg"
-            alt="Lo-fi wireframe — Design Gallery variant with output length and section selector"
-            width={1400}
-            height={1100}
-            className="shimmer w-full h-auto object-cover pointer-events-none"
-            sizes="(max-width: 1024px) 93vw, 55vw"
-          />
+        <div className="flex flex-col gap-[0.56vw] max-lg:gap-2 max-w-[60%] max-lg:max-w-full mx-auto">
+          <div className="relative overflow-hidden rounded-[0.56vw] max-lg:rounded-[6px]" style={{ boxShadow: "0px 2px 8px 0px rgba(0,0,0,0.08)" }}>
+            <ShimmerImage
+              src="/images/pipeline-wireframe-gallery.jpg"
+              alt="Lo-fi wireframe – Design Gallery variant with output length and section selector"
+              width={1400}
+              height={1100}
+              className="shimmer w-full h-auto object-cover pointer-events-none"
+              sizes="(max-width: 1024px) 93vw, 55vw"
+            />
+          </div>
+          <p className="font-sans text-[0.69vw] max-lg:text-[10px] font-normal text-[#888] leading-[1.3]">
+            Early sketch – Jira ticket on the left, generated brief on the right, with output length and section controls below
+          </p>
         </div>
       </motion.div>
 
@@ -483,13 +503,13 @@ export default function DesignPipelinePage() {
         </p>
       </motion.div>
 
-      {/* Figma explorations — grid */}
+      {/* Figma explorations – grid */}
       <motion.div className="px-[3.33vw] max-lg:px-5 mt-[2.22vw] max-lg:mt-6" {...fadeUp}>
         <div className="grid grid-cols-2 max-lg:grid-cols-1 gap-[1.11vw] max-lg:gap-4">
           {[
-            { src: "/images/pipeline-exploration-1.png", label: "Exploration 1 — Guided milestone timeline" },
-            { src: "/images/pipeline-exploration-2.png", label: "Exploration 2 — Receipt + persistent status bar" },
-            { src: "/images/pipeline-exploration-3.png", label: "Exploration 3 — Celebration hero + progressive disclosure", span: true },
+            { src: "/images/pipeline-exploration-1.png", label: "Exploration 1 – Guided milestone timeline" },
+            { src: "/images/pipeline-exploration-2.png", label: "Exploration 2 – Receipt + persistent status bar" },
+            { src: "/images/pipeline-exploration-3.png", label: "Exploration 3 – Celebration hero + progressive disclosure", span: true },
           ].map((exp) => (
             <div key={exp.src} className={`flex flex-col gap-[0.56vw] max-lg:gap-2${"span" in exp && exp.span ? " col-span-2 max-lg:col-span-1 max-w-[50%] max-lg:max-w-full mx-auto" : ""}`}>
               <div className="relative overflow-hidden rounded-[0.56vw] max-lg:rounded-[6px]">
@@ -502,7 +522,7 @@ export default function DesignPipelinePage() {
                   sizes="(max-width: 1024px) 93vw, 45vw"
                 />
               </div>
-              <p className="font-sans text-[0.69vw] max-lg:text-[10px] font-normal text-[#888] leading-[1.3]">
+              <p className="font-sans text-[0.76vw] max-lg:text-[11px] font-normal text-[#878787] leading-[1.6]">
                 {exp.label}
               </p>
             </div>
@@ -521,17 +541,20 @@ export default function DesignPipelinePage() {
         <p className="font-sans text-[1.25vw] max-lg:text-[15px] font-normal text-[#555] leading-[1.5] tracking-[-0.013vw] mt-[0.56vw]">
           From Jira ticket received to build handoff, each node is a discrete agent with explicit gates between stages. Human review gates at steps 12 and 18 ensure the designer stays in control.
         </p>
-        <div className="max-w-[50%] max-lg:max-w-full mx-auto mt-[2.22vw] max-lg:mt-6">
+        <div className="flex flex-col gap-[0.56vw] max-lg:gap-2 max-w-[50%] max-lg:max-w-full mx-auto mt-[2.22vw] max-lg:mt-6">
           <div className="relative overflow-hidden rounded-[0.56vw] max-lg:rounded-[6px]" style={{ backgroundColor: "#f5f3ee", boxShadow: "0px 2px 8px 0px rgba(0,0,0,0.08)" }}>
             <ShimmerImage
               src="/images/pipeline-flowchart.png"
-              alt="The Design Pipeline — 20-step agent architecture from Jira ticket to build"
+              alt="The Design Pipeline – 20-step agent architecture from Jira ticket to build"
               width={1800}
               height={2400}
               className="shimmer w-full h-auto object-contain pointer-events-none"
               sizes="(max-width: 1024px) 93vw, 46vw"
             />
           </div>
+          <p className="font-sans text-[0.69vw] max-lg:text-[10px] font-normal text-[#888] leading-[1.3]">
+            Full agent architecture – 20 steps from Jira ticket to build handoff, with human review gates at steps 12 and 18
+          </p>
         </div>
       </motion.div>
 
@@ -579,7 +602,7 @@ export default function DesignPipelinePage() {
       {/* ── OUTCOME ── */}
       <motion.div className="px-[3.33vw] max-lg:px-5 mt-[4.44vw] max-lg:mt-10" {...fadeUp}>
         <p className="font-sans text-[0.76vw] max-lg:text-[11px] font-semibold text-[#888] tracking-[0.092vw]">
-          OUTCOME
+          OUTCOMES
         </p>
         <h2 className="font-sans text-[3.06vw] max-lg:text-[24px] font-light text-[#555] tracking-[-0.061vw] leading-[1.1] mt-[1.11vw]">
           45 minutes down to{" "}
@@ -661,7 +684,7 @@ export default function DesignPipelinePage() {
             &larr; Back to work
           </a>
           <a
-            href="/work/workplace-solutions"
+            href="/work/deep-purple"
             className="font-sans text-[1.39vw] max-lg:text-[16px] font-normal text-[#555] hover:underline underline-offset-4"
           >
             Next case study &rarr;

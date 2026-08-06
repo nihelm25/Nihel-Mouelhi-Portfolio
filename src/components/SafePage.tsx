@@ -24,7 +24,7 @@ export default function SafePage() {
           className="font-sans text-[0.76vw] max-lg:text-[11px] font-semibold text-[#888] tracking-[0.092vw]"
           {...fadeUp}
         >
-          02 / 04 &middot; THALES &times; SNCF &middot; NEW PRODUCT &middot; AI &middot; B2B
+          02 / 05 &middot; THALES &times; SNCF &middot; NEW PRODUCT &middot; AI &middot; B2B
         </motion.p>
 
         <motion.h1
@@ -89,7 +89,7 @@ export default function SafePage() {
           </span>
         </h2>
         <p className="font-sans text-[1.25vw] max-lg:text-[15px] font-normal text-[#555] leading-[1.5] tracking-[-0.013vw] mt-[1.67vw]">
-          SNCF&rsquo;s control room wasn&rsquo;t one operator drowning in feeds. It was fourteen people moving in concert: video patrollers scanning cameras, analysts cross-referencing evidence, investigators tracing movement, and a lead who held final authority over dispatch. They moved from signal to interception in about 15 minutes, over voice-only talkie-walkie, with no shared record.
+          SNCF&rsquo;s control room wasn&rsquo;t one operator drowning in feeds. It was fourteen people moving in concert: video patrollers scanning cameras, analysts cross-referencing evidence, investigators tracing movement, and a lead who held final authority over dispatch. They moved from signal to interception in about 15 minutes, over voice-only walkie-talkie, with no shared record.
         </p>
         <p className="font-sans text-[1.25vw] max-lg:text-[15px] font-normal text-[#555] leading-[1.5] tracking-[-0.013vw] mt-[1.67vw]">
           The design problem wasn&rsquo;t &ldquo;make one operator faster.&rdquo; It was: how does AI fit into a system that already works, without breaking the chain that makes it possible?
@@ -265,7 +265,7 @@ export default function SafePage() {
 
             <div className="flex flex-col items-center w-[13.19vw] shrink-0 pt-[2.78vw]">
               <p className="font-sans text-[0.625vw] font-semibold text-[#9c4221] tracking-[0.104vw] mb-[0.56vw]">
-                TALKIE-WALKIE
+                WALKIE-TALKIE
               </p>
               <div className="w-[80%] flex items-center">
                 <div className="flex-1 h-px bg-[#9c4221]" />
@@ -372,7 +372,7 @@ export default function SafePage() {
                 COMMUNICATION
               </p>
               <p className="font-sans text-[0.83vw] text-[#555] leading-[1.5]">
-                Voice-only over talkie-walkie. No shared written record between sides.
+                Voice-only over walkie-talkie. No shared written record between sides.
               </p>
             </div>
             <div className="flex flex-col gap-[0.42vw]">

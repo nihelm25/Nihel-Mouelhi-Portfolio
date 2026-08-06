@@ -13,7 +13,7 @@ type CaseCardProps = {
   visualContent: React.ReactNode;
   index: number;
   href?: string;
-  locked?: boolean;
+
 };
 
 /* ── Reusable browser-chrome wrapper ── */
@@ -113,17 +113,13 @@ function DeepPurpleVisual() {
 /* ── Card 5 Visual: Design Pipeline Capstone ── */
 function DesignPipelineVisual() {
   return (
-    <div className="absolute inset-0 pt-[3.5vw] max-lg:pt-6 pl-[3.5vw] max-lg:pl-6">
-      <div className="relative w-full h-full rounded-tl-[0.56vw] max-lg:rounded-tl-[6px] overflow-hidden">
-        <ShimmerImage
-          src="/images/pipeline-hero.png"
-          alt="Design Pipeline Capstone"
-          fill
-          className="object-contain object-left-top pointer-events-none"
-          sizes="(max-width: 1024px) 100vw, 64vw"
-        />
-      </div>
-    </div>
+    <ShimmerImage
+      src="/images/pipeline-hero.png"
+      alt="Design Pipeline Capstone"
+      fill
+      className="object-cover object-top pointer-events-none"
+      sizes="(max-width: 1024px) 100vw, 64vw"
+    />
   );
 }
 
@@ -140,7 +136,6 @@ const projects: Omit<CaseCardProps, "index">[] = [
     visualBg: "#0a5264",
     visualContent: <JPMorganVisual />,
     href: "/work/workplace-solutions",
-    locked: true,
   },
   {
     heading:
@@ -167,7 +162,6 @@ const projects: Omit<CaseCardProps, "index">[] = [
     visualBg: "#1a4a73",
     visualContent: <ESGVisual />,
     href: "/work/specificationworkbench",
-    locked: true,
   },
   {
     heading:
@@ -205,7 +199,6 @@ function CaseCard({
   visualContent,
   index,
   href,
-  locked,
 }: CaseCardProps) {
   const card = (
     <motion.div
@@ -226,12 +219,6 @@ function CaseCard({
             {heading}
           </h3>
           <div className="flex gap-[0.56vw] max-lg:gap-2 items-center flex-wrap">
-            {locked && (
-              <span className="flex items-center gap-[0.28vw] max-lg:gap-1 border border-[#6b6b6b] rounded-full px-[1.1vw] max-lg:px-3 py-[0.56vw] max-lg:py-1.5 font-sans text-[0.625vw] max-lg:text-[10px] tracking-[1.62px] text-[#555] whitespace-nowrap">
-                <svg className="w-[0.7vw] max-lg:w-[11px] h-[0.7vw] max-lg:h-[11px]" viewBox="0 0 16 16" fill="currentColor"><path d="M11.5 6V4.5a3.5 3.5 0 1 0-7 0V6H3v8h10V6h-1.5ZM6 4.5a2 2 0 1 1 4 0V6H6V4.5Z"/></svg>
-                NDA
-              </span>
-            )}
             {tags.map((tag) => (
               <span
                 key={tag}

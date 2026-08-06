@@ -24,7 +24,7 @@ export default function WorkplaceSolutionsPage() {
           className="font-sans text-[0.76vw] max-lg:text-[11px] font-semibold text-[#888] tracking-[0.092vw]"
           {...fadeUp}
         >
-          01 / 04 &middot; JP MORGAN CHASE &amp; CO &middot; REDESIGN &middot; RESPONSIVE WEB &middot; B2C
+          01 / 05 &middot; JP MORGAN CHASE &amp; CO &middot; REDESIGN &middot; RESPONSIVE WEB &middot; B2C
         </motion.p>
 
         <motion.h1
@@ -173,17 +173,16 @@ export default function WorkplaceSolutionsPage() {
         </p>
         <div className="grid grid-cols-3 max-lg:grid-cols-1 gap-[1.11vw] max-lg:gap-4 mt-[2.22vw]">
           {[
-            { src: "/images/ws-wireframe-dashboard.jpg", alt: "Early wireframe: dashboard with equity value, grants, vesting schedule, and quick actions", w: 2000, h: 1232 },
-            { src: "/images/ws-wireframe-holdings.jpg", alt: "Early wireframe: holdings overview with portfolio summary, breakdown by type, and vesting events", w: 2000, h: 1188 },
-            { src: "/images/ws-wireframe-transactions.jpg", alt: "Early wireframe: transactions page with preclearance, sell shares, and transfer flows", w: 2000, h: 1291 },
+            { src: "/images/ws-wireframe-holdings.jpg", alt: "Early wireframe: holdings overview with portfolio summary, breakdown by type, and vesting events", w: 2000, h: 1291 },
+            { src: "/images/ws-wireframe-new.jpg", alt: "Early wireframe: ESPP contribution plan with purchase periods, activity tab, and matching contributions", w: 2000, h: 1131 },
+            { src: "/images/ws-wireframe-third.jpg", alt: "Early wireframe: sell shares transaction flow with order type, proceeds, delivery method, and currency", w: 2000, h: 1131 },
           ].map((img) => (
-            <div key={img.src} className="relative overflow-hidden rounded-[0.56vw] max-lg:rounded-[6px]" style={{ boxShadow: "0px 2px 8px 0px rgba(0,0,0,0.08)" }}>
+            <div key={img.src} className="relative overflow-hidden rounded-[0.56vw] max-lg:rounded-[6px] aspect-[5/3]" style={{ boxShadow: "0px 2px 8px 0px rgba(0,0,0,0.08)" }}>
               <ShimmerImage
                 src={img.src}
                 alt={img.alt}
-                width={img.w}
-                height={img.h}
-                className="shimmer w-full h-auto pointer-events-none"
+                fill
+                className="shimmer object-cover pointer-events-none"
                 sizes="(max-width: 1024px) 93vw, 30vw"
               />
             </div>
@@ -422,7 +421,7 @@ export default function WorkplaceSolutionsPage() {
             <span className="font-semibold">The constraints were the design.</span> Early on I tried to simplify away the complexity, hiding tax disclaimers, collapsing plan types, minimizing legal language. But participants making irrevocable financial decisions need to see the full picture. The real skill was making dense, regulated content legible without removing it.
           </p>
           <p>
-            <span className="font-semibold">Alignment takes longer than design. </span>My week was split between design reviews and rooms with compliance officers, tax counsel, product partners, and engineering leads. I learned to bring rough flows to those rooms early, not polished mocks. Half of my best design decisions came from a compliance officer saying &ldquo;that can&rsquo;t work in Germany&rdquo; before I&rsquo;d spent a week on it.
+            <span className="font-semibold">Alignment takes longer than design.</span>My week was split between design reviews and rooms with compliance officers, tax counsel, product partners, and engineering leads. I learned to bring rough flows to those rooms early, not polished mocks. Half of my best design decisions came from a compliance officer saying &ldquo;that can&rsquo;t work in Germany&rdquo; before I&rsquo;d spent a week on it.
           </p>
           <p>
             <span className="font-semibold">What I&rsquo;d do differently:</span> I would have kept a decision log from day one. With compliance, legal, engineering, and product all in the room, decisions got made fast but not always recorded. Weeks later, someone would relitigate a settled question because nobody could point to where it was decided. A lightweight decision log would have saved hours of re-alignment.

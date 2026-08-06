@@ -35,7 +35,7 @@ export default function ESGPage() {
           className="font-sans text-[0.76vw] max-lg:text-[11px] font-semibold text-[#888] tracking-[0.092vw]"
           {...fadeUp}
         >
-          03 / 04 &middot; JP MORGAN CHASE &amp; CO &middot; NEW PRODUCT
+          03 / 05 &middot; JP MORGAN CHASE &amp; CO &middot; NEW PRODUCT
           &middot; WEB &middot; B2E &middot; B2C
         </motion.p>
 
@@ -496,15 +496,20 @@ export default function ESGPage() {
           LOW FIDELITY
         </p>
         <p className="font-sans text-[1.25vw] max-lg:text-[16px] font-semibold text-[#555] leading-[1.3] mt-[0.83vw]">
-          Early explorations
+          Mapping the methodology builder before any screen existed
         </p>
-        <div
-          className="mt-[2.22vw] bg-[#f5f0e8] rounded-[0.83vw] max-lg:rounded-[8px] flex items-center justify-center"
-          style={{ aspectRatio: "16 / 9" }}
-        >
-          <p className="font-sans text-[0.97vw] max-lg:text-[14px] font-normal text-[#bbb] tracking-[0.069vw]">
-            LOW-FIDELITY EXPLORATIONS · IMAGE PLACEHOLDER
-          </p>
+        <p className="font-sans text-[1.25vw] max-lg:text-[15px] font-normal text-[#555] leading-[1.5] tracking-[-0.013vw] mt-[0.56vw]">
+          These are the rough flows I used to think through the creation journey before opening Figma: from the methodology home to naming, browsing data sources, and selecting attributes. Two rounds of low-fidelity iteration tested how researchers would move from an empty state to a fully composed methodology, with sticky notes marking where the existing tools broke down.
+        </p>
+        <div className="mt-[2.22vw] rounded-[0.83vw] max-lg:rounded-[8px] overflow-hidden" style={{ boxShadow: "0px 2px 8px 0px rgba(0,0,0,0.08)" }}>
+          <ShimmerImage
+            src="/images/esg-exploration-flow.png"
+            alt="Early exploration: methodology builder flow from home to data selection, two iteration rounds with annotations"
+            width={2526}
+            height={670}
+            className="shimmer w-full h-auto pointer-events-none"
+            sizes="(max-width: 1024px) 93vw, 93vw"
+          />
         </div>
       </motion.div>
 
@@ -872,7 +877,7 @@ export default function ESGPage() {
             &larr; Back to work
           </a>
           <a
-            href="/work/deep-purple"
+            href="/work/design-pipeline"
             className="font-sans text-[1.39vw] max-lg:text-[16px] font-normal text-[#555] hover:underline underline-offset-4"
           >
             Next case study &rarr;

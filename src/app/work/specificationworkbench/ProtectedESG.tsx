@@ -1,14 +1,11 @@
 "use client";
 
-import PasswordGate from "@/components/PasswordGate";
 import ESGPage from "@/components/ESGPage";
 
 export default function ProtectedESG() {
   return (
-    <PasswordGate>
-      <main className="w-screen min-h-screen bg-cream">
-        <ESGPage />
-      </main>
-    </PasswordGate>
+    <main className="w-screen min-h-screen bg-cream">
+      <ESGPage />
+    </main>
   );
 }

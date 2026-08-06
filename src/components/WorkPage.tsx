@@ -113,13 +113,17 @@ function DeepPurpleVisual() {
 /* ── Card 5 Visual: Design Pipeline Capstone ── */
 function DesignPipelineVisual() {
   return (
-    <ShimmerImage
-      src="/images/pipeline-hero.png"
-      alt="Design Pipeline Capstone"
-      fill
-      className="object-cover object-top pointer-events-none"
-      sizes="(max-width: 1024px) 100vw, 64vw"
-    />
+    <div className="absolute inset-0 pt-[3.5vw] max-lg:pt-6 pl-[3.5vw] max-lg:pl-6">
+      <div className="relative w-full h-full rounded-tl-[0.56vw] max-lg:rounded-tl-[6px] overflow-hidden">
+        <ShimmerImage
+          src="/images/pipeline-hero.png"
+          alt="Design Pipeline Capstone"
+          fill
+          className="object-cover object-left-top pointer-events-none"
+          sizes="(max-width: 1024px) 100vw, 64vw"
+        />
+      </div>
+    </div>
   );
 }
 

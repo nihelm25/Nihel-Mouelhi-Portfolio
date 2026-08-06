@@ -16,7 +16,7 @@ export default function WorkplaceSolutionsPage() {
     <section className="relative w-full min-h-screen bg-cream overflow-x-hidden">
       <Header activeItem="WORK" />
 
-      <div className="h-[19.4vw] max-lg:h-[100px]" />
+      <div className="h-[11.1vw] max-lg:h-[80px]" />
 
       {/* ── HERO ── */}
       <div className="px-[3.33vw] max-lg:px-5">
@@ -156,6 +156,38 @@ export default function WorkplaceSolutionsPage() {
               Same platform for a first-time enroller and a CEO preclearing a sale. Vastly different confidence levels, vocabulary, and stakes, all needing clarity from one interface.
             </p>
           </div>
+        </div>
+      </motion.div>
+
+      {/* ── EARLY EXPLORATIONS ── */}
+      <motion.div className="px-[3.33vw] max-lg:px-5 mt-[4.44vw] max-lg:mt-10" {...fadeUp}>
+        <p className="font-sans text-[0.76vw] max-lg:text-[11px] font-semibold text-[#888] tracking-[0.092vw]">
+          EARLY EXPLORATIONS
+        </p>
+        <h2 className="font-sans text-[3.06vw] max-lg:text-[24px] font-light text-[#555] tracking-[-0.061vw] leading-[1.1] mt-[1.11vw]">
+          Sketching the information{" "}
+          <span className="font-semibold text-[#9c4221]">architecture.</span>
+        </h2>
+        <p className="font-sans text-[1.25vw] max-lg:text-[15px] font-normal text-[#555] leading-[1.5] tracking-[-0.013vw] mt-[1.67vw]">
+          Before any screen was built, I mapped the core surfaces on paper to pressure-test what belongs together. These sketches worked through the dashboard hierarchy, portfolio breakdowns, and transaction flows, testing how participants would move between viewing, modeling, and acting.
+        </p>
+        <div className="grid grid-cols-3 max-lg:grid-cols-1 gap-[1.11vw] max-lg:gap-4 mt-[2.22vw]">
+          {[
+            { src: "/images/ws-wireframe-dashboard.jpg", alt: "Early wireframe: dashboard with equity value, grants, vesting schedule, and quick actions", w: 2000, h: 1232 },
+            { src: "/images/ws-wireframe-holdings.jpg", alt: "Early wireframe: holdings overview with portfolio summary, breakdown by type, and vesting events", w: 2000, h: 1188 },
+            { src: "/images/ws-wireframe-transactions.jpg", alt: "Early wireframe: transactions page with preclearance, sell shares, and transfer flows", w: 2000, h: 1291 },
+          ].map((img) => (
+            <div key={img.src} className="relative overflow-hidden rounded-[0.56vw] max-lg:rounded-[6px]" style={{ boxShadow: "0px 2px 8px 0px rgba(0,0,0,0.08)" }}>
+              <ShimmerImage
+                src={img.src}
+                alt={img.alt}
+                width={img.w}
+                height={img.h}
+                className="shimmer w-full h-auto pointer-events-none"
+                sizes="(max-width: 1024px) 93vw, 30vw"
+              />
+            </div>
+          ))}
         </div>
       </motion.div>
 

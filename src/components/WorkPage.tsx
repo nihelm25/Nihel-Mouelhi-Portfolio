@@ -287,7 +287,7 @@ export default function WorkPage() {
       <Header activeItem="WORK" />
 
       {/* Header spacer */}
-      <div className="h-[19.4vw] max-lg:h-[100px]" />
+      <div className="h-[11.1vw] max-lg:h-[80px]" />
 
       {/* Project cards — sticky stacking (desktop), normal flow (mobile) */}
       <div className="px-[3.33vw] max-lg:px-5 pb-[2.22vw] max-lg:pb-6">

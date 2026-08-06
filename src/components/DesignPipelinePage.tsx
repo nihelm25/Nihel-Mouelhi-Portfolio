@@ -24,7 +24,7 @@ export default function DesignPipelinePage() {
     <section className="relative w-full min-h-screen bg-cream overflow-x-hidden">
       <Header activeItem="WORK" />
 
-      <div className="h-[19.4vw] max-lg:h-[100px]" />
+      <div className="h-[11.1vw] max-lg:h-[80px]" />
 
       {/* ── HERO ── */}
       <div className="px-[3.33vw] max-lg:px-5">

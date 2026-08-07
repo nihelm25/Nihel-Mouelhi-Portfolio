@@ -314,7 +314,7 @@ export default function LandingPage() {
             {...fadeUp}
             transition={{ delay: 0.3, duration: 0.8 }}
           >
-            I take products from{" "}
+            I own products from{" "}
             <span
               className="text-accent cursor-default"
               onMouseEnter={() => setZeroHovered(true)}

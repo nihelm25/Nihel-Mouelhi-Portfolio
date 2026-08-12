@@ -15,11 +15,11 @@ export default function Header({ activeItem }: { activeItem?: string } = {}) {
 
   return (
     <>
-      <header className="absolute top-0 left-0 right-0 z-40">
+      <header className="absolute top-0 left-0 right-0 z-[60]">
         <div className="flex items-center justify-between pt-8 px-[3.33vw] max-lg:px-5 w-full">
           <motion.a
             href="/"
-            className="transition-opacity duration-200 hover:opacity-60"
+            className={`transition-opacity duration-200 hover:opacity-60${mobileMenuOpen ? " max-lg:invisible" : ""}`}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3, duration: 0.6 }}
@@ -85,7 +85,7 @@ export default function Header({ activeItem }: { activeItem?: string } = {}) {
       <AnimatePresence>
         {mobileMenuOpen && (
           <motion.div
-            className="fixed inset-0 z-30 bg-cream flex flex-col items-start justify-center px-8 lg:hidden"
+            className="fixed inset-0 z-50 bg-cream flex flex-col items-start justify-center px-8 lg:hidden"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}

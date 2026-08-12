@@ -158,7 +158,7 @@ export default function AboutPage() {
       <Header activeItem="ABOUT" />
 
       {/* Header spacer */}
-      <div className="h-[11.1vw] max-lg:h-[80px]" />
+      <div className="h-[11.1vw] max-lg:h-[150px]" />
 
       {/* ── About hero ── */}
       <div className="grid grid-cols-2 max-lg:grid-cols-1 gap-x-[1.67vw] max-lg:gap-8 items-start px-[3.33vw] max-lg:px-5">

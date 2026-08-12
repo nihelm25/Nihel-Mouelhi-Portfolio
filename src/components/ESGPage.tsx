@@ -27,7 +27,7 @@ export default function ESGPage() {
     <section className="relative w-full min-h-screen bg-cream overflow-x-hidden">
       <Header activeItem="WORK" />
 
-      <div className="h-[11.1vw] max-lg:h-[80px]" />
+      <div className="h-[11.1vw] max-lg:h-[125px]" />
 
       {/* ── HERO ── */}
       <div className="px-[3.33vw] max-lg:px-5">

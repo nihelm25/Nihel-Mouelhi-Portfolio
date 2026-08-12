@@ -229,16 +229,16 @@ export default function LandingPage() {
   }, []);
 
   return (
-    <section className="relative w-full min-h-full bg-cream flex flex-col">
+    <section className="relative w-full min-h-full max-lg:min-h-dvh bg-cream flex flex-col">
       <CursorGlow />
       <ConfettiOverlay active={confetti} />
       <Header />
 
       {/* Header spacer */}
-      <div className="shrink-0 h-[13.44vw] max-lg:h-[100px]" />
+      <div className="shrink-0 h-[13.44vw] max-lg:h-[52px]" />
 
       {/* Main content */}
-      <div className="flex-1 flex flex-col justify-end px-[3.33vw] max-lg:px-5 max-lg:pt-4 pb-[8vw] max-lg:pb-10">
+      <div className="flex-1 flex flex-col justify-end max-lg:justify-center px-[3.33vw] max-lg:px-5 pb-[8vw] max-lg:pb-[30%]">
         <div className="flex flex-col items-start text-left">
           {/* Handwritten greeting with headshot on hover */}
           <motion.div
